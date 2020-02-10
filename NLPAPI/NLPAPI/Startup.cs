@@ -32,6 +32,8 @@ namespace NLPAPI
                 builder =>
                 {
                     builder.AllowAnyOrigin();
+                    builder.AllowAnyHeader();
+                    builder.AllowAnyMethod();
                     //.WithOrigins("http://127.0.0.1:4200");
                 });
             });
