@@ -22,6 +22,8 @@ export class DashboardComponent implements OnInit {
   ClassiReq: ClassificationDTO = new ClassificationDTO()
   CommentNumber: any[] = [];
 
+
+  CommentText: String;
   constructor(private route: ActivatedRoute, private httpClient: HttpClient,  private router: Router) {}
   ngOnInit() {  }
 
@@ -84,7 +86,7 @@ export class DashboardComponent implements OnInit {
     this.postObj.docs = []
     this.postObj.docs.push(this.doc);
 
-
+    console.log(this.CommentText)
     this.ClassiReq.docs=this.postObj
     this.ClassiReq.access = this.tokenRequest
     this.httpClient.post(apiURL + "/Classify",this.ClassiReq,httpOptions) .subscribe(data => {
