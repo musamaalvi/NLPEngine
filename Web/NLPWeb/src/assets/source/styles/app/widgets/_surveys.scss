@@ -1,0 +1,64 @@
+//Lastdays
+$alert-color: #546a79;
+$small-color: #889eb1;
+
+.widget--surveys {
+  .table {
+    td {
+      color: $alert-color;
+      vertical-align: middle;
+
+      .icon-stack {
+        position: relative;
+        display: inline-block;
+        width: 2em;
+        height: 5em;
+        line-height: 4em;
+        vertical-align: middle;
+
+        .icon {
+
+          &:before {
+            font-size: emify(30, 10);
+          }
+
+          margin: 0;
+          &.icon--small {
+            position: absolute;
+            right: -10px;
+            bottom: -5px;
+
+            &:before {
+              font-size: emify(17, 10);
+              background:$white;
+            }
+          }
+        }
+
+      }
+
+      &:first-child {
+        width: emify(36, 10);
+        padding: emify(10, 10) emify(15, 10);
+      }
+    }
+  }
+  .surveys__label {
+    float: left;
+    margin-top: emify(5, 10);
+    font-size: emify(13, 10);
+    text-transform: capitalize;
+    font-weight: normal;
+    vertical-align: middle;
+    small {
+      display: block;
+      font-size: emify(7, 10);
+      color: $small-color;
+    }
+  }
+  .surveys__count {
+    float: right;
+    font-size: emify(25, 10);
+    font-weight: 300;
+  }
+}

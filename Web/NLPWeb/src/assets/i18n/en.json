@@ -1,0 +1,62 @@
+{
+  "titles": {
+    "dashboard": "Main Dashboard",
+    "alerts": "Hot Alerts Dashboard",
+    "contactStatistics": "Contact Statictics"
+  },
+  "filterBar": {
+    "hierarchy": "Hierarchy",
+    "datatype": "Data Type",
+    "models": "Models",
+    "surveytype": "Survey Type",
+    "daterange": "Date Range",
+    "action": "Action",
+    "applyfilters": "Applty Filters"
+  },
+  "programs": {
+    "sales": "Sales",
+    "services": "Services"
+  },
+  "headerTaps": {
+    "Dashboard": "Dashboard",
+    "Alerts": "Alerts",
+    "Reports": "Reports",
+    "Cross Tab": "Cross Tab",
+    "Survey Builder": "Survey Builder",
+    "Report Generator": "Report Generator",
+    "Social Media": "Social Media",
+    "Text Analytics": "Text Analytics"
+  },
+  "Description": "Description",
+  "Dashboard": "Dashboard",
+  "Alerts": "Alerts",
+  "Reports": "Reports",
+  "Cross Tab": "Cross Tab",
+  "Survey Builder": "Survey Builder",
+  "Report Generator": "Report Generator",
+  "Social Media": "Social Media",
+  "Text Analytics": "Text Analytics",
+  "Main Dashboard": "Main Dashboard",
+  "Survey List": "Survey List",
+  "Email Edits": "Email Edits",
+  "Customer Search": "Customer Search",
+  "Resend Survey": "Resend Survey",
+  "Language": "Language",
+  "Notification Template": "Notification Template",
+  "Welcome": "Welcome",
+  "Back": "Back",
+  "Portal Translation": "Portal Translation",
+  "Admin Module": "Admin Module",
+  "Help": "Help",
+  "Logout": "Logout",
+  "Hot Alerts List": "Hot Alerts List",
+  "Organization Summary": "Organization Summary",
+  "Management Report": "Management Report",
+  "Portal Traffic": "Portal Traffic",
+  "Target Score Update": "Target Score Update",
+  "All": "All",
+  "All Models": "All Models",
+  "View": "View",
+  "Survey Type": "Survey Type",
+  "Email Disposition Report": "Email Disposition Report"
+}

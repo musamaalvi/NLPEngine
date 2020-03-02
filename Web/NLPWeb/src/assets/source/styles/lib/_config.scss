@@ -1,0 +1,229 @@
+// config.scss
+// contains all the required configurations
+
+$basePath:"assets/build/assets/images/" !default;
+
+
+/*:root {
+  !* #f0f0f0 in decimal RGB *!
+  --color: 240, 240, 240;
+}*/
+
+// Grays:
+$white 		    : #fff !default;
+$black	 		: #000 !default;
+$gray-lighter   : #e0e0e0 !default;
+$gray-light     : #000000;
+$gray           : #3f474f;
+$gray-dark      : #1a2128;
+$clr-lightblue: #effafd;
+$clr-unassigned: #c2cbdc;
+
+$clr-light      : $white;
+$clr-dark       : $black;
+$text-clr:       #5b6c7c;
+$clr-gray: #888888;
+$bg-gray: #f7f7f7;
+$border-count: #d7d7d7;
+$btn-gray: #bdc3c7;
+
+$clr-red: #dc3545;
+$clr-green: #3bb001;
+$clr-yellow: #ffc107;
+$clr-amber: #fd7e14;
+
+$clr-navi-pri: #363b6a;
+$clr-navi-sec: #363b6a;
+
+// Colors
+$clr-pri        : #59b9ef;
+$clr-sec        : $gray !default;
+$clr-blue        :#59b9ef !default;
+$clr-accent     : $black !default;
+$clr-blue-tab   : #36a6e4;
+$color-legend-pink: #f73071;
+$color-legend-purple: #7746ff;
+$color-legend-purple-d: #4d00b9;
+$color-legend-orange: #fca52b;
+$color-legend-blue: #00a3c4;
+$clr-darkgreen: #70c1b3 !default;
+$clr-lightgray: #f9f9f9 !default;
+$clr-icon-gray: #9aa3ac;
+$clr-icongreen: #11c97e;
+$clr-iconred: #e35092;
+$clr-iconblue: #36a6e4;
+$clr-iconyellow: #ffc600;
+$clr-bluerow: #effafd;
+$clr-timeline: #c0c0c0;
+$clr-dark-blue: #3498db;
+$clr-raiting-green: #6ec672;
+$clr-raiting-yellow: #f7c065;
+$clr-raiting-ornage: #f67812;
+$clr-lightgray-text: #b5bbc2;
+$clr-blue-light:#546a79;
+$clr-graylight: #666666;
+$clr-graylighter: #cdcdcd;
+
+// Fonts        :
+$sans-serif		: Helvetica, Arial, sans-serif;
+$serif		    : Helvetica, Arial, sans-serif;
+
+$font-pri: "Roboto";
+$font-sec             : $serif !default;  
+$font-avenir          : Avenir; 
+$font-opensansbold    : Opensansbold !default;
+
+// Paths
+$path-images 			      : 'assets/build/assets/images';
+$path-fonts 			       : 'assets/build/assets/fonts' !default;
+
+// Sprite (if using the old school way)
+$sprite-svg 			       : '#{$path-images}/icons.svg' !default;
+$sprite-png 			       : '#{$path-images}/icons.png'!default;
+$fallback-extension 	 : 'png';
+$retina-suffix 			    : '@2x';
+
+$base-font-size       : 62.5%;
+
+
+
+$zindex: (
+        header    : 30,
+        filter-fix: 20,
+        sidebar   : 31,
+        modal     : 35,
+        modalcontent: 10,
+        overlay   : 32,
+        dropdown  : 18,
+        filter    : 10
+);
+
+
+
+// -----------------------------------------------------------------------------------
+// Responsive
+$iphone4  : 'iphone4';
+$iphone5 				            : 'iphone5';
+$iphone6 				            : 'iphone6';
+$iphone6plus 			            : 'iphone6plus';
+$xs 					                : 480px; 					// Default Mobile-first approach
+$sm 					                : 768px;					// Respond Mixin's Default Tablet size
+$md 					                : 992px;					// Medium Desktops and Laptops
+$lg 					                : 1200px;					// Large Screens
+$mobile_first_approach 	 : true !default;			// if set false, the min-width will change to max-width
+$most_used_device 		     : $iphone4;   				// Values : iphone4, iphone5, iphone6, iphone plus
+
+
+$breakpoints: (
+        'small'     : 320px,
+        'med'       : 640px,
+        'large'     : 920px,
+        'wide'      : 1200px,
+        'mega'      : 1400px,
+);
+
+// ------------------------------------------------------------------------------------
+// Containers
+// overriding bootstrap defaults as per design
+// $container-sm 			: 960px;
+$container-md 			: 990px;
+$container-lg 			: 990px;
+
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs         : 480px !default;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min     : $screen-xs !default;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone      : $screen-xs-min !default;
+
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm         : 768px !default;
+$screen-sm-min     : $screen-sm !default;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet     : $screen-sm-min !default;
+
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md         : 992px !default;
+$screen-md-min     : $screen-md !default;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop    : $screen-md-min !default;
+
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg         : 1200px !default;
+$screen-lg-min     : $screen-lg !default;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop : $screen-lg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max     : ($screen-sm-min - 1) !default;
+$screen-sm-max     : ($screen-md-min - 1) !default;
+$screen-md-max     : ($screen-lg-min - 1) !default;
+
+
+
+/*
+
+!* Default Theme *!
+
+
+$basePath:"assets/build/assets/images/" !default;
+
+// Theme styles goes here
+// colors
+
+
+$clr-light: #f0f1f2;
+// corporate colors
+$clr-pri: #59b9ef !default;
+$clr-sec: #606060;
+$clr-lightblue: #effafd;
+$clr-blue:#234669;
+
+
+// $clr-accent: ;!
+$clr-links: $black ;
+$clr-body: $clr-sec;
+$clr-gray: #888888;
+
+$btn-gray: #bdc3c7;
+$clr-darkgray: #909090;
+$border-count: #d7d7d7;
+
+// backgrounds
+$bg-breadcrumbs: #f4f7fa;
+$bg-body: $clr-light;
+$bg-pagination: #efefef;
+$bg-gray: #f7f7f7;
+// fonts
+//$font-pri: 'Roboto', $sans-serif;
+// $font-sec: ;
+// paths
+$path-images: "assets/build/assets/images/";
+
+$transition: all 0.5s ease;
+
+$border: 1px solid $gray-light;
+$border-dark: 1px solid $black;
+
+$border-heading: #e0e0e0 !default;
+$border-clr:     #f3f3f3 !default;
+
+%transition {
+  transition: all 0.5s ease;
+}
+*/
+
+$transition: all 0.5s ease;
+
+%transition {
+  transition: all 0.5s ease;
+}

@@ -1,0 +1,998 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>Action Plan Dashboard</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <!-- favicons-->
+    <link rel="icon" type="image/ico" href="assets/images/favicon.png">
+
+</head>
+
+<body>
+
+/*create Action Plan */
+
+<div class="modal modal--medium active">
+    <div class="modal__background"></div>
+    <div class="modal__outer">
+        <div class="modal__inner">
+            <div class="modal__header">
+                <h2 class="modal__title">Create Action Plan</h2>
+            </div>
+            <div class="modal__content">
+
+                <div class="form-container form--padding10">
+
+                    <div class="form-row">
+                        <div class="form-column four">
+                            <div class="form-label">
+                                Action Plan Title
+                            </div>
+                            <div class="form-field">
+                                <input
+                                        type="text"
+                                        class="fluid"
+                                />
+                            </div>
+                        </div>
+                        <div class="form-column four">
+                            <div class="form-label">
+                                Target Completed Date
+                            </div>
+                            <div class="form-field calendar-field">
+                                <input type="text" class="fluid">
+
+                                <div class="calendar-dropdown">
+                                    test
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-column eight">
+                            <div class="form-label">
+                                Comments
+                            </div>
+                            <div class="form-field">
+                                <textarea class="ui-inputtext ui-corner-all ui-state-default ui-widget"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="form-container row-grey form--padding10">
+
+
+                    <h2 class="form-title">
+                        Automated Action Plan
+                    </h2>
+                    <div class="form-row ">
+                        <div class="form-column four">
+                            <div class="form-label">
+                                Event Type
+                            </div>
+                            <div class="form-field">
+                                <select class="selectpicker" data-placeholder="Steve Newman"
+                                        data-style="btn-select" data-width="100%">
+
+                                    <option value="">ibex Burnaby</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-column four">
+                            <div class="form-label">
+                                KPI
+                            </div>
+                            <div class="form-field">
+                                <select class="selectpicker" data-placeholder="Steve Newman"
+                                        data-style="btn-select" data-width="100%">
+
+                                    <option value="">ibex Burnaby</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-column four">
+                            <div class="form-label">
+                                Dealer Code / Name
+                            </div>
+                            <div class="form-field">
+                                <select class="selectpicker" data-placeholder="Steve Newman"
+                                        data-style="btn-select" data-width="100%">
+
+                                    <option value="">ibex Burnaby</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="form-column four">
+                            <div class="form-label">
+                                Assigned To
+                            </div>
+                            <div class="form-field">
+                                <select class="selectpicker" data-placeholder="Steve Newman"
+                                        data-style="btn-select" data-width="100%">
+
+                                    <option value="">ibex Burnaby</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-column four">
+                            <div class="form-label">
+                                Approval Date
+                            </div>
+                            <div class="form-field calendar-field">
+                                <input type="text" class="fluid">
+                            </div>
+                        </div>
+                        <div class="form-column four">
+                            <div class="form-label">
+                                Target Score
+                            </div>
+                            <div class="form-field">
+                                <select class="selectpicker" data-placeholder="Steve Newman"
+                                        data-style="btn-select" data-width="100%">
+
+                                    <option value="">ibex Burnaby</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+
+                        <div class="form-column four">
+                            <div class="form-label">
+                                Priority
+                            </div>
+                            <div class="form-field">
+                                <select class="selectpicker" data-placeholder="Steve Newman"
+                                        data-style="btn-select" data-width="100%">
+
+                                    <option value="">ibex Burnaby</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-column four">
+                            <div class="form-label">
+                                Start Date
+                            </div>
+                            <div class="form-field calendar-field">
+                                <input type="text" class="fluid">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="form-column four">
+                            <div class="form-label">
+                                Attachment
+                            </div>
+                            <div class="form-field field-attachment">
+
+                                <label for="FileUploadControl">
+                                    <input id="hdnNofileChosenText" value="No file chosen " type="hidden">
+                                    <span class="btn">Choose File</span> <span id="spanFile"> No file chosen</span>
+                                </label>
+
+                                <input class="file-field" type="file" name="files" id="FileUploadControl"
+                                       onchange="updatefileSpan(this)">
+                                <span id="filename"></span>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+            <div class="modal__footer">
+                <button class="btn btn--cancel">Cancel</button>
+
+                <button class="btn"> Create Plan</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+/*Edit Action Plan */
+
+<div class="modal modal--medium">
+    <div class="modal__background"></div>
+    <div class="modal__outer">
+        <div class="modal__inner">
+            <div class="modal__header">
+                <h2 class="modal__title">Edit Action Plan</h2>
+            </div>
+            <div class="modal__content">
+
+                <div class="form-container form--padding10">
+
+                    <div class="form-row">
+                        <div class="form-column four">
+                            <div class="form-label">
+                                Action Plan Title
+                            </div>
+                            <div class="form-field">
+                                <input
+                                        type="text"
+                                        class="fluid"
+                                />
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-column eight">
+                            <div class="form-label">
+                                Comments
+                            </div>
+                            <div class="form-field">
+                                <textarea class="ui-inputtext ui-corner-all ui-state-default ui-widget"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="form-container row-grey form--padding10">
+
+
+                    <h2 class="form-title">
+                        Automated Action Plan
+                    </h2>
+                    <div class="form-row ">
+                        <div class="form-column four">
+                            <div class="form-label">
+                                Start Score
+                            </div>
+                            <div class="form-field">
+                                <input type="text">
+                            </div>
+                        </div>
+
+                        <div class="form-column four">
+                            <div class="form-label">
+                                Target Score
+                            </div>
+                            <div class="form-field">
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="form-column four">
+                            <div class="form-label">
+                                Start Date
+                            </div>
+                            <div class="form-field calendar-field">
+                                <input type="text" class="fluid">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="form-column four">
+                            <div class="form-label">
+                                Target Compelted Date
+                            </div>
+                            <div class="form-field calendar-field">
+                                <input type="text" class="fluid">
+                            </div>
+                        </div>
+
+                        <div class="form-column four">
+                            <div class="form-label">
+                                Assigned To
+                            </div>
+                            <div class="form-field">
+                                <select class="selectpicker" data-placeholder="Steve Newman"
+                                        data-style="btn-select" data-width="100%">
+
+                                    <option value="">ibex Burnaby</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-column four">
+                            <div class="form-label">
+                                Status
+                            </div>
+                            <div class="form-field">
+                                <select class="selectpicker" data-placeholder="Steve Newman"
+                                        data-style="btn-select" data-width="100%">
+
+                                    <option value="">ibex Burnaby</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-column four">
+                            <div class="form-label">
+                                Attachment
+                            </div>
+                            <div class="form-field field-attachment">
+
+                                <label for="FileUploadControl">
+                                    <input id="hdnNofileChosenText" value="No file chosen " type="hidden">
+                                    <span class="btn">Choose File</span> <span id="spanFile"> No file chosen</span>
+                                </label>
+
+                                <input class="file-field" type="file" name="files" id="FileUploadControl"
+                                       onchange="updatefileSpan(this)">
+                                <span id="filename"></span>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+                <section class="timeline-history timeline--modal">
+                    <h2 class="timeline-title">History</h2>
+                    <div class="timeline__block">
+                        <div class="timeline__icon open">
+                            <i class="fal fa-bell"></i>
+                        </div>
+
+                        <div class="timeline__content">
+                            <h2>
+                                service alert (98753)
+                                <span class="time">/ 1:11 pm</span>
+                            </h2>
+                            <h3 class="status open">Open</h3>
+
+                            <div class="timeline__date open">
+                                <h4>24</h4>
+                                <h5>Jun, 2018</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline__block">
+                        <div class="timeline__icon comment">
+                            <i class="fal fa-list-ul"></i>
+                        </div>
+
+                        <div class="timeline__content">
+                            <h2>
+                                purchase alert (98753)
+                                <span class="time">/ 1:11 pm</span>
+                            </h2>
+                            <h3 class="status comment">Comment</h3>
+
+                            <p>
+                                Contacted Mr. Foster to schedule oil and filter change
+                            </p>
+
+                            <div class="timeline__date comment">
+                                <h4>02</h4>
+                                <h5>Dec, 2017</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline__block">
+                        <div class="timeline__icon close">
+                            <i class="fal fa-list-ul"></i>
+                        </div>
+
+                        <div class="timeline__content">
+                            <h2>
+                                Sales alert (98753) <span class="time">/ 1:11 pm</span>
+                            </h2>
+                            <h3 class="status close">Closed</h3>
+
+                            <div class="timeline__date close">
+                                <h4>09</h4>
+                                <h5>Nov, 2016</h5>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+            </div>
+            <div class="modal__footer">
+                <button class="btn btn--cancel">Cancel</button>
+
+                <button class="btn"> Create Plan</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <header class="l-header header">
+
+        <div class="logo l-logo">
+            <a href="index.html"><img src="assets/images/logo.png"></a>
+        </div>
+        <!-- /.logo -->
+        <nav class="nav">
+            <ul>
+                <li class="nav__link active">
+                    <a href="">
+                        <i class="fal fa-tachometer-alt"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav__link">
+                    <a href="">
+                        <i class="fal fa-exclamation-circle"></i> Alerts
+                    </a>
+                </li>
+                <li class="nav__link">
+                    <a href="#">
+                        <i class="fal fa-list-alt"></i> Reports
+                    </a>
+                </li>
+                <li class="nav__link">
+                    <a href="">
+                        <i class="fal fa-sliders-v"></i> Report Generator
+                    </a>
+                </li>
+                <li class="nav__link">
+                    <a href="">
+                        <i class="fal fa-file"></i> Text Analytics
+                    </a>
+                </li>
+                <li class="nav__link">
+                    <a href="">
+                        <i class="fal fa-book-alt"></i> Cross Tab
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-options">
+
+            <div class="user-info">
+                <a href="javascript:void(0)" class="user-dropdown-link">
+                    <i class="fas fa-user-circle"></i>
+                </a>
+                <div class="user-dropdown">
+                    <div class="user">
+                        <div class="user__inital"> J</div>
+                        <p>Welcome Back, <strong>Jason Tryfon</strong></p></div>
+                    <div class="user__list">
+                        <ul>
+                            <li>
+                                <a href="#"><i class="fal fa-plus"></i>Admin Module</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fal fa-pencil"></i>Portal Translation</a>
+                            </li>
+
+                            <li>
+                                <a href="#"><i class="fal fa-file"></i>Notification Template</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fal fa-sign-language"></i>Language</a>
+                            </li>
+
+                            <li>
+                                <a href="#"><i class="fal fa-print"></i>Print</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fal fa-question-circle"></i>Help</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fal fa-power-off"></i>Logout</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="user-features">
+                <div class="feature-node notification-node has-notification notification-box">
+                    <div class="noti-dot">
+                        <span class="dot"></span>
+                        <span class="pulse"></span>
+                    </div>
+                    <a class="handler" href="#"><i class="fal fa-bell"></i></a>
+
+                </div>
+                <div class="feature-node edit-node">
+                    <a class="handler" href="#"><i class="fal fa-pencil"></i></a>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </header>
+    <!-- /.header-->
+    <div class="l-content">
+        <section class="sidebar">
+            <!--<a href="" class="back-link"><i class="icon icon-long-arrow-left"></i><span>Back</span></a>-->
+            <div class="sidebar-header">
+                <div class="menu-wrapper">
+                    <div class="hamburger-menu"></div>
+                </div>
+            </div>
+            <div class="sidebar-menu ">
+                <ul class="">
+                    <li><a href="" class="sidebar__link"> <i class="icon icon-file-text-o"></i> My Reports</a></li>
+                    <li><a href="" class="sidebar__link"> <i class="icon icon-star-half-o"></i> Rating Analysis</a></li>
+                    <li><a href="" class="sidebar__link"> <i class="icon icon-building-o"></i> Organization Summary</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- /.sidebar-->
+        <main class="page-surveylist main">
+            <div class="page_inner">
+
+
+                <div class="w-xl">
+                    <div class="page_header">
+                        <div class="breadcrumbs page-breadcrumbs">
+                            <ul class="breadcrumbs_list">
+                                <!-- <li><a
+                                         href=""><span class="">Back</span></a>
+                                 </li>-->
+                                <li>
+                                    <a><span class="fas fa-home"></span></a></li>
+                                <li class="active"><a
+                                        href=""><span class="">Main Dashboard</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <h1 class="page__title">
+                            Action Plan Dashboard
+                        </h1>
+                        <div class="breadcrumbs">
+                            <ol class="breadcrumbs_list">
+                                <li>
+                                    <a href="javascript:void(0);">National</a>
+                                </li>
+                                <li class="active"><a href="#">Zone</a></li>
+                            </ol>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="w-xl ">
+                    <div class="widget fullpage--widget">
+
+
+                        <div class="widget__filters filter--white">
+                            <div class="filter-item filter-item--dropdown">
+                                <a href="#" class="btn">Create Action Plan</a>
+                            </div>
+
+                        </div>
+
+                        <div class="form-container form--padding form--grey">
+                            <div class="form-row">
+                                <div class="form-column three">
+                                    <div class="form-label">
+                                        Event Type
+                                    </div>
+                                    <div class="form-field">
+                                        <select class="selectpicker" data-placeholder="" data-style="btn-select"
+                                                data-width="100%">
+                                            <option value="">Option 01</option>
+                                            <option value="">Option 02</option>
+                                            <option value="">Option 03</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-column three">
+                                    <div class="form-label">
+                                        KPI
+                                    </div>
+                                    <div class="form-field">
+                                        <select class="selectpicker" data-placeholder="" data-style="btn-select"
+                                                data-width="100%">
+                                            <option value="">Option 01</option>
+                                            <option value="">Option 02</option>
+                                            <option value="">Option 03</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-column three">
+                                    <div class="form-label">
+                                        Date
+                                    </div>
+                                    <div class="form-field calendar-field field--error">
+                                        <input type="text" class="fluid">
+                                        <span class="form-error">field error message goese here...</span>
+                                    </div>
+                                </div>
+                                <div class="form-column three">
+                                    <div class="form-label">
+                                        Status
+                                    </div>
+                                    <div class="form-field">
+                                        <select class="selectpicker" data-placeholder="" data-style="btn-select"
+                                                data-width="100%">
+                                            <option value="">Option 01</option>
+                                            <option value="">Option 02</option>
+                                            <option value="">Option 03</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-column three">
+                                    <div class="form-label">
+                                        Region
+                                    </div>
+                                    <div class="form-field">
+                                        <select class="selectpicker" data-placeholder="" data-style="btn-select"
+                                                data-width="100%">
+                                            <option value="">Option 01</option>
+                                            <option value="">Option 02</option>
+                                            <option value="">Option 03</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-column three">
+                                    <div class="form-label">
+                                        Dealer
+                                    </div>
+                                    <div class="form-field">
+                                        <select class="selectpicker" data-placeholder="" data-style="btn-select"
+                                                data-width="100%">
+                                            <option value="">Option 01</option>
+                                            <option value="">Option 02</option>
+                                            <option value="">Option 03</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-column three">
+                                    <div class="form-label">
+                                        Creator
+                                    </div>
+                                    <div class="form-field">
+                                        <select class="selectpicker" data-placeholder="" data-style="btn-select"
+                                                data-width="100%">
+                                            <option value="">Option 01</option>
+                                            <option value="">Option 02</option>
+                                            <option value="">Option 03</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-column three">
+                                    <button class="btn">Search</button>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="">
+                            <div class="table table--striped" style="overflow: hidden;">
+                                <!-- <table>
+                                     <thead>
+                                     <tr>
+                                         <th>No.</th>
+                                         <th>Type</th>
+                                         <th>Following</th>
+
+                                         <th>Customer Name</th>
+                                         <th>Follow Up Response</th>
+                                         <th>Program</th>
+                                         <th>Status</th>
+                                         <th>Action</th>
+                                         <th>Survey Date</th>
+                                         <th>Tags</th>
+                                         <th>Q1</th>
+                                         <th>Q2</th>
+                                         <th>Q2a</th>
+                                         <th>Q3</th>
+                                     </tr>
+                                     </thead>
+                                     <tbody>
+
+                                     <tr class="tr-border">
+                                         <td>0001</td>
+                                         <td class=""><div class="type"><i class="fas fa-globe"></i></div></td>
+                                         <td class="follow ">
+                                             <a href="javascript:void(0)"> Follow  </a>
+                                         </td>
+
+                                         <td>Ryan Smith</td>
+                                         <td class="responseToolTip">Response 01
+                                             <div class="response" title="Response"><i
+                                                     class="icon icon-commenting-o"></i>
+                                                 <div class="responseToolTipContent"><p>1 Lorem ipsum dolor sit amet,
+                                                     consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                                                     labore et dolore magna aliqua. Lorem ipsum dolor sit amet,
+                                                     consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                                                     labore et dolore magna aliqua. 02</p></div>
+                                             </div>
+                                         </td>
+                                         <td>&nbsp;</td>
+                                         <td class="status "><i title="In Progress"
+                                                                class="fal fa-spinner clr-amber"></i></td>
+                                         <td class="actions "><i class="icon icon-file-text-o "></i></td>
+                                         <td>11/21/17</td>
+                                         <td class="tags ">
+                                             <ul>
+
+                                                 <li><a class="service ">Service</a></li>
+                                             </ul>
+                                         </td>
+                                         <td class="qts "><span class="green ">10</span></td>
+                                         <td class="qts "><span class="blue ">8</span></td>
+                                         <td class="qts "><span class="red ">5</span></td>
+                                         <td class="qts "><span class="blue ">7</span></td>
+
+                                     </tr>
+
+
+                                     </tbody>
+                                 </table>-->
+
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <th width="3% ">No.</th>
+                                        <th width="5% ">Type</th>
+                                        <th width="7% ">Following</th>
+                                        <th width="5% ">R. Days</th>
+                                        <th width="13% ">Customer Name</th>
+                                        <th width="13% ">Dealers Name</th>
+                                        <th width="5% ">Program</th>
+                                        <th width="5% ">Status</th>
+                                        <th width="5% ">Action</th>
+                                        <th width="8% ">Survey Date</th>
+                                        <th width="19% ">Tags</th>
+                                        <th>Q1</th>
+                                        <th>Q2</th>
+                                        <th>Q2a</th>
+                                        <th>Q3</th>
+
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="">
+                                        <td>0001</td>
+                                        <td>
+                                            <div class="type"><i class="far fa-mobile "></i></div>
+                                        </td>
+                                        <td class="follow">
+                                            <a>follow</a>
+                                        </td>
+                                        <td class="red-bg ">2</td>
+                                        <td>Ryan Smith</td>
+                                        <td>Luxe Los Angeles</td>
+                                        <td>&nbsp;</td>
+                                        <td class="status "><i title="New" class="far fa-play-circle clr-green"></i>
+                                        </td>
+                                        <td class="actions "><i class="far fa-file-alt"></i></td>
+                                        <td>11/21/17</td>
+                                        <td class="tags ">
+                                            <ul>
+                                                <li><a class="dirty ">Dirty</a></li>
+
+                                            </ul>
+                                        </td>
+                                        <td class="qts "><span class="green ">10</span></td>
+                                        <td class="qts "><span class="blue ">8</span></td>
+                                        <td class="qts "><span class="red ">5</span></td>
+                                        <td class="qts "><span class="blue ">7</span></td>
+
+                                    </tr>
+                                    <tr class="">
+                                        <td>0001</td>
+                                        <td>
+                                            <div class="type"><i class="far fa-globe "></i></div>
+                                        </td>
+                                        <td class="follow ">
+                                            <a>follow</a>
+                                        </td>
+                                        <td class="red-bg ">2</td>
+                                        <td>Ryan Smith</td>
+                                        <td>Luxe Los Angeles</td>
+                                        <td>&nbsp;</td>
+                                        <td class="status "><i title="Late"
+                                                               class="fal fa-exclamation-triangle clr-red"></i></td>
+                                        <td class="actions "><i class="far fa-file-alt"></i></td>
+                                        <td>11/21/17</td>
+                                        <td class="tags ">
+                                            <ul>
+                                                <li><a class="dirty ">Dirty</a></li>
+
+                                            </ul>
+                                        </td>
+                                        <td class="qts "><span class="green ">10</span></td>
+                                        <td class="qts "><span class="blue ">8</span></td>
+                                        <td class="qts "><span class="red ">5</span></td>
+                                        <td class="qts "><span class="blue ">7</span></td>
+
+                                    </tr>
+                                    <tr class="">
+                                        <td>0001</td>
+                                        <td>
+                                            <div class="type"><i class="far fa-mobile"></i></div>
+                                        </td>
+                                        <td class="follow ">
+                                            <a>follow</a>
+                                        </td>
+                                        <td class="red-bg ">2</td>
+                                        <td>Ryan Smith</td>
+                                        <td>Luxe Los Angeles</td>
+                                        <td>&nbsp;</td>
+                                        <td class="status "><i title="In Progress"
+                                                               class="far fa-spinner clr-amber"></i></td>
+                                        <td class="actions "><i class="far fa-file-alt"></i></td>
+                                        <td>11/21/17</td>
+                                        <td class="tags ">
+                                            <ul>
+                                                <li><a class="dirty ">Dirty</a></li>
+
+                                            </ul>
+                                        </td>
+                                        <td class="qts "><span class="green ">10</span></td>
+                                        <td class="qts "><span class="blue ">8</span></td>
+                                        <td class="qts "><span class="red ">5</span></td>
+                                        <td class="qts "><span class="blue ">7</span></td>
+
+                                    </tr>
+                                    <tr class="">
+                                        <td>0001</td>
+                                        <td>
+                                            <div class="type"><i class="far fa-mobile"></i></div>
+                                        </td>
+                                        <td class="follow ">
+                                            <a>follow</a>
+                                        </td>
+                                        <td class="red-bg ">2</td>
+                                        <td>Ryan Smith</td>
+                                        <td>Luxe Los Angeles</td>
+                                        <td>&nbsp;</td>
+                                        <td class="status "><i title="Closed within Target"
+                                                               class="far fa-circle clr-green"></i></td>
+                                        <td class="actions "><i class="far fa-file-alt"></i></td>
+                                        <td>11/21/17</td>
+                                        <td class="tags ">
+                                            <ul>
+                                                <li><a class="dirty ">Dirty</a></li>
+
+                                            </ul>
+                                        </td>
+                                        <td class="qts "><span class="green ">10</span></td>
+                                        <td class="qts "><span class="blue ">8</span></td>
+                                        <td class="qts "><span class="red ">5</span></td>
+                                        <td class="qts "><span class="blue ">7</span></td>
+
+                                    </tr>
+
+                                    <tr class="">
+                                        <td>0001</td>
+                                        <td>
+                                            <div class="type"><i class="far fa-mobile "></i></div>
+                                        </td>
+                                        <td class="follow ">
+                                            <a>follow</a>
+                                        </td>
+                                        <td class="red-bg ">2</td>
+                                        <td>Ryan Smith</td>
+                                        <td>Luxe Los Angeles</td>
+                                        <td>&nbsp;</td>
+                                        <td class="status "><i title="Closed after Target"
+                                                               class="far fa-times-circle clr-red"></i></td>
+                                        <td class="actions "><i class="far fa-file-alt"></i></td>
+                                        <td>11/21/17</td>
+                                        <td class="tags ">
+                                            <ul>
+                                                <li><a class="dirty ">Dirty</a></li>
+
+                                            </ul>
+                                        </td>
+                                        <td class="qts "><span class="green ">10</span></td>
+                                        <td class="qts "><span class="blue ">8</span></td>
+                                        <td class="qts "><span class="red ">5</span></td>
+                                        <td class="qts "><span class="blue ">7</span></td>
+
+                                    </tr>
+
+
+                                    <tr class="">
+                                        <td>0001</td>
+                                        <td>
+                                            <div class="type"><i class="far fa-mobile "></i></div>
+                                        </td>
+                                        <td class="follow ">
+                                            <a>follow</a>
+                                        </td>
+                                        <td class="red-bg ">2</td>
+                                        <td>Ryan Smith</td>
+                                        <td>Luxe Los Angeles</td>
+                                        <td>&nbsp;</td>
+                                        <td class="status "><i title="Closed after Target"
+                                                               class="fas fa-triangle clr-red"></i></td>
+                                        <td class="actions "><i class="far fa-file-alt"></i></td>
+
+
+                                        <td>11/21/17</td>
+                                        <td class="tags ">
+                                            <ul>
+                                                <li><a class="dirty ">Dirty</a></li>
+
+                                            </ul>
+                                        </td>
+                                        <td class="qts "><span class="green ">10</span></td>
+                                        <td class="qts "><span class="blue ">8</span></td>
+                                        <td class="qts "><span class="red ">5</span></td>
+                                        <td class="qts "><span class="blue ">7</span></td>
+
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+</body>
+<script src='assets/scripts/jquery-1.12.3.min.js'></script>
+<script src="assets/scripts/bootstrap-dropdown.js"></script>
+<script src="assets/scripts/bootstrap-select.min.js"></script>
+
+</html>
+                                                                                                                                           

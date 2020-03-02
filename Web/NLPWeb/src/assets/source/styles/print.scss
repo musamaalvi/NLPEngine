@@ -1,0 +1,130 @@
+
+// framework config
+@import 'lib/config';
+
+// mixins
+@import 'lib/mixins/mixins';
+
+// Susy
+@import 'vendor/susy';
+// Breakpoint
+@import 'vendor/breakpoint';
+
+
+@import 'lib/reset'; // base - general styles
+
+// helper classes
+
+/**
+ * App Configuration
+ */
+@import 'app/app-config';
+// breakpoints - and other settings which aint related to theming
+// // Start app styles here:
+
+//@import 'app/sprite';
+//Vendors
+@import "vendor/roboto";
+@import "vendor/fontawesome/fontawesome";
+@import "vendor/fontawesome/light";
+@import "vendor/fontawesome/solid";
+@import "vendor/fontawesome/regular";
+@import "vendor/fontawesome/brands";
+
+
+@import 'app/layout';
+// positioning of modules - as per SMACSS approach
+@import 'app/base';
+// base styles
+@import 'app/typography';
+// base styles
+//@import 'app/media'; // icons/images/videos etc
+
+// forms styles
+@import 'app/main';
+@import 'app/grid';
+@import 'app/app-mixins';
+@import 'app/login';
+// Blocks
+@import 'app/header';
+@import 'app/nav';
+@import 'app/sidebar';
+
+@import 'app/forms';
+@import 'app/widget';
+// // Modules:
+@import 'modules/tabs';
+@import 'modules/arrows';
+@import 'modules/breadcrumbs';
+@import 'modules/customized__dashboard';
+@import 'modules/filters';
+//@import 'modules/animate';
+@import 'modules/timeline';
+@import 'modules/datepicker';
+@import 'modules/datepickerbs';
+@import 'modules/mcustomscrollbar';
+@import "vendor/owlcrousal/owl.carousel";
+@import 'app/table';
+@import 'app/pagination';
+@import 'app/buttons';
+@import 'app/modal';
+@import 'vendor/flags/flags';
+@import 'app/widgets/expriencekpi';
+@import 'app/widgets/lastdays';
+@import 'app/widgets/weeklytraffic';
+@import 'app/widgets/alerts';
+@import 'app/widgets/salesdriver';
+@import 'app/widgets/surveys';
+@import 'app/widgets/recentcomments';
+@import 'app/widgets/competionrate';
+@import 'app/widgets/areasforimprovement';
+@import 'app/widgets/tags';
+@import 'app/widgets/clbreakdown';
+@import 'app/widgets/clefficiency';
+@import 'app/widgets/obw';
+@import 'app/widgets/retailers';
+@import 'app/widgets/clre';
+@import 'app/widgets/emergingtrends';
+@import 'app/widgets/customerinquiries';
+@import 'app/widgets/autoreviews';
+@import 'app/widgets/topissues';
+@import 'app/widgets/topbottom';
+@import "app/widgets/responseanalysis";
+@import "app/widgets/multiplewidget";
+@import "app/widgets/multiplehotalerts";
+@import "app/widgets/sentimentanalysis";
+@import "app/widgets/customizeddashboard";
+@import "app/pages/notification__template";
+@import 'app/pages/socialmedia';
+@import "app/widgets/socialmediafeed";
+@import "app/widgets/socialmediacards";
+@import "app/socialmediacards";
+@import "app/widgets/categories";
+@import "app/widgets/total__alerts";
+@import "app/widgets/sales__questions";
+@import 'app/kpi';
+@import 'app/messages';
+@import 'app/tabletabs';
+@import "app/loader";
+@import 'app/pages/contact-manager';
+@import 'app/pages/balanced-scorecard';
+@import 'app/pages/action-planner';
+@import 'app/pages/text-analytics';
+@import 'app/pages/reportgenerator';
+@import 'app/pages/error';
+@import 'app/pages/customer-profile';
+@import 'app/pages/customer-raiting';
+@import 'app/pages/crosstab';
+@import 'app/pages/performancetrend';
+@import 'app/pages/manageuser';
+@import 'app/pages/surveylist';
+@import 'app/pages/ratinganalysis';
+@import 'app/pages/trendreport';
+@import 'app/pages/contactstatistics';
+@import 'app/pages/comment-list';
+@import 'app/pages/bulletins';
+@import 'app/toggle';
+@import 'app/translation';
+@import 'app/gridview';
+@import 'vendor/bootstrap-select/bootstrap-select';
+@import 'app/print';

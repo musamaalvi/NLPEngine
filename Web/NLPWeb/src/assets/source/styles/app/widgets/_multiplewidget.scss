@@ -1,0 +1,40 @@
+//multiple
+.widget--multiple {
+
+  overflow: hidden;
+
+  .widget--completedsurvey{
+    @include span(4 no-gutter);
+   // box-shadow: none;
+    box-shadow: 0px 0px 64px 0px rgba(0, 0, 0, 0.1);
+    padding-right: 25px;
+    padding-bottom: 5px;
+    position: relative;
+    @include arrow('right','center', 16px, $white);
+    background: $white;
+    border-radius: 0;
+    z-index: 1;
+
+    @include susy-breakpoint(1024px, $susy, '.no-mq') {
+      @include span(12);
+
+      @include arrow('bottom','center', 16px, $white);
+
+      &:after{
+        top: auto;
+      }
+    }
+
+  }
+
+  .widget--recentlyaddedsurveys{
+    @include span(8 no-gutter);
+    padding-left: 25px;
+    box-shadow: none;
+    border-radius: 0;
+    @include susy-breakpoint(1024px, $susy, '.no-mq') {
+      @include span(12);
+    }
+  }
+
+ }

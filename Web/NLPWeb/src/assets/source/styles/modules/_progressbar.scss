@@ -1,0 +1,118 @@
+//progressbar
+.progress-bar {
+  margin-top: 3px;
+  @include susy-breakpoint(1024px, $susy, '.no-mq') {
+    margin: 10px 0;
+    float: left;
+    width: 100%;
+    clear: both;
+  }
+
+  .progress__label {
+    margin-bottom: 5px;
+    font-size: 11px;
+    display: block;
+    color: #969dab;
+    span {
+      color: $clr-pri;
+    }
+  }
+
+  .progress {
+    width: 100%;
+    height: 7px;
+    float: left;
+    background: #e9ecef;
+    @include border-radius(3px);
+    overflow: hidden;
+    .progress__bar {
+      background: $clr-pri;
+      height: 7px;
+      float: left;
+      @include transition();
+    }
+
+    &.progress--green {
+      .progress__bar {
+        background: #00cccc;
+      }
+    }
+
+    &.progress--yellow {
+      .progress__bar {
+        background: $clr-yellow;
+      }
+    }
+
+    &.progress--pink {
+      .progress__bar {
+        background: #f10075;
+      }
+    }
+
+    &.progress--purple {
+      .progress__bar {
+        background: #6f42c1;
+      }
+    }
+
+    &.progress--gray {
+      .progress__bar {
+        background: #3f3f3f;
+      }
+    }
+
+    &.progress--blue {
+      .progress__bar {
+        background:$clr-blue;
+      }
+    }
+
+    /*&.progress--positive {
+      .progress__bar {
+        background: #54c5ab;
+      }
+    }
+
+    &.progress--negative {
+      .progress__bar {
+        background: #ff2b43;
+      }
+    }*/
+  }
+
+}
+
+.progress--modal {
+  float: right;
+  width: 320px;
+  max-width: 100%;
+  margin-top: 2px;
+  @include susy-breakpoint(1024px, $susy, '.no-mq') {
+    margin: 2px 0 0;
+    float: left;
+    width: 100%;
+  }
+
+  .progress__label {
+    float: left;
+    margin-bottom: 0;
+    margin-right: 10px;
+    @include susy-breakpoint(1024px, $susy, '.no-mq') {
+      margin: 0;
+    }
+  }
+
+  .progress {
+    margin-top: 3px;
+    width: 60%;
+    @include susy-breakpoint(1024px, $susy, '.no-mq') {
+      width: 100%;
+    }
+  }
+}
+
+.progress--topbottom {
+  min-width: 60px;
+  margin: 0;
+}

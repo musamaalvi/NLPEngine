@@ -1,0 +1,43 @@
+
+.widget--catfrequency {
+  .widget__content {
+    padding:20px;
+  }
+  .chart-sorting {
+    color: #888888;
+    font-size: 14px;
+    padding: 0 20px;
+    vertical-align: middle;
+    p {
+      span {
+        margin: 0 10px 0 0;
+      }
+    }
+  }
+}
+
+.frequency-charts{
+  .chart__frequency{
+    @include span(8);
+    padding-right: 30px;
+    text-align: right;
+    @include susy-breakpoint(1024px, $susy, '.no-mq') {
+      @include span(12 no-gutter);
+      padding-right: 0;
+    }
+  }
+  .chart__score{
+    @include span(4);
+    @include susy-breakpoint(1024px, $susy, '.no-mq') {
+      @include span(12 no-gutter);
+     // padding-right: 0;
+    }
+    .chart-sorting {
+      p {
+        span {
+          margin: 0 0 0 10px;
+        }
+      }
+    }
+  }
+}

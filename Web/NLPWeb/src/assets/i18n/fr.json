@@ -1,0 +1,62 @@
+{
+  "titles" : {
+    "dashboard": "Tableau de bord principal",
+    "alerts": "Tableau de bord des alertes",
+    "contactStatistics": "Contactez Statictics"
+  },
+  "filterBar": {
+    "hierarchy": "Hiérarchie",
+    "datatype": "Type de données",
+    "models": "Des modèles",
+    "surveytype": "Type d'enquête",
+    "daterange": "Gamme Date",
+    "action": "Action",
+    "applyfilters": "Appliquer des filtres"
+  },
+  "programs": {
+    "sales": "Ventes",
+    "services": "Prestations de service"
+  },
+  "headerTaps": {
+    "Dashboard": "Tableau de bord",
+    "Alerts": "Alertes",
+    "Reports": "Rapports",
+    "Cross Tab": "Cross Tab",
+    "Survey Builder": "Enquête Builder",
+    "Text Analytics": "Text Analytics",
+    "Report Generator": "Générateur de rapports",
+    "Social Media": "Des médias sociaux"
+  },
+  "Description": "La description",
+  "Dashboard": "Tableau de bord",
+  "Alerts": "Alertes",
+  "Reports": "Rapports",
+  "Cross Tab": "Cross Tab",
+  "Survey Builder": "Enquête Builder",
+  "Text Analytics": "Text Analytics",
+  "Report Generator": "Générateur de rapports",
+  "Social Media": "Des médias sociaux",
+  "Main Dashboard": "Tableau de bord principal",
+  "Survey List": "Liste de sondage",
+  "Email Edits": "E-mail Edits",
+  "Customer Search": "Recherche client",
+  "Resend Survey": "Re-expédition",
+  "Language": "Langue",
+  "Notification Template": "Modèle de notification",
+  "Welcome": "Bienvenue",
+  "Back": "Retour",
+  "Portal Translation": "Portail de traduction",
+  "Admin Module": "Module d'administration",
+  "Help": "Aidez-moi",
+  "Logout": "Se déconnecter",
+  "Hot Alerts List": "Hot List Alertes",
+  "Organization Summary": "Organisation Résumé",
+  "Management Report": "Rapport de gestion",
+  "Portal Traffic": "Portail du trafic",
+  "Target Score Update": "Mise à jour Score cible",
+  "All": "Tout",
+  "All Models": "Tous les modèles",
+  "View": "Vue",
+  "Survey Type": "Type d'enquête",
+  "Email Disposition Report": "Envoyer Rapport Disposition"
+}

@@ -1,0 +1,38 @@
+// App configuration file. Usually contains variables that are not theme related.
+$susy: (
+        container:700px,
+        math: fluid,
+        columns: 12,
+  // gutters: 0.20,
+  //gutter-position: inside
+        column-width:80px,
+        gutter: 10px/80px,
+        gutter-position: inside-static
+);
+// debug: (image: show-columns)
+// layout
+$wide: (
+        columns: 24,
+        container: 100%,
+        gutters: 0.25,
+        gutter-position: inside,
+        debug: (image: show-columns)
+);
+// Same results:
+// @include layout(24 0.25 100% float inside)
+// $wide : layout(24 0.25 100% float inside)
+
+@include breakpoint-set('default feature', max-width);
+// $breakpoint-default-pair: height; // default is width
+// // $breakpoint-to-ems: true; // default is width
+$BREAKPOINTS: (
+        'tablets' : (768px, 'no-query' true),
+        'desktop': (1200px, 'no-query' true),
+  //  'large': (1369px, 'no-query' true),
+        'retina' : min-resolution 1.5dppx,
+        'touch': (pointer coarse, 'no-query' '.touch'),
+);
+// $breakpoint-no-query-fallbacks: '.touch';
+
+
+

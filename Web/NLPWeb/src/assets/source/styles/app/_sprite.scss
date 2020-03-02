@@ -1,0 +1,145 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$all-name: 'all';
+$all-x: 0px;
+$all-y: 64px;
+$all-offset-x: 0px;
+$all-offset-y: -64px;
+$all-width: 18px;
+$all-height: 19px;
+$all-total-width: 85px;
+$all-total-height: 83px;
+$all-image: '../images/sprite/sprite.png';
+$all: (0px, 64px, 0px, -64px, 18px, 19px, 85px, 83px, '../images/sprite/sprite.png', 'all', );
+$audi-name: 'audi';
+$audi-x: 47px;
+$audi-y: 46px;
+$audi-offset-x: -47px;
+$audi-offset-y: -46px;
+$audi-width: 36px;
+$audi-height: 12px;
+$audi-total-width: 85px;
+$audi-total-height: 83px;
+$audi-image: '../images/sprite/sprite.png';
+$audi: (47px, 46px, -47px, -46px, 36px, 12px, 85px, 83px, '../images/sprite/sprite.png', 'audi', );
+$drag-name: 'drag';
+$drag-x: 0px;
+$drag-y: 0px;
+$drag-offset-x: 0px;
+$drag-offset-y: 0px;
+$drag-width: 39px;
+$drag-height: 41px;
+$drag-total-width: 85px;
+$drag-total-height: 83px;
+$drag-image: '../images/sprite/sprite.png';
+$drag: (0px, 0px, 0px, 0px, 39px, 41px, 85px, 83px, '../images/sprite/sprite.png', 'drag', );
+$ford-name: 'ford';
+$ford-x: 44px;
+$ford-y: 0px;
+$ford-offset-x: -44px;
+$ford-offset-y: 0px;
+$ford-width: 41px;
+$ford-height: 15px;
+$ford-total-width: 85px;
+$ford-total-height: 83px;
+$ford-image: '../images/sprite/sprite.png';
+$ford: (44px, 0px, -44px, 0px, 41px, 15px, 85px, 83px, '../images/sprite/sprite.png', 'ford', );
+$isky-name: 'isky';
+$isky-x: 0px;
+$isky-y: 46px;
+$isky-offset-x: 0px;
+$isky-offset-y: -46px;
+$isky-width: 42px;
+$isky-height: 13px;
+$isky-total-width: 85px;
+$isky-total-height: 83px;
+$isky-image: '../images/sprite/sprite.png';
+$isky: (0px, 46px, 0px, -46px, 42px, 13px, 85px, 83px, '../images/sprite/sprite.png', 'isky', );
+$ibex-name: 'ibex';
+$ibex-x: 44px;
+$ibex-y: 20px;
+$ibex-offset-x: -44px;
+$ibex-offset-y: -20px;
+$ibex-width: 29px;
+$ibex-height: 19px;
+$ibex-total-width: 85px;
+$ibex-total-height: 83px;
+$ibex-image: '../images/sprite/sprite.png';
+$ibex: (44px, 20px, -44px, -20px, 29px, 19px, 85px, 83px, '../images/sprite/sprite.png', 'ibex', );
+$spritesheet-width: 85px;
+$spritesheet-height: 83px;
+$spritesheet-image: '../images/sprite/sprite.png';
+$spritesheet-sprites: ($all, $audi, $drag, $ford, $isky, $ibex, );
+$spritesheet: (85px, 83px, '../images/sprite/sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

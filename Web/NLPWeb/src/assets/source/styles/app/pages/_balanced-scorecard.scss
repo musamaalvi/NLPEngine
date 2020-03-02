@@ -1,0 +1,13 @@
+//balanced-scorecard
+.page-balanced-scorecard {
+    @include nested(10) {
+        .kpi {
+            @include span(2);
+            // margin-bottom: gutter();
+            // &:nth-child(5n) {
+            // @include last;
+            // }
+        }
+    }
+}
+

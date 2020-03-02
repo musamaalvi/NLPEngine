@@ -1,0 +1,92 @@
+.widget--sentimentcount {
+  .widget__content {
+    @include clearfix();
+  }
+
+  .highcharts-tooltip > span {
+    padding: 8px;
+    background-color: rgba(255, 255, 255, 1);
+    background-color: white \9
+  ; /* < IE11 */
+    //  border: 1px solid #a8a7a5;
+    z-index: 9999 !important;
+  }
+
+  .widget__graph {
+    @include span(6);
+
+    .chart__score{
+     cursor: pointer;
+    }
+
+    @include susy-breakpoint(1024px, $susy, '.no-mq') {
+      @include span(12);
+    }
+
+    div {
+      margin: 0 auto;
+    }
+
+    .alert__count {
+      font-size: 10px;
+      color: red;
+    }
+
+  }
+
+  .widget__counts {
+    @include span(6);
+    height: 200px;
+    position: relative;
+    @include susy-breakpoint(1024px, $susy, '.no-mq') {
+      @include span(12);
+      height: auto;
+    }
+
+  }
+
+  .counts__table {
+    @include center(vertical);
+    width:90%;
+    @include susy-breakpoint(1024px, $susy, '.no-mq') {
+      position: static;
+      top: 0;
+      transform: none;
+      width:100%;
+    }
+
+    table {
+      width: 100%;
+      td {
+        color: #969dab;
+        padding: 5px 0;
+        font-size: 16px;
+        vertical-align: middle;
+
+        div{
+          display: inline-block;
+        }
+
+        .count__percentage {
+          margin: 0 5px;
+          white-space: nowrap;
+        }
+
+        .series__name {
+         // font-size: 13px;
+        }
+      }
+    }
+
+    .count__symbol {
+      width: 8px;
+      background: $clr-gray;
+      margin-right:5px;
+      height: 8px;
+      border-radius: 100%;
+      display: inline-block;
+    }
+
+  }
+
+}

@@ -1,0 +1,68 @@
+.survey-completion {
+  .completion__item {
+    margin-bottom: 20px;
+    float: left;
+    width: 100%;
+
+    h2 {
+      color: #212229;
+      font-weight:500;
+      font-size:22px;
+      margin-bottom: 5px;
+    }
+    p {
+      float:left;
+      color: #494c57;
+      font-size:16px;
+      margin-bottom:0;
+    }
+
+    .completion__percentage{
+      color: #494c57;
+      float: right;
+      font-size:14px;
+    }
+
+    .progress-bar {
+      float: left;
+      width: 100%;
+      margin:8px 0;
+      span{
+        float:left;
+        animation: grower 3s linear;
+        -moz-animation: grower 3s linear;
+        -webkit-animation: grower 3s linear;
+        -o-animation: grower 3s linear;
+        height:7px;
+      }
+    }
+
+    .survey__legends{
+      color:#494c57;
+      font-size:14px;
+      float: left;
+      padding-left:15px;
+      position: relative;
+
+      &:before{
+        content:'';
+        position: absolute;
+        width: 7px;
+        left:0;
+        top:5px;
+        background: #007bff;
+        height: 7px;
+      }
+
+      &.legends--right{
+        float: right;
+        &:before{
+          background:#6f42c1;
+        }
+      }
+    }
+
+  }
+}
+
+

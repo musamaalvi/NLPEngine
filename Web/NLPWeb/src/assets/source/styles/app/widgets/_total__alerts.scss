@@ -1,0 +1,157 @@
+.widget--totalhotalerts {
+  .widget__content {
+    @include clearfix();
+  }
+
+  .highcharts-tooltip > span {
+    padding: 8px;
+    background-color: rgba(255, 255, 255, 1);
+    background-color: white \9
+  ; /* < IE11 */
+    //  border: 1px solid #a8a7a5;
+    z-index: 9999 !important;
+  }
+
+  .widget__graph {
+    @include span(6);
+
+    @include susy-breakpoint(1024px, $susy, '.no-mq') {
+      @include span(12);
+    }
+
+    div {
+      margin: 0 auto;
+    }
+
+    .alert__count {
+      font-size: 10px;
+      color: red;
+    }
+
+  }
+
+  .widget__counts {
+    @include span(6);
+    height: 230px;
+    position: relative;
+    @include susy-breakpoint(1024px, $susy, '.no-mq') {
+      @include span(12 no-gutters);
+      height: auto;
+    }
+
+  }
+
+  .counts__table {
+    @include center(vertical);
+    width: 100%;
+    @include susy-breakpoint(1024px, $susy, '.no-mq') {
+      position: static;
+      top: 0;
+      transform: none;
+    }
+
+    table {
+      width: 100%;
+      td {
+        color: #969dab;
+        padding: 5px 0;
+        font-size: 16px;
+        vertical-align: middle;
+
+        .count__percentage {
+          margin: 0 10px;
+          white-space: nowrap;
+        }
+
+        .series__name {
+          font-size: 13px;
+        }
+      }
+    }
+
+    .count__symbol {
+      width: 8px;
+      background: $clr-gray;
+      margin-right: 10px;
+      height: 8px;
+      border-radius: 100%;
+      display: inline-block;
+    }
+
+  }
+
+}
+
+//pie chart
+
+.pie-chart {
+  text-align: center;
+  span {
+    display: block;
+    padding-bottom: 2px;
+  }
+
+  .chart__title {
+    font-weight: normal;
+    //cursor: pointer;
+  }
+
+  .chart__count {
+    font-size: 30px;
+
+  }
+
+  .chart__label {
+    font-size: 11px;
+    font-weight: normal;
+  }
+
+  .chart__link {
+    font-size: 14px;
+    color: $clr-pri;
+    cursor: pointer;
+    font-weight: normal;
+  }
+
+}
+
+.hc-clr-new {
+  background: #3BB001 !important;
+}
+
+.hc-clr-inprogress {
+  background: #FFC107 !important;
+}
+
+.hc-clr-late {
+  background: #FD7E14 !important;
+}
+
+.hc-clr-closedintarget {
+  background: #007BFF !important;
+}
+
+.hc-clr-closedouttarget {
+  background: #DC3545 !important;
+}
+
+.hc-clr-followupyes {
+  background: #27D4D4 !important;
+}
+
+.hc-clr-followupno {
+  background: #17A2B8 !important;
+}
+
+
+.clr-green-background{
+  color: $clr-green !important;
+}
+
+.clr-red-background{
+  color: $clr-red !important;
+}
+
+.clr-yellow-background{
+  color: $clr-yellow !important;
+}

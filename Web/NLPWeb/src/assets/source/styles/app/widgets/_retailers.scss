@@ -1,0 +1,100 @@
+//retailer
+
+.widget--retailer {
+
+  .widget__content {
+    @include clearfix();
+    padding: 0;
+  }
+
+  .retailer__header{
+    background: #ebeef0;
+    padding: 10px;
+    text-align: center;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom:20px;
+    font-size: 14px;
+  }
+
+  .top__retailer {
+    @include span(6 no-gutters);
+     padding:0 20px;
+    border-right: 1px solid #ebeef0;
+    margin-top:20px;
+    position: relative;
+    min-height:250px;
+    @include susy-breakpoint(1024px, $susy, '.no-mq') {
+      @include span(12);
+      padding: 0 20px;
+    }
+  }
+
+  .bottom__retailer {
+    position: relative;
+    @include span(6 no-gutters);
+    padding:0 20px 0;
+    margin-top:20px;
+    min-height: 300px;
+
+    @include susy-breakpoint(1024px, $susy, '.no-mq') {
+      @include span(12);
+      padding: 0 20px;
+    }
+
+  }
+
+}
+
+.retailer__list {
+  counter-reset: my-badass-counter;
+  margin: 8px 0 0;
+
+  li {
+    margin: 0 0 15px 0;
+    padding-left:50px;
+    position: relative;
+    float: left;
+    width: 100%;
+
+
+    &:before {
+      content: counter(my-badass-counter);
+      counter-increment: my-badass-counter;
+      position: absolute;
+      left:0;
+      top:4px;
+      font-size: 14px;
+      color: #34495e;
+      width: 34px;
+      height: 34px;
+      text-align: center;
+      @include border-radius(100%);
+      background: #ebeef0;
+      line-height: 34px;
+    }
+
+    .retailer__title{
+      float: left;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: normal;
+    }
+
+    .retailer__count{
+      float: right;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .progress {
+      margin:5px 0 0;
+      height: 14px;
+      .progress-bar{
+        height: 14px;
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,416 @@
+$cat-clr: #949ea9;
+$cat-sel: #606060;
+$cat-bg: #effafd;
+$cat-heading: #6b6b6b;
+$placeholder: #6b6b6b;
+$base: #158EC6;
+
+.categories {
+  @include clearfix();
+  padding: 0;
+  .cat__column {
+    @include span(4 no-gutter);
+
+    .cat__content {
+      ul {
+        border-left: 1px solid #ebebeb;
+      }
+
+    }
+
+    &:first-child {
+      .cat__content {
+        ul {
+          border-left: 0;
+        }
+
+      }
+    }
+  }
+  .cat__content {
+    float: left;
+    width: 100%;
+    position: relative;
+  }
+  .cat__heading {
+    padding: 15px 10px 10px 20px;
+    border-bottom: 1px solid #ebebeb;
+    h3 {
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: 500;
+      display: inline-block;
+      color: #a9b4bd;
+    }
+  }
+  .cat__control {
+    float: right;
+    margin-top: -5px;
+    position: relative;
+
+    .control__link {
+      border-radius: 100%;
+      background: #eff0f2;
+      width: 22px;
+      height: 22px;
+      display: inline-block;
+      line-height: 22px;
+      font-size: 12px;
+      text-align: center;
+      color: #969dab;
+      border: 1px solid #ebebeb;
+      &:hover {
+        background: $clr-pri;
+        color: #fff;
+      }
+    }
+
+    .add__categories {
+      input[type="text"] {
+        width: 100%;
+        padding:6px 10px;
+        @include border-radius(3px);
+        border: 1px solid #d0d7dd;
+        font-family: $font-pri;
+        font-size: 12px;
+        color: #666;
+
+        &:focus {
+          -webkit-box-shadow: 0px 0px 10px 0px rgba(119, 119, 119, 0.25);
+          -moz-box-shadow: 0px 0px 10px 0px rgba(119, 119, 119, 0.25);
+          box-shadow: 0px 0px 10px 0px rgba(119, 119, 119, 0.25);
+        }
+        &:disabled {
+          background: #f1f1f1;
+          opacity: 0.5;
+        }
+
+        &.field--error {
+          input[type="text"],
+          input[type="url"],
+          input[type="email"],
+          input[type="password"] {
+            border-color: $clr-red;
+          }
+        }
+
+      }
+    }
+
+  }
+  .cat__list {
+    min-height: 350px;
+  //  overflow-x: auto;
+
+    .mCSB_scrollTools {
+      right: -4px;
+      top: 0;
+    }
+    li {
+      position: relative;
+      transition: 0.5s ease-out;
+      border-bottom: 1px solid #ebebeb;
+      a {
+        display: block;
+        color: #34495e;
+        font-size: 12px;
+        padding: 10px 55px 10px 20px;
+        position: relative;
+      }
+      &.new {
+        > a {
+
+          font-style: italic;
+          color: #d3d3d4;
+          &:before {
+            font-family: "Font Awesome 5 Pro";
+            content: "\f005";
+            height: 12px;
+            color: $clr-amber;
+            font-style: normal;
+            width: 12px;
+            display: inline-block;
+            margin-right: 5px;
+          }
+        }
+
+      }
+      input[type="text"] {
+        width: 80%;
+        padding: 8px 10px;
+        @include border-radius(3px);
+        border: 1px solid #d0d7dd;
+        font-family: $font-pri;
+        font-size: 12px;
+        color: #666;
+
+        &:focus {
+          -webkit-box-shadow: 0px 0px 10px 0px rgba(119, 119, 119, 0.25);
+          -moz-box-shadow: 0px 0px 10px 0px rgba(119, 119, 119, 0.25);
+          box-shadow: 0px 0px 10px 0px rgba(119, 119, 119, 0.25);
+        }
+        &:disabled {
+          background: #f1f1f1;
+          opacity: 0.5;
+        }
+
+        &.field--error {
+          input[type="text"],
+          input[type="url"],
+          input[type="email"],
+          input[type="password"] {
+            border-color: $clr-red;
+          }
+        }
+
+      }
+      .category__control {
+        position: absolute;
+        right: 0;
+        top: 5px;
+        transition: 0.5s ease-out;
+        opacity: 0;
+        transform: translateY(10px);
+        visibility: hidden;
+        a {
+          padding: 5px 10px;
+          position: static;
+          float: left;
+          &.translation--link {
+            // padding: emify(8, 10) emify(7, 10) emify(4, 10);
+          }
+
+          i {
+            font-size: 14px;
+          }
+
+          &:hover,
+          &:active {
+            color: $clr-pri;
+          }
+          &.hide {
+            display: none !important;
+          }
+        }
+      }
+      &:hover {
+        //color: $clr-pri;
+        a {
+          color: $clr-pri;
+        }
+        .category__control {
+          opacity: 1;
+          transform: translateY(0);
+          visibility: visible;
+        }
+      }
+      &.selected {
+        padding: 5px 5px 5px 18px;
+        .translation--link {
+          opacity: 0.5;
+        }
+      }
+      &.active {
+        background: #f5f6f7;
+        border-left: 3px solid $clr-pri;
+        color: #666;
+        .category__control {
+          opacity: 1;
+          transform: translateY(0);
+          visibility: visible;
+
+          a {
+            &:hover,
+            &:active {
+              color: $clr-pri;
+            }
+          }
+        }
+        &:hover {
+          a {
+            //   color: $cat-clr;
+          }
+        }
+      }
+    }
+  }
+}
+
+$notificationbg: #88c057;
+.cat-notification {
+  float: right;
+  font-size: 1rem;
+  min-width: 230px;
+  max-width: 40%;
+  margin-right: emify(10, 10);
+  @include border-radius(12px);
+  background-color: $notificationbg;
+  color: $white;
+  padding: emify(5, 10) emify(10, 10);
+  padding-right: emify(25, 10);
+  @include clearfix();
+  transform: translateY(0);
+  @include transition();
+  opacity: 0;
+  p {
+    font-size: emify(12, 10);
+    float: left;
+  }
+  a {
+    position: absolute;
+    right: 10px;
+    top: 4px;
+    // float: right;
+    // margin-left: emify(10, 10);
+    color: $white;
+  }
+  &.active {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  &.notification--danger {
+    background: $clr-red;
+  }
+  .modal--keywordsconfiguration & {
+    &.active {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+}
+
+///add category
+
+$tl: 0.6s; // transition length
+
+.search-box {
+  transition: width $tl, border-radius $tl, background $tl, box-shadow $tl;
+  width: 28px;
+  height: 28px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  border-color: #d6dade;
+  background: $white;
+  & + label .search-icon {
+    color: #9d9d9d;
+    vertical-align: middle;
+    &:before {
+      font-size: 13px;
+      position: relative;
+      // top: 1px;
+    }
+  }
+
+  .icon {
+
+  }
+  &:hover {
+    color: white;
+    background: $clr-pri;
+    box-shadow: 0 0 0 5px $clr-pri;
+    border-color: $white;
+    & + label .search-icon {
+      color: white;
+    }
+  }
+  &:focus {
+    transition: width $tl cubic-bezier(0, 1.22, .66, 1.39), border-radius $tl, background $tl;
+    // border: none;
+    outline: none;
+    box-shadow: none;
+    padding-left: 15px;
+    cursor: text;
+    width: 250px;
+    padding-right: 25px;
+    border-radius: 3px;
+    background: $white;
+    color: black;
+    & + label .search-icon {
+      color: $clr-pri;
+    }
+  }
+  &:not(:focus) {
+    text-indent: -5000px;
+  }
+  // for more-graceful falling back (:not browsers likely support indent)
+}
+
+#search-submit {
+  position: relative;
+  left: -5000px;
+}
+
+.search-icon {
+  left: -22px;
+  color: white;
+  position: relative;
+  cursor: pointer;
+  top: 1px;
+}
+
+.extract-filter {
+  float: right;
+  position: relative;
+  .filter__link {
+    @include border-radius(50%);
+  //  background: $white;
+    display: inline-block;
+    font-size: 20px;
+    line-height: 28px;
+    width: 28px;
+    text-align: center;
+    height: 28px;
+    color: #a0a6ac;
+    transition: none;
+    .icon {
+      &:before {
+        vertical-align: middle;
+      }
+    }
+    &:hover {
+      background: #eeeeee;
+      color: #34495e;
+    }
+    &.active {
+      background: #e4e4e4;
+      color: #34495e;
+    }
+  }
+  .filter__dropdown {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    margin: 10px 0 0 0;
+    min-width: 240px;
+    background: $white;
+    @include border-radius(5px);
+    z-index: 1;
+    overflow: hidden;
+    box-shadow: 0px 2px 7px 0px rgba(35, 31, 32, 0.36);
+    @include transition();
+    opacity: 0;
+    transform: translateY(-10px);
+    visibility: hidden;
+    &.dropdown--active {
+      opacity: 1;
+      transform: translateY(2px);
+      visibility: visible;
+    }
+  }
+  .filter__list {
+    font-size: 12px;
+    text-align: left;
+    font-weight: normal;
+    li {
+      display: block;
+      i{
+        margin-right: 5px;
+      }
+      a {
+        display: block;
+        padding: 8px 10px;
+      }
+    }
+  }
+}

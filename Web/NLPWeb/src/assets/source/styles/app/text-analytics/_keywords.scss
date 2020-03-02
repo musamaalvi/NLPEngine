@@ -1,0 +1,371 @@
+//kewords
+$keywordtitle: #5b6c7c;
+.keywords {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  padding: 0 20px 20px;
+
+  .keywords__col {
+    display: table-cell;
+    width: 41%;
+
+    h2 {
+      font-size:13px;
+      font-weight:400;
+      display: inline-block;
+      color:#212229;
+      margin-bottom: 10px;
+    }
+    &.keywords__sorting {
+      text-align: center;
+      padding:10px;
+      vertical-align: middle;
+      width: 8%;
+    }
+  }
+  .keywords__content {
+    border: 1px solid #d6dade;
+    padding: 10px;
+    position: relative;
+    @include border-radius(5px);
+  }
+  .keywords__list {
+    @include clearfix();
+
+    .mCSB_scrollTools {
+      top: 0;
+      right: -4px;
+    }
+    ul {
+      height: 300px;
+      overflow-y: auto;
+      .mCSB_container {
+        //height: 100% !important;
+        overflow: visible !important;
+      }
+    }
+  }
+  .keywords__header {
+    @include clearfix();
+    height: 25px;
+    margin-bottom: 20px;
+
+    .edit-field {
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: normal;
+      display: inline-block;
+      color: $keywordtitle;
+    }
+  }
+  .keywords--btn {
+
+    &:before {
+      font-family: "Font Awesome 5 Pro";
+      content: "\f060";
+      top: 10px;
+      left: 10px;
+    }
+    &:hover {
+      background: $clr-pri;
+      color: $white;
+      &:before {
+        animation: error 0.8s ease;
+      }
+    }
+    &.hover {
+      background: $clr-pri;
+      color: $white;
+      &:before {
+        animation: error 0.8s ease;
+      }
+    }
+  }
+}
+
+$placeholder: #cccccc;
+$lightblue: #e8f2f6;
+.keywords__control {
+  float: right;
+  width: 100%;
+  text-align: right;
+  margin-bottom: 15px;
+
+  .keyword__field {
+    display: inline-block;
+    position: relative;
+  }
+
+  .search-btn {
+    position: absolute;
+    right: 10px;
+    top: 11px;
+
+    i {
+      &:before {
+        font-size: 14px;
+        color: #b3b3b3;
+      }
+    }
+  }
+
+  input[type=text] {
+
+    &.keyword__search {
+      width: 170px;
+      border: 1px solid #d6dade;
+      text-transform: none;
+      background: #f8f9fa;
+      margin-left: 5px;
+      padding: 10px;
+      color: $black;
+      text-align: left;
+      font-size: 14px;
+      height: 36px;
+      vertical-align: top;
+      margin-top: 0;
+      border-radius: 3px;
+      @include placeholder {
+        color: $placeholder;
+      }
+
+      //&.new--field {
+      //  font-family: 'Font Awesome 5 Pro', 'Roboto', sans-serif;
+      //  padding-bottom: emify(2, 10);
+      //}
+    }
+
+  }
+
+  .btn {
+    margin-left: 5px;
+    vertical-align: top;
+  }
+
+}
+
+.keywords__legend {
+  padding-top: 15px;
+  ul {
+    li {
+      display: block;
+      font-size: 12px;
+      margin-bottom: 7px;
+      position: relative;
+      padding-left: 20px;
+      .icon {
+        position: absolute;
+        color: $clr-red;
+        font-size: 14px;
+        left: 0;
+      }
+      &.non-representative {
+        .icon {
+          color: $clr-pri;
+        }
+      }
+    }
+  }
+}
+
+$tabactive: #efefef;
+$tagborder: #cccccc;
+$tagclr: #2d2d2d;
+.tags-keyword {
+  list-style-type: none;
+  width: 100%;
+  font-size: 1rem;
+  .tag__item {
+    position: relative;
+    display: inline-block;
+    border: 2px solid $clr-red;
+    vertical-align: middle;
+    padding:8px 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    .icon {
+      padding-left: 6px;
+      vertical-align: middle;
+    }
+    a {
+      color: $tagclr;
+      font-size: 14px;
+      font-weight: 400;
+      &:hover {
+        color: $clr-pri;
+      }
+    }
+    &.active {
+      a {
+        color: $clr-pri;
+      }
+      border-bottom: 2px solid $clr-pri;
+    }
+    &.tag--nonrepresentativekeywords {
+      border-color: $clr-pri;
+      &.tag--selected {
+        background: $clr-pri;
+      }
+    }
+    &.tag--selected {
+      background: $clr-red;
+      a {
+        color: $white;
+        //font-weight: bold;
+      }
+      // border-style:dashed;
+    }
+    &.tag--unassigned {
+      a {
+        color: #cecdcd;
+      }
+      border-color: #cecdcd;
+      &.tag--selected {
+        background: #cecdcd;
+        a {
+          color: $white;
+        }
+      }
+    }
+    &.tag--positive {
+      a {
+        color: $clr-green;
+      }
+      border-color: $clr-green;
+      &.tag--selected {
+        background: $clr-green;
+        a {
+          color: $white;
+        }
+      }
+    }
+    &.tag--negative {
+      a {
+        color: $clr-red;
+      }
+      border-color: $clr-red;
+      &.tag--selected {
+        background: $clr-red;
+        a {
+          color: $white;
+        }
+      }
+    }
+    &.tag--neutral {
+      a {
+        color: $clr-amber;
+      }
+      border-color: $clr-amber;
+      &.tag--selected {
+        background: $clr-amber;
+        a {
+          color: $white;
+        }
+      }
+    }
+  }
+  &.tags--available {
+    .tag__item {
+      border: 1px solid #ebebeb;
+      a {
+        color: $clr-pri;
+        &:hover {
+          color: $tagclr;
+        }
+      }
+      &.tag--selected {
+        background: $clr-pri;
+        a {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.keywordConfiguration {
+  .last-updated {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-bottom: 1px solid #eceef1;
+    font-size: 12px;
+    @include border-radius-separate(7px, 7px, 0, 0);
+
+    p {
+      font-weight: 600;
+      color: #a3afba;
+
+      span {
+        color: $clr-pri;
+      }
+    }
+
+    .icon {
+      margin-right: 5px;
+    }
+
+  }
+}
+
+.modal {
+  &.modal--keywordsconfiguration {
+    .modal__outer {
+      .modal__inner {
+
+        .last-updated {
+          position: absolute;
+          right: 50px;
+          background: #f8f9fa;
+          padding: 10px 25px;
+          border-radius: 20px;
+          top: 15px;
+
+          .icon {
+            margin-right: 5px;
+          }
+
+          p {
+            font-weight: 600;
+            color: #a3afba;
+            font-size: 12px;
+
+            span {
+              color: $clr-pri;
+            }
+          }
+
+        }
+        .modal__content {
+
+          .keywords {
+            padding-top: 0;
+          }
+
+
+
+        }
+
+      }
+    }
+
+  }
+}
+
+.icon-positive {
+  color: $clr-green;
+}
+
+.icon-neutral {
+  color: $clr-amber;
+}
+
+.icon-negative {
+  color: $clr-red;
+}
+
+
+.suggested__keyword{
+  float: right;
+  margin: -3px 0 0 0;
+}

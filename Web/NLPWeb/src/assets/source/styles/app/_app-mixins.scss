@@ -1,0 +1,45 @@
+// App specific mixins (if any)
+//bleed for negative gutters
+@mixin bleed($padding: $grid-padding, $sides: left right) {
+    @if $sides=='all' {
+        margin: - $padding;
+        padding: $padding;
+    }
+    @else {
+        @each $side in $sides {
+            margin-#{$side}: - $padding;
+            padding-#{$side}: $padding;
+        }
+    }
+}
+
+//box shadow
+%box-shadow {
+    box-shadow: 0 1px 5px #ccc;
+}
+
+//box shadow topnone
+%box-shadowTN {
+    box-shadow: 0 2px 2px rgba(1, 1, 1, .35);
+}
+
+
+$default-tr-property: all;
+$default-tr-duration: 0.3s;
+$default-tr-function:ease-in-out;
+
+
+// Transition:
+@mixin transition ($property: $default-tr-property, $duration: $default-tr-duration, $function: $default-tr-function, $delay: 0s) {
+    transition: $property $duration $function;
+    transition-delay: $delay;
+}
+
+
+@mixin placeholder {
+    ::-webkit-input-placeholder {@content}
+    :-moz-placeholder           {@content}
+    ::-moz-placeholder          {@content}
+    :-ms-input-placeholder      {@content}
+}
+

@@ -1,0 +1,80 @@
+.toggle {
+
+  ul {
+    li {
+      display: table-cell;
+      vertical-align: middle;
+      label {
+        font-size:13px;
+        font-weight:400;
+        color: #969dab;
+
+        cursor: pointer;
+        margin: 0;
+
+        &.active{
+          color: #212229;
+        }
+
+
+        :active {
+          color:#969dab;
+        }
+
+        &.toggle__switch {
+          margin: 0 10px;
+        }
+
+        &.label--toggle{
+          margin-right: 10px;
+          color: #969dab;
+        }
+      }
+
+
+    }
+
+    .help-icon{
+      margin-right: 10px;
+      font-size: 18px;
+      color: #b3b3b3;
+    }
+  }
+
+  &.toggle--right {
+    float: right;
+  }
+
+  input {
+    position: absolute;
+    left: -9999px
+  }
+  .toggle__switch {
+    position: relative;
+    display: block;
+    width:40px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 350ms;
+    border: 1px solid #d0d7dd;
+    &::after {
+      position: absolute;
+      content: '';
+      width: 25px;
+      height:25px;
+      top: -4px;
+      left: 15px;
+      border-radius: 50%;
+      transition: 250ms ease-in-out;
+      background: $white;
+      border: 1px solid #d0d7dd;
+    }
+  }
+
+  input:checked + .toggle__switch {
+    &::after {
+      left: -2px;
+    }
+  }
+}

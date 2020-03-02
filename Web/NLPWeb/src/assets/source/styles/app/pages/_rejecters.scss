@@ -1,0 +1,90 @@
+.rejecters-avoiders {
+  overflow: hidden;
+  width: 1100px;
+  padding:0 30px 30px;
+  max-width: 100%;
+  position: relative;
+  margin: 0 auto;
+  @include susy-breakpoint(1024px, $susy, ".no-mq") {
+    padding:0 10px 20px;
+  }
+
+  .avoider__chart {
+    width: 230px;
+    height: 230px;
+    margin: 0 auto 20px;
+  }
+
+  .dealear-box {
+    .pie-score {
+      font-size: 19px;
+      color: #54657e;
+      font-weight: 600;
+      position: relative;
+      top: 43px;
+    }
+
+    .chartbox {
+      float: left;
+      width: 95px;
+      height: 100%;
+    }
+
+    .content-box {
+      float: right;
+      width: 55%;
+      h4 {
+        font-size: 16px;
+        color: #54657e;
+        font-weight: 500;
+        margin-top: 20px;
+      }
+
+      p {
+        color: #8493a8;
+        font-size: 14px;
+        text-align: right;
+
+        span {
+          padding: 3px 10px;
+          background-color: #ff6152;
+          border-radius: 5px;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.visiting__dealer{
+  border-top: 1px solid #ebebeb;
+}
+
+.visiting-dealer{
+  @include span(4 no-gutter);
+  border-right: 1px solid #ebebeb;
+  @include susy-breakpoint(1024px, $susy, ".no-mq") {
+    @include span(12 no-gutter);
+  }
+  &:last-child{
+   // border: 0;
+  }
+
+  h2{
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color:#212229;
+    padding: 20px 20px 0;
+    @include susy-breakpoint(1024px, $susy, ".no-mq") {
+      padding:10px 10px 0;
+    }
+  }
+
+  .chart{
+    padding: 20px;
+    @include susy-breakpoint(1024px, $susy, ".no-mq") {
+      padding:10px;
+    }
+  }
+}

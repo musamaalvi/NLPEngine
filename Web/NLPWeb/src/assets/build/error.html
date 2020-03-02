@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" class="login-body" dir="ltr">
+
+<head>
+    <title>Error</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <!-- favicons-->
+    <link rel="icon" type="image/ico" href="assets/images/favicon.ico">
+
+</head>
+
+<body>
+<!--    <div class="error error&#45;&#45;success">
+        <div class="error__inner">
+            <i class="fal fa-info-circle"></i>
+           &lt;!&ndash; <h1>You're now signed out</h1>&ndash;&gt;
+
+
+           <p> You have been logged out successfully.</p>
+            <p> Vous avez été déconnecté avec succès</p>
+
+           &lt;!&ndash; <a href="" class="btn"> Let's get back</a>&ndash;&gt;
+            
+        </div>
+    </div>-->
+
+
+<div class="error">
+    <div class="error__inner">
+        <i class="fal fa-info-circle"></i>
+        <h1>OOH! Duplicate login</h1>
+
+
+        <p>This account is already logged in from <br> another browser or from another machine.</p>
+
+        <p>
+            If you would like to continue logging in, the other session
+            <br> will be logged out.
+        </p>
+
+        <form method="post" action="@Url.Action("DuplicateLogin","Account")">
+
+            <input type="submit" name="RemoveSession" class="btn" value="Yes" />
+            <input type="submit" name="RemoveSession" class="btn btn--cancel" value="No" />
+
+        </form>
+
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,462 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>User Admin</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <!-- favicons-->
+    <link rel="icon" type="image/ico" href="assets/images/favicon.png">
+
+</head>
+
+<body>
+
+
+<div class="container">
+    <header class="l-header header">
+
+        <div class="logo l-logo">
+            <a href="index.html"><img src="assets/images/logo.png"></a>
+        </div>
+        <!-- /.logo -->
+        <nav class="nav">
+            <ul>
+                <li class="nav__link active">
+                    <a href="">
+                        <i class="fal fa-tachometer-alt"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav__link">
+                    <a href="">
+                        <i class="fal fa-exclamation-circle"></i> Alerts
+                    </a>
+                </li>
+                <li class="nav__link">
+                    <a href="#">
+                        <i class="fal fa-list-alt"></i> Reports
+                    </a>
+                </li>
+                <li class="nav__link">
+                    <a href="">
+                        <i class="fal fa-sliders-v"></i> Report Generator
+                    </a>
+                </li>
+                <li class="nav__link">
+                    <a href="">
+                        <i class="fal fa-file"></i> Text Analytics
+                    </a>
+                </li>
+                <li class="nav__link">
+                    <a href="">
+                        <i class="fal fa-book-alt"></i> Cross Tab
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-options">
+
+            <div class="user-info">
+                <a href="javascript:void(0)" class="user-dropdown-link">
+                    <i class="fas fa-user-circle"></i>
+                </a>
+                <div class="user-dropdown">
+                    <div class="user">
+                        <div class="user__inital"> J</div>
+                        <p>Welcome Back, <strong>Jason Tryfon</strong></p></div>
+                    <div class="user__list">
+                        <ul>
+                            <li>
+                                <a href="#"><i class="fal fa-plus"></i>Admin Module</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fal fa-pencil"></i>Portal Translation</a>
+                            </li>
+
+                            <li>
+                                <a href="#"><i class="fal fa-file"></i>Notification Template</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fal fa-sign-language"></i>Language</a>
+                            </li>
+
+                            <li>
+                                <a href="#"><i class="fal fa-print"></i>Print</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fal fa-question-circle"></i>Help</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fal fa-power-off"></i>Logout</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="user-features">
+                <div class="feature-node notification-node has-notification notification-box">
+                    <div class="noti-dot">
+                        <span class="dot"></span>
+                        <span class="pulse"></span>
+                    </div>
+                    <a class="handler" href="#"><i class="fal fa-bell"></i></a>
+
+                </div>
+                <div class="feature-node edit-node">
+                    <a class="handler" href="#"><i class="fal fa-pencil"></i></a>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </header>
+    <!-- /.header-->
+    <div class="l-content">
+        <section class="sidebar">
+            <!--<a href="" class="back-link"><i class="icon icon-long-arrow-left"></i><span>Back</span></a>-->
+            <div class="sidebar-header">
+                <div class="menu-wrapper">
+                    <div class="hamburger-menu"></div>
+                </div>
+            </div>
+            <div class="sidebar-menu ">
+                <ul class="">
+                    <li><a href="" class="sidebar__link"> <i class="icon icon-file-text-o"></i> My Reports</a></li>
+                    <li><a href="" class="sidebar__link"> <i class="icon icon-star-half-o"></i> Rating Analysis</a></li>
+                    <li><a href="" class="sidebar__link"> <i class="icon icon-building-o"></i> Organization Summary</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- /.sidebar-->
+        <main class="page-surveylist main">
+            <div class="page_inner">
+
+
+                <div class="w-xl">
+                    <div class="page_header">
+                        <div class="breadcrumbs page-breadcrumbs">
+                            <ul class="breadcrumbs_list">
+                                <!-- <li><a
+                                         href=""><span class="">Back</span></a>
+                                 </li>-->
+                                <li>
+                                    <a><span class="fas fa-home"></span></a></li>
+                                <li class="active"><a
+                                        href=""><span class="">User Admin module</span></a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                        <h1 class="page__title">
+                            Update User
+                        </h1>
+
+
+                    </div>
+
+                </div>
+
+                <div class="w-xl ">
+                    <div class="widget fullpage--widget">
+
+
+                        <div class="page__filters">
+                            <div class="filter-item filter-item--hierarchy">
+
+                                <div class="filter-hierarchy">
+                                    <label>Hierarchy Level</label>
+                                    <div class="filter-field filter--hierarchy">
+                                        <div class="filter__trigger">
+                                            <div class="breadcrumbs-tags">
+                                                <ol>
+                                                    <li>
+                                                        <a href="javascript:void(0);">National</a>
+                                                    </li>
+                                                    <li class="active"><a href="#">Zone</a></li>
+
+                                                    <li>
+                                                        <a href="javascript:void(0);">National</a>
+                                                    </li>
+                                                    <li class="active"><a href="#">Zone</a></li> <li>
+                                                    <a href="javascript:void(0);">National</a>
+                                                </li>
+                                                    <li class="active"><a href="#">Zone</a></li> <li>
+                                                    <a href="javascript:void(0);">National</a>
+                                                </li>
+                                                    <li class="active"><a href="#">Zone</a></li> <li>
+                                                    <a href="javascript:void(0);">National</a>
+                                                </li>
+                                                    <li class="active"><a href="#">Zone</a></li> <li>
+                                                    <a href="javascript:void(0);">National</a>
+                                                </li>
+                                                    <li class="active"><a href="#">Zone</a></li> <li>
+                                                    <a href="javascript:void(0);">National</a>
+                                                </li>
+                                                    <li class="active"><a href="#">Zone</a></li> <li>
+                                                    <a href="javascript:void(0);">National</a>
+                                                </li>
+                                                    <li class="active"><a href="#">Zone</a></li>
+                                                </ol>
+                                            </div>
+                                            <div class="field__icons"><span class="icons__active"><i
+                                                    class="fal fa-pencil"></i></span><span
+                                                    class="icons__active icon--ok"><i class="fal fa-check"></i></span><i
+                                                    class="fal fa-angle-down"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-container form--padding">
+
+                            <div class="form-row">
+                                <div class="form-column three">
+                                    <div class="form-label">
+                                        User Name
+                                    </div>
+                                    <div class="form-field">
+                                        <input type="text" readonly="readonly" class="fluid">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-column three">
+                                    <div class="form-label">
+                                        First Name
+                                    </div>
+                                    <div class="form-field">
+                                        <input type="text" class="fluid">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-column three">
+                                    <div class="form-label">
+                                        Last Name
+                                    </div>
+                                    <div class="form-field">
+                                        <input type="text" class="fluid">
+                                    </div>
+                                </div>
+
+                                <div class="form-column three">
+                                    <div class="form-label">
+                                        Email
+                                    </div>
+                                    <div class="form-field">
+                                        <input type="email" class="fluid">
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="form-row">
+                                <div class="form-column three">
+                                    <div class="form-label">
+                                        Role
+                                    </div>
+                                    <div class="form-field">
+                                        <select class="selectpicker" data-placeholder="" data-style="btn-select"
+                                                data-width="100%">
+                                            <option value="">Option 01</option>
+                                            <option value="">Option 02</option>
+                                            <option value="">Option 03</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-column three">
+                                    <div class="form-label">
+                                        SSO ID
+                                    </div>
+                                    <div class="form-field">
+                                        <div class="form-field">
+                                            <input type="text" class="fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-column three no-label">
+
+                                    <div class="form-field">
+
+
+                                        <div class="custom-checkbox">
+                                            <input class="checkbox__field" type="checkbox" id="active">
+                                            <label class="checkbox__label" for="active"><span>Active</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-row">
+
+
+                                <div class="form-column six">
+                                    <div class="form-label">
+                                        Notifications
+                                    </div>
+                                    <div class="form-field">
+                                        <div class="notification-field">
+
+                                            <div class="notification__col">
+                                                <div class="notification__header"><h2>Alert</h2></div>
+
+
+                                                <ul class="notification__list">
+                                                    <li>
+
+                                                        <div class="custom-checkbox">
+                                                            <input class="checkbox__field" type="checkbox" id="sale">
+                                                            <label class="checkbox__label" for="sale"><span>Sales - Initial
+                                                            Assignee</span></label>
+                                                        </div>
+
+
+                                                    </li>
+
+                                                    <li>
+
+                                                        <div class="custom-checkbox">
+                                                            <input class="checkbox__field" type="checkbox" id="Escalation">
+                                                            <label class="checkbox__label" for="Escalation"><span>Sales - Dealer
+                                                            Escalation</span></label>
+                                                        </div>
+
+
+                                                    </li>
+
+                                                    <li>
+                                                        <div class="custom-checkbox">
+                                                            <input class="checkbox__field" type="checkbox" id="Notificaiton">
+                                                            <label class="checkbox__label" for="Notificaiton"><span>Sales - Alert Notificaiton</span></label>
+                                                        </div>
+
+
+                                                    </li>
+
+                                                    <li>
+                                                        <div class="custom-checkbox">
+                                                            <input class="checkbox__field" type="checkbox" id="Assignee">
+                                                            <label class="checkbox__label" for="Assignee"><span>Service - Initial Assignee</span></label>
+                                                        </div>
+
+
+                                                    </li>
+
+                                                    <li>
+                                                        <div class="custom-checkbox">
+                                                            <input class="checkbox__field" type="checkbox" id="Dealer">
+                                                            <label class="checkbox__label" for="Dealer"><span>Service - Dealer Escalation</span></label>
+                                                        </div>
+
+
+                                                    </li>
+
+                                                    <li>
+                                                        <div class="custom-checkbox">
+                                                            <input class="checkbox__field" type="checkbox" id="Alert">
+                                                            <label class="checkbox__label" for="Alert"><span>Service - Alert
+                                                            Notification</span></label>
+                                                        </div>
+
+
+                                                    </li>
+
+
+                                                </ul>
+
+                                            </div>
+                                            <div class="notification__col">
+                                                <div class="notification__header"><h2>Other</h2></div>
+
+
+                                                <ul class="notification__list">
+                                                    <li>
+                                                        <div class="custom-checkbox">
+                                                            <input class="checkbox__field" type="checkbox" id="1">
+                                                            <label class="checkbox__label" for="1"><span>Appeals Approver Level
+                                                            1</span></label>
+                                                        </div>
+                                                       
+
+                                                    </li>
+
+                                                    <li>
+                                                        <div class="custom-checkbox">
+                                                            <input class="checkbox__field" type="checkbox" id="2">
+                                                            <label class="checkbox__label" for="2"><span>Appeals Approver Level
+                                                            2</span></label>
+                                                        </div>
+
+
+                                                    </li>
+
+                                                    <li>
+                                                        <div class="custom-checkbox">
+                                                            <input class="checkbox__field" type="checkbox" id="3">
+                                                            <label class="checkbox__label" for="3"><span>Appeals Approver Level
+                                                            3</span></label>
+                                                        </div>
+
+
+                                                    </li>
+
+                                                    <li>
+                                                        <div class="custom-checkbox">
+                                                            <input class="checkbox__field" type="checkbox" id="Email">
+                                                            <label class="checkbox__label" for="Email"><span>Email Edits</span></label>
+                                                        </div>
+
+
+                                                    </li>
+
+
+                                                </ul>
+
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="form__footer">
+                            <a class="btn btn--cancel" href="">Cancel</a>
+                            <a class="btn" href="">Update Changes</a>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+</body>
+<script src='assets/scripts/jquery-1.12.3.min.js'></script>
+<script src="assets/scripts/bootstrap-dropdown.js"></script>
+<script src="assets/scripts/bootstrap-select.min.js"></script>
+
+</html>
+                                                                                                                                           

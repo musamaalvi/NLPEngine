@@ -1,0 +1,90 @@
+.tags {
+  .tags__item {
+    display: inline-block;
+    line-height: 1;
+    margin-bottom: emify(5, 10);
+    margin-right: emify(2, 10);
+    //font-size:26px;
+
+
+    .tags__count{
+      font-size:15px;
+      color: $clr-pri;
+    }
+
+    &.tag--one {
+      font-size:32px;
+      .tags__count{
+        font-size:15px;
+      }
+    }
+
+    &.tag--two{
+      font-size: 27px;
+      .tags__count{
+        font-size:15px;
+      }
+    }
+
+    &.tag--three{
+      font-size: 24px;
+      .tags__count{
+        font-size:15px;
+      }
+    }
+
+    &.tag--four{
+      font-size: 21px;
+      .tags__count{
+        font-size:15px;
+      }
+    }
+
+    &.tag--five{
+      font-size: 18px;
+      .tags__count{
+        font-size:15px;
+      }
+    }
+  }
+}
+
+/*.corporate {
+  .tags {
+    .tags__item {
+      font-size: 13px;
+      margin-bottom: .8em;
+
+
+
+      &.tag--one {
+        //font-size: 20px;
+        .tags__count {
+          font-size: 14px;
+        }
+
+        &.tag--two{
+          font-size: 18px;
+          .tags__count {
+            font-size: 13px;
+          }
+        }
+
+        &.tag--three{
+          font-size: 16px;
+          .tags__count {
+            font-size: 12px;
+          }
+        }
+
+        &.tag--four{
+          font-size: 14px;
+          .tags__count {
+            font-size: 12px;
+          }
+        }
+
+      }
+    }
+  }
+}*/

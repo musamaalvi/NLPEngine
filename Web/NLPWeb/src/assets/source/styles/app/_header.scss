@@ -1,0 +1,43 @@
+$header-border: #d6dbdf;
+$user-color: #4c5e70;
+.header {
+  float: left;
+  width: 100%;
+ padding:20px 0;
+  @include transition();
+
+  h2{
+    float:right;
+    font-weight: normal;
+    line-height: 32px;
+    font-size: 20px;
+    color: #212229;
+  }
+}
+
+.logo {
+  float: left;
+  height: 100%;
+  text-align: center;
+
+  a{
+    outline: none;
+  }
+  // img {
+  //   vertical-align: middle;
+  //   max-height: 60px;
+  //   width: auto;
+  //   border: 0;
+  //   outline: none;
+  //   margin-top: -5px;
+  //   @include susy-breakpoint(480px, $susy, ".no-mq") {
+  //     max-width: 140px;
+  //   }
+  // }
+  // &:before {
+  //   content: "";
+  //   display: inline-block;
+  //   height: 100%;
+  //   vertical-align: middle;
+  // }
+}

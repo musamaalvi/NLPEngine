@@ -1,0 +1,65 @@
+.widget--trendingtopic {
+  .view-more {
+    float: right;
+    font-size: 14px;
+    margin: 0;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+
+  .tags {
+    float: left;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+}
+
+.tags {
+  .tags__item {
+    display: inline-block;
+    font-size: 22px;
+    margin-right: 7px;
+    margin-bottom: 5px;
+    .tags__count {
+      font-size: 16px;
+      color: #a5adb5;
+    }
+
+
+    &:hover{
+
+    }
+
+  }
+
+  &.tags--smaller {
+    .tags__item {
+      font-size:15px;
+      .tags__count {
+        font-size: 12px;
+      }
+
+    }
+  }
+}
+
+.tags-section {
+  float: left;
+  width: 100%;
+  padding: 15px 0;
+  .section-title {
+    float: left;
+    color: #4c5e70;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  border-bottom: 1px solid #d6dbdf;
+
+  &:last-child {
+    border: 0;
+  }
+}
+
+

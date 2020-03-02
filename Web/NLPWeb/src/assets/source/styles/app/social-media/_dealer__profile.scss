@@ -1,0 +1,49 @@
+// dealer profile
+
+.dealer-profile {
+  float: left;
+  width: 100%;
+  padding: 0 20px;
+
+
+  .profile__info {
+    border-bottom: 1px solid #ebebeb;
+    float: left;
+    padding:20px 20px 20px 75px;
+    width: 100%;
+    position: relative;
+  }
+
+  &:last-child{
+    .profile__info{
+      border-bottom: 0;
+    }
+  }
+
+  .profile__icon {
+    position: absolute;
+    width: 55px;
+    left: 0;
+    top:12px;
+    text-align: center;
+    height: 55px;
+    font-size: 20px;
+    background: #f5f5f5;
+    border-radius: 100%;
+    i {
+      @include center();
+    }
+  }
+
+  h5 {
+    color: #969dab;
+    font-weight: normal;
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size:18px;
+    color: #4c5e70;
+    font-weight: normal;
+  }
+}

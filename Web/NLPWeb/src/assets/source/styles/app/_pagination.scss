@@ -1,0 +1,92 @@
+$txt-clr: #34495e;
+.pagination {
+  width: 100%;
+  @include clearfix();
+  padding: 10px 15px;
+  .pagination__list {
+    text-align: center;
+    > li {
+      display: inline-block;
+      color: $txt-clr;
+      @include susy-breakpoint(768px, $susy, '.no-mq') {
+        margin: 0 0 10px;
+      }
+
+      @include susy-breakpoint(480px, $susy, '.no-mq') {
+        display: block;
+        float: none;
+      }
+      &.pagination__result {
+        float: left;
+        margin-top: 10px;
+        @include susy-breakpoint(768px, $susy, '.no-mq') {
+          display: block;
+          float: none;
+
+        }
+      }
+      &.pagination__control {
+        float: right;
+        @include susy-breakpoint(480px, $susy, '.no-mq') {
+          float: none;
+        }
+      }
+      .pagination__count {
+        background: $white;
+        padding: 7px;
+        display: inline-block;
+        text-align: center;
+        border: 1px solid $border-count;
+        @include border-radius(5px);
+        min-width: 40px;
+        margin: 0 5px;
+
+        select {
+          padding: 9px 5px;
+          border-color: #d7d7d7;
+          border-radius: 5px;
+
+        }
+
+        &.count--select {
+          padding: 0;
+          border: 0;
+          min-width:80px;
+          margin: 0 10px;
+          background: none;
+          position: relative;
+        }
+      }
+      .pagination__btn {
+        margin-left: 1px;
+        padding: 9px;
+        min-width: 40px;
+        @include border-radius(5px);
+        .icon {
+          &:before {
+            font-size: 13px;
+          }
+        }
+        &.btn {
+          border: 1px solid $clr-pri;
+        }
+        &.btn--prev {
+          margin-left: 5px;
+        }
+        &.btn--disabled {
+          color: #727272;
+          background: $btn-gray;
+          border: 1px solid #d6dade;
+        }
+      }
+    }
+  }
+}
+
+.pager-control {
+  padding: 20px;
+  text-align: right;
+  .btn {
+    margin-left: 10px;
+  }
+}

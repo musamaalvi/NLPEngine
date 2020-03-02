@@ -1,0 +1,89 @@
+//cl breakdown
+.widget--clbreakdown {
+  // overflow: hidden;
+
+  .widget__content {
+    @include clearfix();
+    padding: 15px 0 0;
+  }
+
+  .widget__graph {
+    padding: 0px 5px;
+    margin-bottom: 13px;
+  }
+
+  .widget__counts {
+    float: left;
+    width: 100%;
+    clear: both;
+    &.top--space {
+      margin-top: 50px;
+    }
+  }
+
+  .counts__list {
+    //display: table;
+    width: 100%;
+    background: #f8f9fa;
+    clear: both;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #e7e8e8;
+   // table-layout: fixed;
+    @include border-radius(0 0 7px 7px);
+    li {
+      //display: table-cell;
+      cursor: pointer;
+      display: inline-block;
+      padding: 0 10px;
+      text-align: center;
+      border-left: 1px solid #e7e8e8;
+      &:first-child {
+        border: 0;
+      }
+    }
+
+    .count {
+      font-size: 20px;
+      //font-weight:300;
+      font-weight: normal;
+
+      small {
+        font-size:12px;
+        color: #a1a5a9;
+        margin: 0 0 0 5px;
+      }
+
+    }
+
+    label {
+      display: block;
+      font-size: emify(13, 10);
+      color: $clr-blue;
+      text-transform: capitalize;
+      cursor: pointer;
+    }
+  }
+
+  &.widget--scount {
+
+
+    .widget__content {
+      padding:40px 0 0;
+
+      .widget__counts {
+        margin-top:27px;
+        clear: both;
+        float: left;
+        width: 100%;
+      }
+    }
+  }
+  &.widget--businessarea {
+
+  }
+
+}
+
+
+

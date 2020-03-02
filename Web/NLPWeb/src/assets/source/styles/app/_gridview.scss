@@ -1,0 +1,36 @@
+$arrow-clr: #d1d1d1;
+
+.arrow-wrap {
+  width: 100%;
+  margin: 0;
+  @include susy-breakpoint(1024px, $susy, '.no-mq') {
+
+    display: none;
+  }
+
+  .arrow__left, .arrow__right {
+    cursor: all-scroll;
+    position: absolute;
+    z-index: 16;
+    width: 30px;
+    height: 63px;
+    line-height: 63px;
+    font-size: 25px;
+    @include transition();
+    text-align: center;
+    background: rgba(227, 237, 240, 0.8);
+    border-radius: 3px;
+    color: #969dab;
+
+    &:hover {
+      background: $clr-pri;
+      color: #fff;
+    }
+
+  }
+
+  .arrow__right {
+    right: 2%;
+  }
+
+}

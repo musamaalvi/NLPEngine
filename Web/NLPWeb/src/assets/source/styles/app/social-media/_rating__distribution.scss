@@ -1,0 +1,107 @@
+.rating-distribution {
+  .completion__item {
+    margin-bottom: 20px;
+    float: left;
+    width: 100%;
+
+    .col__left {
+      float: left;
+      height: 60px;
+      position: relative; 
+      width: 10%;
+      img {
+        @include center();
+      }
+    }
+
+    .col__right {
+      float: right;
+      width: 85%;
+      min-height: 60px;
+
+      img {
+        vertical-align: middle;
+      }
+    }
+
+    .rating__value {
+      float: left;
+    }
+
+    .star-icon {
+      color: $clr-yellow;
+      font-size: 20px;
+      position: relative;
+      top: -3px;
+      i {
+        margin: 0 0 0 5px;
+      }
+    }
+
+    h2 {
+      color: #212229;
+      display: inline-block;
+      font-weight: 500;
+      font-size: 26px;
+    }
+
+    .completion__percentage {
+      color: #494c57;
+      float: right;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .progress-bar {
+      float: left;
+      width: 100%;
+      margin: 10px 0;
+      span {
+        float: left;
+        animation: grower 3s linear;
+        -moz-animation: grower 3s linear;
+        -webkit-animation: grower 3s linear;
+        -o-animation: grower 3s linear;
+        height: 7px;
+      }
+    }
+
+  }
+
+  &.review--distribution{
+    .completion__item {
+      margin:10px 0 30px 0;
+    }
+  }
+
+  &.todays--survey{
+
+    .completion__item{
+      margin: 20px 0;
+    }
+
+    .completion__percentage {
+     
+      margin-top:0;
+     // font-size: 14px;
+    }
+
+    .col__right{
+      min-height: 50px;
+    }
+
+    .col__left {
+      height: 50px;
+      
+      i {
+        font-size:33px;
+        color: #999;
+        @include center();
+      }
+    }
+    h2 {
+
+      font-size:18px;
+    }
+  }
+}

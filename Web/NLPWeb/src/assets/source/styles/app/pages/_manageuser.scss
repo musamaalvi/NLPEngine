@@ -1,0 +1,244 @@
+//manage-user
+.page-manageuser {
+
+  .table {
+
+    tbody {
+      tr {
+        background: #f3f3f3;
+        border-bottom-color: $white;
+        &.thead {
+          background: none;
+        }
+        &.active {
+          border-bottom: 0
+        }
+
+        &.expanded {
+          td {
+            background: #fafafa;
+          }
+        }
+      }
+
+    }
+
+  }
+}
+
+.form {
+  &.form--manageuser {
+    @include clearfix();
+    fieldset {
+      padding:emify(10,10) emify(20, 10);
+      @include susy-breakpoint(768px, $susy, '.no-mq') {
+        padding: 0 10px;
+      }
+    }
+
+    .field_group {
+      .field {
+        @include span(4);
+        @include susy-breakpoint(768px, $susy, '.no-mq') {
+          @include span(12);
+        }
+
+        &.fields--full {
+          @include span(12);
+        }
+
+        &.fields--two {
+          @include span(6);
+        }
+
+      }
+    }
+  }
+
+
+
+}
+
+//organization hierarchy
+
+.organization-hierarchy {
+  // @include nested(15) {
+  border: 1px solid #d5d5d5;
+  @include clearfix();
+  .hierarchy__col {
+    min-height: 300px;
+    display: block;
+    float: left;
+    width: 400px;
+    &:last-child{
+      .hierarchy__list{
+        border: 0;
+      }
+
+
+    }
+    @include susy-breakpoint(768px, $susy, '.no-mq') {
+      min-height: 30px;
+      width: 100%;
+    }
+
+    &.two--col {
+      @include span(6 no-gutters);
+    }
+
+    &.three--col {
+      @include span(4 no-gutters);
+    }
+
+    &:last-child {
+      // @include span(3 no-gutters);
+    }
+  }
+  // }
+
+  .hierarchy__header {
+    @include background-gradient(#ffffff, #eaf2f4, 'vertical');
+    padding: emify(10, 10);
+    border-bottom: 1px solid #d5d5d5;
+    h2 {
+      font-weight: normal;
+      font-size: 12px;
+    }
+  }
+
+  .hierarchy__list {
+    width: 100%;
+    display: block;
+    margin: 0;
+    background: $white;
+    height: 259px;
+    @include susy-breakpoint(768px, $susy, '.no-mq') {
+      height: auto;
+    }
+    &:last-child {
+      width: 100%;
+    }
+    li {
+      background: $white;
+      //height: 28px;
+      margin-bottom: 2px;
+      border-bottom: 1px solid $gray-light;
+      padding: 10px;
+
+      &:hover {
+        background: #fafafa;
+      }
+
+      .custom-checkbox {
+        font-size: 12px;
+        input[type=checkbox]:not(old) + label > span {
+          top: -1px;
+        }
+      }
+
+      .hierarchy__control {
+        text-align: center;
+
+        a {
+          font-size: 12px;
+          margin-left: 10px;
+
+          .icon {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+  }
+
+  &.role--hierarchy {
+    // @include span(12);
+    .hierarchy__col {
+      // min-height: 300px;
+      @include span(3 no-gutters);
+      border-right: 1px solid #d5d5d5;
+
+      &:last-child {
+        border: 0;
+      }
+    }
+
+    .hierarchy__list {
+      overflow-y: auto;
+    }
+  }
+
+  &.notification--list {
+    background: $white;
+    @include border-radius(5px);
+    padding: 20px 5px 0;
+
+    .hierarchy__list {
+      width: 100%;
+      display: block;
+      margin: 0;
+      background: $white;
+      height: 230px;
+      overflow: hidden;
+      @include susy-breakpoint(480px, $susy, '.no-mq') {
+        border: 0;
+      }
+      &:last-child {
+        width: 100%;
+      }
+      li {
+        background: $white;
+        // height: 28px;
+        //  margin-bottom: 2px;
+        border-bottom: 0;
+        padding: emify(8, 10) emify(8, 10);
+        @include transition();
+        @include border-radius(3px);
+        height: auto;
+
+        .custom-checkbox {
+          margin-top: 0;
+
+          input[type=checkbox]:not(old) ~ label > span {
+            margin-right: 10px;
+          }
+
+          label {
+            display: block;
+            cursor: pointer;
+          }
+        }
+
+        &:hover, .active {
+          background: $clr-pri;
+          color: $white;
+          cursor: pointer;
+        }
+
+        .custom-checkbox {
+          font-size: 12px;
+          input[type=checkbox]:not(old) + label > span {
+            top: -1px;
+          }
+        }
+
+      }
+
+    }
+
+    .hierarchy__col {
+      @include span(4);
+      min-height: auto;
+
+      @include susy-breakpoint(1024px, $susy, '.no-mq') {
+        @include span(6);
+      }
+      @include susy-breakpoint(480px, $susy, '.no-mq') {
+        @include span(12);
+      }
+    }
+
+  }
+}
+

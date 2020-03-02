@@ -1,0 +1,125 @@
+$nav-gray: #eef0f2;
+.nav {
+  vertical-align: top;
+
+  .nav__link {
+    float: left;
+    font-weight: 400;
+    border-left: 1px solid #ebebeb;
+    text-transform: capitalize;
+    text-align: center;
+    position: relative;
+    min-width:78px;
+    @include transition();
+
+    a {
+      display: block;
+      padding: 8px 10px 8px;
+      color: #969dab;
+      @include transition();
+      height: 70px;
+      cursor: pointer;
+
+      &:before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        display: none;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: $clr-pri;
+      }
+
+      &:hover {
+        color: $clr-pri;
+        .icon {
+          color: $clr-pri;
+        }
+      }
+    }
+    i {
+      display: block;
+      font-size: 20px;
+      margin: 0 0 4px;
+    }
+  }
+  .active {
+    a {
+      color: $clr-pri;
+      &:before {
+        display: block;
+      }
+      i {
+        font-weight: 600;
+      }
+    }
+  }
+  .sidebar__icon {
+    display: block;
+  }
+
+  @include susy-breakpoint(1024px, $susy, ".no-mq") {
+    // display: none;
+    position: absolute;
+    background: #fff;
+    top: 55px;
+    width: 100%;
+    left: 0;
+    padding: 0;
+    box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    border-top: 1px solid #ebebeb;
+    @include transition();
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .nav__link {
+      display: block;
+      height: auto;
+      float: none;
+      font-size: 14px;
+      min-width: 100%;
+      width: 100%;
+      font-weight: 400;
+      text-align: left;
+      border: 0;
+      border-bottom: 1px solid #ebebeb;
+
+      &:last-child {
+        border: 0;
+      }
+
+      i {
+        display: inline-block;
+        margin: 0 10px 0 0;
+        position: relative;
+        font-size: 16px;
+        top: 0;
+      }
+
+      a {
+        height: auto;
+        border: 0;
+        padding: 15px;
+
+        &:before {
+          height: 100%;
+          top: 0;
+          left: 0;
+          width: 3px;
+        }
+      }
+
+      &.active {
+        a {
+        }
+      }
+    }
+  }
+}

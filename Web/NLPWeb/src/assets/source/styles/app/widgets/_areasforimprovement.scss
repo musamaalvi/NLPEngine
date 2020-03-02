@@ -1,0 +1,180 @@
+
+.widget--areasforimprovements {
+  background: #F9F9F9;
+  padding: 0;
+  @include susy-breakpoint(1024px, $susy, '.no-mq') {
+    background:$white;
+  }
+  .widget__header {
+    background: $white;
+    margin: 0;
+    padding: 20px;
+    border-radius: 3px 3px 0 0;
+    @include susy-breakpoint(1024px, $susy, ".no-mq") {
+      padding:15px;
+    }
+  }
+  .widget__content {
+    padding: 0;
+    border-top: 1px solid #ebebeb;
+    @include clearfix();
+  }
+  .widget__graph {
+    float: left;
+    width: 100%;
+    padding:10px 20px 10px;
+    background: $white;
+    @include susy-breakpoint(1024px, $susy, ".no-mq") {
+      padding:10px;
+    }
+  }
+
+  .table {
+    padding: 0;
+    // color: #a9b4bd;
+    width: 100%;
+    line-height: 16px;
+
+    th{
+      padding:15px 20px;
+      text-transform: uppercase;
+      color: #a9b4bd;
+      text-transform: none;
+      @include susy-breakpoint(1024px, $susy, '.no-mq') {
+        white-space: normal;
+        padding:10px;
+      }
+    }
+
+    td {
+      padding:15px 20px;
+      @include susy-breakpoint(1024px, $susy, '.no-mq') {
+        white-space: normal;
+        padding:10px;
+      }
+    }
+
+  }
+  .widget__footer {
+    float: left;
+    width: 100%;
+    border-top: 1px solid #ebebeb;
+    position: relative;
+    @include arrow('top', 'center', 10px, #F9F9F9, #ebebeb, 1px);
+    padding:0;
+    margin: 0;
+    @include susy-breakpoint(1024px, $susy, '.no-mq') {
+      background: #F9F9F9;
+
+      border-radius: 0 0 3px 3px;
+    }
+  }
+
+}
+
+.widget--keyperformance {
+  background: #F9F9F9;
+  padding: 0;
+
+  @include susy-breakpoint(1024px, $susy, '.no-mq') {
+    background: $white;
+  }
+
+  .widget__header {
+    background: $white;
+    margin: 0;
+    padding: 20px;
+    border-radius: 3px 3px 0 0;
+    @include susy-breakpoint(1024px, $susy, ".no-mq") {
+      padding:15px;
+    }
+  }
+  .widget__content {
+    padding: 0;
+    border-top: 1px solid #ebebeb;
+    @include clearfix();
+  }
+  .widget__graph {
+    float: left;
+    width: 100%;
+    padding: 5px 20px 10px;
+    background: $white;
+    @include susy-breakpoint(1024px, $susy, ".no-mq") {
+      padding: 5px 10px 10px;
+    }
+  }
+
+  h3 {
+    padding-left: 10px;
+  }
+
+  .highest__score, .lowest__score {
+    float: left;
+    width: 50%;
+    @include susy-breakpoint(1024px, $susy, '.no-mq') {
+      width: 100%;
+    }
+  }
+
+  .lowest__score{
+    .widget__graph,.widget__footer {
+      border-left: 1px solid #ebebeb;
+    }
+  }
+
+  .highest__score {
+
+    @include susy-breakpoint(1024px, $susy, '.no-mq') {
+      border: 0;
+    }
+  }
+  .table {
+    padding: 0;
+    width: 100%;
+    line-height: 16px;
+
+    tr{
+      &:last-child{
+        border: 0;
+      }
+
+    }
+
+    td {
+      padding:15px 20px;
+      @include susy-breakpoint(1024px, $susy, '.no-mq') {
+        white-space: normal;
+        padding: 10px;
+      }
+    }
+
+  }
+  .widget__footer {
+    float: left;
+    width: 100%;
+    border-top: 1px solid #ebebeb;
+    position: relative;
+    @include arrow('top', 'center', 10px, #F9F9F9, #ebebeb, 1px);
+    padding:0;
+    margin: 0;
+    @include susy-breakpoint(1024px, $susy, '.no-mq') {
+      background: #F9F9F9;
+      border-radius: 0 0 3px 3px;
+      border-bottom: 1px solid #ebebeb;
+    }
+  }
+
+}
+
+
+
+//
+
+.widget--escalations {
+  .widget__graph {
+    float: left;
+    width: 100%;
+    padding:0 20px 0;
+  }
+
+}

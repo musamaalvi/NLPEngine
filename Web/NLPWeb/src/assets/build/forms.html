@@ -1,0 +1,454 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <title>Forms</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <!-- favicon-->
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+</head>
+<body>
+<div class="container">
+    <header class="l-header header">
+
+        <div class="logo l-logo">
+            <a href="index.html"><img src="assets/images/logo.png"></a>
+        </div>
+        <!-- /.logo -->
+        <nav class="nav">
+            <ul>
+                <li class="nav__link active">
+                    <a href="">
+                        <i class="fal fa-tachometer-alt"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav__link">
+                    <a href="">
+                        <i class="fal fa-exclamation-circle"></i> Alerts
+                    </a>
+                </li>
+                <li class="nav__link">
+                    <a href="#">
+                        <i class="fal fa-list-alt"></i> Reports
+                    </a>
+                </li>
+                <li class="nav__link">
+                    <a href="">
+                        <i class="fal fa-sliders-v"></i> Report <br> Generator
+                    </a>
+                </li>
+                <li class="nav__link">
+                    <a href="">
+                        <i class="fal fa-file"></i> Text <br> Analytics
+                    </a>
+                </li>
+                <li class="nav__link">
+                    <a href="">
+                        <i class="fal fa-book-alt"></i> Cross Tab
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-options">
+
+            <div class="user-info">
+                <a href="javascript:void(0)" class="user-dropdown-link">
+                    <i class="fas fa-user-circle"></i>
+                </a>
+                <div class="user-dropdown">
+                    <div class="user">
+                        <div class="user__inital"> J</div>
+                        <p>Welcome Back, <strong>Jason Tryfon</strong></p></div>
+                    <div class="user__list">
+                        <ul>
+                            <li>
+                                <a href="#"><i class="fal fa-plus"></i>Admin Module</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fal fa-pencil"></i>Portal Translation</a>
+                            </li>
+
+                            <li>
+                                <a href="#"><i class="fal fa-file"></i>Notification Template</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fal fa-sign-language"></i>Language</a>
+                            </li>
+
+                            <li>
+                                <a href="#"><i class="fal fa-print"></i>Print</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fal fa-question-circle"></i>Help</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fal fa-power-off"></i>Logout</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="user-features">
+                <div class="feature-node notification-node has-notification notification-box">
+                    <div class="noti-dot">
+                        <span class="dot"></span>
+                        <span class="pulse"></span>
+                    </div>
+                    <a class="handler" href="#"><i class="fal fa-bell"></i></a>
+
+                </div>
+                <div class="feature-node edit-node">
+                    <a class="handler" href="#"><i class="fal fa-pencil"></i></a>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </header>
+    <!-- /.header-->
+    <div class="l-content">
+        <section class="sidebar">
+            <!--<a href="" class="back-link"><i class="icon icon-long-arrow-left"></i><span>Back</span></a>-->
+            <div class="sidebar-header">
+                <div class="menu-wrapper">
+                    <div class="hamburger-menu"></div>
+                </div>
+            </div>
+            <div class="sidebar-menu ">
+                <ul class="">
+                    <li><a href="" class="sidebar__link"> <i class="icon icon-file-text-o"></i> My Reports</a></li>
+                    <li><a href="" class="sidebar__link"> <i class="icon icon-star-half-o"></i> Rating Analysis</a></li>
+                    <li><a href="" class="sidebar__link"> <i class="icon icon-building-o"></i> Organization Summary</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- /.sidebar-->
+        <main class="page-dashboard main">
+            <div class="page_inner">
+                <div class="w-xl">
+                    <div class="page_header">
+                        <h1 class="page__title">
+                            All forms
+                        </h1>
+
+
+                    </div>
+                </div>
+
+                <div class="w-xl">
+                    <div class="widget">
+                        <div class="widget__header ">
+                            <h2 class="widget__title ">Hot Alert</h2>
+                        </div>
+                        <div class="form-container">
+                            <div class="form-column six">
+                                <div class="form-label">
+                                    Issues
+                                </div>
+                                <div class="form-field">
+                                    <input
+                                            type="text"
+                                            class="fluid"
+                                            pInputText
+                                            placeholder="Car heats up very quickly ever since it was serviced"
+                                    />
+                                </div>
+                            </div>
+                            <div class="form-column six no-label">
+                                <div class="form-field">
+                                    <input
+                                            type="text"
+                                            class="fluid"
+                                            pInputText
+                                            placeholder="The Dealer did not respond to my phone call."
+                                    />
+                                </div>
+                            </div>
+                            <div class="form-column six">
+                                <div class="form-label">
+                                    Issue Tags
+                                </div>
+                                <div class="form-field">
+                                    <input type="text" class="fluid" placeholder="" pInputText/>
+                                </div>
+                            </div>
+                            <div class="form-column six no-label">
+                                <div class="form-field">
+                                    <input type="text" class="fluid" placeholder="" pInputText/>
+                                </div>
+                            </div>
+                            <div class="form-column three">
+                                <div class="form-label">
+                                    Assignee
+                                </div>
+                                <div class="form-field">
+                                    <select class="selectpicker" data-placeholder="Steve Newman"
+                                            data-style="btn-select" data-width="100%">
+
+                                        <option value="">ibex Burnaby</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-column three">
+                                <div class="form-label">
+                                    Due Date
+                                </div>
+                                <div class="form-field">
+                                    <select class="selectpicker" data-placeholder="Steve Newman"
+                                            data-style="btn-select" data-width="100%">
+
+                                        <option value="">ibex Burnaby</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-column three">
+                                <div class="form-label">
+                                    Following
+                                </div>
+                                <div class="form-field">
+                                    <select class="selectpicker" data-placeholder="Steve Newman"
+                                            data-style="btn-select" data-width="100%">
+
+                                        <option value="">ibex Burnaby</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-column three">
+                                <div class="form-label">
+                                    Priority
+                                </div>
+                                <div class="form-field">
+                                    <select class="selectpicker" data-placeholder="Steve Newman"
+                                            data-style="btn-select" data-width="100%">
+
+                                        <option value="">ibex Burnaby</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-column three">
+                                <div class="form-label">
+                                    Type
+                                </div>
+                                <div class="form-field">
+                                    <select class="selectpicker" data-placeholder="Steve Newman"
+                                            data-style="btn-select" data-width="100%">
+
+                                        <option value="">ibex Burnaby</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-column three">
+                                <div class="form-label">
+                                    Resolution
+                                </div>
+                                <div class="form-field">
+                                    <select class="selectpicker" data-placeholder="Steve Newman"
+                                            data-style="btn-select" data-width="100%">
+
+                                        <option value="">ibex Burnaby</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-column three">
+                                <div class="form-label">
+                                    Resolution Tags
+                                </div>
+                                <div class="form-field">
+                                    <select class="selectpicker" data-placeholder="Steve Newman"
+                                            data-style="btn-select" data-width="100%">
+
+                                        <option value="">ibex Burnaby</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-column three">
+                                <div class="form-label">
+                                    Suggested Resolution Tags
+                                </div>
+                                <div class="form-field">
+                                    <select class="selectpicker" data-placeholder="Steve Newman"
+                                            data-style="btn-select" data-width="100%">
+
+                                        <option value="">ibex Burnaby</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-column six">
+                                <div class="form-label">
+                                    Comment
+                                </div>
+                                <div class="form-field">
+                                    <textarea pInputTextarea
+                                              class="ui-inputtext ui-corner-all ui-state-default ui-widget"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-column six">
+                                <div class="form-label">
+                                    Attachment
+                                </div>
+                                <div class="form-field">
+                                    <button class="btn">Choose File</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__footer">
+                            <button class="btn">Update</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-xl">
+                    <div class="widget">
+                        <div class="widget__header ">
+                            <h2 class="widget__title ">Appeal</h2>
+                        </div>
+                        <div class="form-container">
+                            <div class="form-column three">
+                                <div class="form-label">
+                                    Issues
+                                </div>
+                                <div class="form-field">
+                                    <input
+                                            type="text"
+                                            class="fluid"
+
+                                    />
+                                </div>
+                            </div>
+                            <div class="form-column three">
+                                <div class="form-label">
+                                    Issues
+                                </div>
+                                <div class="form-field">
+                                    <input
+                                            type="text"
+                                            class="fluid"
+
+                                    />
+                                </div>
+                            </div>
+
+                            <div class="form-column three">
+                                <div class="form-label">
+                                    Issues
+                                </div>
+                                <div class="form-field">
+                                    <input
+                                            type="text"
+                                            class="fluid"
+
+                                    />
+                                </div>
+                            </div>
+
+                            <div class="form-column three">
+                                <div class="form-label">
+                                    Issues
+                                </div>
+                                <div class="form-field">
+                                    <input
+                                            type="text"
+                                            class="fluid"
+
+                                    />
+                                </div>
+                            </div>
+
+                            <div class="form-column three">
+                                <div class="form-label">
+                                    Issues
+                                </div>
+                                <div class="form-field">
+                                    <input
+                                            type="text"
+                                            class="fluid"
+
+                                    />
+                                </div>
+                            </div>
+
+                            <div class="form-column three">
+                                <div class="form-label">
+                                    Issues
+                                </div>
+                                <div class="form-field">
+                                    <input
+                                            type="text"
+                                            class="fluid"
+
+                                    />
+                                </div>
+                            </div>
+
+                            <div class="form-column three">
+                                <div class="form-label">
+                                    Issues
+                                </div>
+                                <div class="form-field">
+                                    <input
+                                            type="text"
+                                            class="fluid"
+
+                                    />
+                                </div>
+                            </div>
+                            <div class="form-column three">
+                                <div class="form-label">
+                                    Issues
+                                </div>
+                                <div class="form-field">
+                                    <input
+                                            type="text"
+                                            class="fluid"
+
+                                    />
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="form__footer">
+                            <button class="btn">Update</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+</body>
+<script src='assets/scripts/jquery-1.12.3.min.js'></script>
+<script src="assets/scripts/bootstrap-dropdown.js"></script>
+<script src="assets/scripts/bootstrap-select.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('#datetimepicker12').datetimepicker({
+            inline: true,
+            format: 'MM-DD-YYYY',
+            sideBySide: true
+        });
+    });
+</script>
+</html>

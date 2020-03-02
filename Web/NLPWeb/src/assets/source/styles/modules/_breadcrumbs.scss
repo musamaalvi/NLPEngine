@@ -1,0 +1,117 @@
+.breadcrumbs {
+  float: right;
+  line-height: 34px;
+  @include susy-breakpoint(480px, $susy, ".no-mq") {
+    line-height:normal;
+    float: left;
+    width: 100%;
+  }
+  .breadcrumbs_list {
+    display: inline-block;
+    @include susy-breakpoint(480px, $susy, ".no-mq") {
+      padding-top: 5px;
+    }
+    li {
+      display: inline;
+      vertical-align: middle;
+      white-space: normal;
+      font-size:14px;
+      font-weight: 500;
+      color: #969dab;
+      @include susy-breakpoint(480px, $susy, ".no-mq") {
+        font-size: 12px;
+        // font-weight: normal;
+      }
+
+      &:before {
+        color: #73879d;
+        position: relative;
+        top: 1px;
+        font-size: 14px;
+        margin: 0 10px;
+        @include opacity(0.5);
+        content: "\f105";
+        font-family: "Font Awesome 5 Pro";
+      }
+      &:first-child {
+        &:before {
+          display: none;
+        }
+      }
+
+      &.active {
+        a {
+          color: #969dab;
+        }
+      }
+    }
+  }
+
+  &.page-breadcrumbs {
+    float: left;
+    width: 100%;
+    line-height: normal;
+    .breadcrumbs_list {
+      @include susy-breakpoint(480px, $susy, ".no-mq") {
+        padding:0;
+      }
+      li {
+        display: inline-block;
+        &:before {
+          color: #73879d;
+          position: relative;
+          top: 1px;
+          font-size: 14px;
+          margin: 0 5px;
+          @include opacity(0.5);
+          content: "/";
+          @include susy-breakpoint(480px, $susy, ".no-mq") {
+            font-size:12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//tags breadcrumbs
+
+.breadcrumbs-tags {
+  float: left;
+
+  ol {
+    li {
+      float: left;
+      vertical-align: middle;
+      white-space: normal;
+      font-size: 10px;
+      margin-right: 10px;
+      font-weight: 500;
+      a {
+        background: $clr-pri;
+        display: inline-block;
+        padding: 3px 8px;
+        text-transform: uppercase;
+        position: relative;
+        color: $white;
+        border-radius: 3px;
+        @include arrow("right", "center", 4px, $clr-pri);
+      }
+
+      &.remove--tag{
+        a{
+          padding-right: 25px;
+          &:before{
+            content: "\f00d";
+            font-family: "Font Awesome 5 Pro";
+            font-size: 12px;
+            position: absolute;
+            right:10px;
+          }
+
+        }
+      }
+    }
+  }
+
+}

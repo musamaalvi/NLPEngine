@@ -1,0 +1,22 @@
+//action planner
+
+.page-actionplanner {
+    .select-filter{
+        padding:5px 0;
+
+        .select__field{
+            width: 200px;
+            select{
+                background: $white;
+                border-color: #d6dade;
+            }
+        }
+
+        .select__item{
+            width: auto;
+            &:last-child{
+                width: auto;
+            }
+        }
+    }
+}

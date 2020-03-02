@@ -1,0 +1,136 @@
+.sm-kpi {
+
+}
+
+.kpi__card {
+  @include span(3);
+  border-right: 1px solid #e1e1e1;
+  min-height:165px;
+  padding: 20px 10px 20px 20px;
+  position: relative;
+  @include susy-breakpoint(1024px, $susy, ".no-mq") {
+    @include span(12);
+    min-height: 50px;
+    border-right: 0;
+    padding:10px 20px;
+    border-bottom: 1px solid #e1e1e1;
+  }
+
+  &:last-child {
+    border: 0;
+  }
+
+  .card__title {
+    font-size:13px;
+    color: #383838;
+    margin-bottom: 10px;
+    font-weight:500;
+  }
+
+  .card__label {
+    font-size: 12px;
+    color: #969dab;
+    margin-top: 5px;
+  }
+
+  .chart__detail {
+    padding: 10px 0;
+    position: relative;
+  }
+
+  .card__chart {
+    position: absolute;
+    right:0;
+    top: 0;
+    width:155px;
+    .highcharts-container {
+      overflow: visible !important;
+    }
+    .highcharts-tooltip > span {
+      padding:8px;
+      font-size:11px !important;
+      position: relative;
+      background-color: rgba(255, 255, 255, 1);
+      background-color: white \9;
+      /* < IE11 */
+      //  border: 1px solid #a8a7a5;
+      z-index: 9999 !important;
+    }
+  }
+
+  .card__score {
+    font-size:28px;
+    color: #383838;
+    font-weight: normal;
+
+    small{
+      font-size: 13px;
+      margin-left: 5px;
+    }
+
+  }
+
+  .card__footer {
+    font-size:14px;
+    font-weight: normal;
+    margin-top:10px;
+    position: relative;
+    padding-left:20px;
+    &:before {
+      position: absolute;
+      font-family: "Font Awesome 5 Pro";
+      left: 0;
+      content: '';
+      font-size:12px;
+      font-weight:700;
+    //  top:0;
+
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+
+
+  }
+
+  &.card--negative {
+    .card__footer {
+      strong {
+        color: $clr-red;
+      }
+      &:before {
+        content: "\f0ab";
+        color: $clr-red;
+      }
+
+    }
+  }
+
+  &.card--positive {
+    .card__footer {
+      strong, i {
+        color: $clr-green;
+      }
+
+      &:before {
+        content: "\f0aa";
+        color: $clr-green;
+      }
+    }
+  }
+
+  &.card--neutral {
+    .card__footer {
+      strong, i {
+        color: $clr-amber;
+      }
+
+      &:before {
+        content: "\f056";
+        color: $clr-amber;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.widget--salesdriver {
+
+  .question-container {
+    float: left;
+    width: 100%;
+    color: #212229;
+    margin: 10px 0 25px;
+    font-size: 14px;
+    @include susy-breakpoint(1024px, $susy, '.no-mq') {
+      margin: 10px 0 10px;
+    }
+
+    .question__solidchart {
+      float: left;
+      margin-right: 15px;
+    }
+
+    .question__header {
+      float: left;
+      width: 48%;
+      @include susy-breakpoint(1024px, $susy, '.no-mq') {
+        width: 100%;
+      }
+
+      .question__score {
+        font-size: 25px;
+        font-weight: 500;
+      }
+    }
+
+    .question__linechart {
+      float: right;
+      width: 50%;
+      @include susy-breakpoint(1024px, $susy, '.no-mq') {
+        width: 100%;
+      }
+    }
+
+  }
+
+}

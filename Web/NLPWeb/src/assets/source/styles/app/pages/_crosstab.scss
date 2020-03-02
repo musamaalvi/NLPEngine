@@ -1,0 +1,289 @@
+//Crosstab
+
+$border-clr: #ebebeb;
+
+
+.ct__filters {
+  display: flex;
+  border-bottom: 1px solid #ebebeb;
+  align-items: baseline;
+
+  .tabs-secondary{
+ //   display: inline-block;
+    float: left;
+  }
+
+  .filter-save{
+    float: right;
+  }
+  .filter-item {
+    padding: 15px 20px;
+    flex: 1 1 0;
+   // border-left: 1px solid #ebebeb;
+
+    &:first-child {
+      border-left: 0;
+    }
+
+    .item__label {
+      font-size: 12px;
+      color: #969dab;
+      margin-right:30px;
+    }
+
+  }
+}
+
+.page-crosstab {
+
+  .content {
+    @include clearfix();
+    clear: both;
+    padding:20px 20px 20px;
+
+    .content__col {
+      @include span(4);
+      min-height: 500px;
+
+      &.col--right {
+        @include span(8);
+
+      }
+
+    }
+
+  }
+
+  .table {
+    width: 100%;
+    table-layout: fixed;
+
+    td {
+      padding: 0;
+    }
+
+    .key-filter {
+      width: 180px;
+      margin: 0 2px 0 0;
+      text-align: left;
+      display: inline-block;
+
+      &.right--col{
+        margin-bottom: 10px;
+      }
+    }
+
+    .table--right {
+    //  border-top: 1px solid $border-clr;
+
+      th {
+        height:67px;
+
+        &:last-child {
+          border: 0;
+        }
+      }
+    }
+
+    .table--outer {
+      border-right: 1px solid $border-clr;
+      height:568px;
+    }
+
+    table {
+      width: 100%;
+      table-layout: fixed;
+
+      tr {
+        border-color: $border-clr;
+        // height: 35px;
+      }
+
+      table {
+        td, th {
+          padding: 15px;
+        }
+      }
+
+      td {
+      //  padding: 0;
+
+        &.accordion-ct {
+          i {
+            margin-right: 5px;
+          }
+        }
+
+      }
+    }
+
+    td {
+
+      .tag {
+        display: inline-block;
+        padding: 5px 10px;
+        font-size: 14px;
+        margin-left:15px;
+        margin-bottom: 10px;
+        border: 1px solid $border-clr;
+      }
+    }
+  }
+
+  .key-filter {
+    border: 1px solid #d6dade;
+    border-radius: 5px;
+    background-clip: padding-box;
+    padding: 10px;
+    margin-bottom: 5px;
+    background: #f8f9fa;
+    position: relative;
+    .filter__icons {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+  }
+
+}
+
+.ct-panel {
+  @include clearfix();
+  clear: both;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f3f5f6;
+
+  .filter-field {
+    float: right;
+  }
+
+}
+
+.rg-control {
+  text-align: right;
+  padding: 10px;
+
+  .btn {
+    margin-left: 5px;
+
+  }
+}
+
+.crosstab__editor {
+  border: 1px solid $border-clr;
+  min-height: 500px;
+  @include border-radius(3px);
+  overflow: hidden;
+  margin-top: 28px;
+
+  .title {
+    background: #f8f9fa;
+    border-bottom: 1px solid $border-clr;
+    text-align: center;
+    padding: 10px;
+    color: #4c5e70;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 10px;
+
+    i {
+      position: relative;
+      margin-right: 2px;
+      top: 2px;
+    }
+  }
+}
+
+.crosstab__filter {
+  min-height: 500px;
+  overflow: hidden;
+
+  .title {
+    padding-bottom: 10px;
+    color: #5b6c7c;
+    font-size: 14px;
+    font-weight: 600;
+
+    i {
+      position: relative;
+      margin-right: 2px;
+      top: 3px;
+      &:before {
+        color: #b3b3b3;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .filter__widget {
+    @include span(6);
+    margin-top: gutter();
+
+  }
+
+  .filter__controls {
+
+    .custom-checkbox{
+      float: left;
+      margin-top: 5px;
+      width: 70%;
+    }
+    .btn {
+      float: right;
+    }
+  }
+
+  .filter__box {
+    border: 1px solid $border-clr;
+    height: 190px;
+    padding: 10px;
+    @include border-radius(3px);
+    overflow: auto;
+    margin-bottom: 10px;
+
+    .filter__list {
+      li {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 8px;
+        position: relative;
+        padding-left: 45px;
+
+        &:before {
+          font-family: "Font Awesome 5 Pro";
+          position: absolute;
+          left: 0;
+          content: "\f0fe";
+          top: 3px;
+          font-size: 15px;
+          color: #4c5e70;
+        }
+
+        i {
+
+          position: absolute;
+          left: 23px;
+          top: 1px;
+          &:before {
+            color: $clr-pri;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ct__footer {
+  border-top: 1px solid #ebebeb;
+  padding: 15px;
+  margin: 0 0 0;
+  position: relative;
+  background: #f9fafc;
+  text-align: right;
+  border-radius: 0 0 3px 3px;
+
+  .btn {
+    margin: 0 5px 0 0;
+  }
+}

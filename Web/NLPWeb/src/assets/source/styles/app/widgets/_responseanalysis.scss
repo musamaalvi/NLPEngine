@@ -1,0 +1,59 @@
+//response analysis
+.widget--responseanalysis {
+  //overflow: hidden;
+
+  .accordion {
+    padding-left: emify(50, 10);
+    .icon {
+      position: absolute;
+      text-align: center;
+      top: -5px;
+      width: 35px;
+      color: #899099;
+      left: 15px;
+      &:before {
+        font-size: 23px;
+      }
+    }
+  }
+
+  .table {
+    td {
+
+      padding:emify(15, 10) emify(10, 10);
+    //  position: relative;
+
+    }
+  }
+
+}
+
+.expanded-data{
+  position: absolute;
+  border: 0;
+  width:90%;
+  background: $white;
+  //left:33px;
+  margin-top: 15px;
+  z-index:2;
+  padding: 10px;
+  box-shadow: 0px 0px 30px 0px rgba(119, 119, 119, 0.35);
+  @include arrow('top', 'right', 10px, $white, #eee, 1px);
+  &:before {
+    left:25px;
+  }
+
+  &:after {
+    left:24px;
+  }
+
+  table {
+    td {
+
+      padding:emify(10, 10) !important;
+      font-weight: normal;
+
+    }
+  }
+
+}

@@ -1,0 +1,53 @@
+.container {
+  @include container;
+}
+
+.w-small,
+.w-medium,
+.w-large,
+.w-xl {
+  margin-bottom: gutter();
+  margin-top: gutter();
+
+  @include susy-breakpoint(1024px, $susy, '.no-mq') {
+    margin-bottom: gutter()-5;
+    margin-top: gutter()-5;
+  }
+}
+
+.w-small {
+  @include span(4);
+  @include susy-breakpoint(1024px, $susy, '.no-mq') {
+    @include span(12);
+  }
+
+}
+
+.w-medium {
+  @include span(6);
+  @include susy-breakpoint(1024px, $susy, '.no-mq') {
+    @include span(12);
+  }
+}
+
+.w-large {
+  @include span(8);
+  @include susy-breakpoint(1024px, $susy, '.no-mq') {
+    @include span(12);
+  }
+}
+
+.w-xl {
+  @include span(12);
+  &.no-lr-padding {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &.no--margin {
+    margin-bottom: 0;
+    @include susy-breakpoint(1024px, $susy, '.no-mq') {
+      margin-bottom: 5px;
+    }
+  }
+}

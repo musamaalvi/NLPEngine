@@ -1,0 +1,491 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>Dashboard</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <!-- favicon-->
+
+
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+
+</head>
+
+<body>
+
+<div class="modal modal--translation active">
+    <div class="modal__background"></div>
+    <div class="modal__outer">
+        <div class="modal__inner">
+
+            <div class="form">
+                <div class="modal__header">
+
+                    <div class="progress-modal">
+                        <label class="progress__label"><span>30%</span> Translation Updated</label>
+                        <div class="progress"><span class="progress-bar" style="width:30%;"></span>
+                        </div>
+                    </div>
+
+
+                    <h2 class="modal__title"><i class="icon icon-bars"></i> Portal Translation - Report Name</h2>
+                </div>
+
+
+                <div class="modal__content">
+
+
+                    <div class="table">
+
+                        <table>
+                            <thead>
+                            <tr class="bar no--border">
+                                <th class="text-left"><input type="checkbox"></th>
+                                <th class="text-left">Reviewed</th>
+                                <th class="sorting text-left"><a href="">Portal Location</a></th>
+                                <th class="sorting text-left"><a href="">current translation</a></th>
+                                <th class="sorting text-left "><a href="">new translation</a></th>
+                                <th class="sorting text-left"><a href="">last updated</a></th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="bar ">
+                                <td class="text-left"><input type="checkbox"></td>
+                                <td class=" text-left">allKpiDashboard-Al.</td>
+
+                                <td class="text-left">PerformanceTrendWidget-Purc...</td>
+                                <td class="text-left">apr</td>
+                                <td class="text-left"></td>
+                                <td class="text-left">3/05/16</td>
+
+
+                            </tr>
+
+                            <tr class="bar active">
+                                <td class="text-left"><input type="checkbox"></td>
+                                <td class=" text-left">allKpiDashboard-Al.</td>
+
+                                <td class="text-left">PerformanceTrendWidget-Purc...</td>
+                                <td class="text-left">apr <a class="translation-link" href=""><i
+                                        class="icon icon-edit2"></i></a></td>
+                                <td class="text-left"><input class="translation-field" type="text"></td>
+                                <td class="text-left">3/05/16</td>
+
+
+                            </tr>
+
+                            <tr class="bar ">
+                                <td class="text-left"><input type="checkbox"></td>
+                                <td class=" text-left">allKpiDashboard-Al.</td>
+
+                                <td class="text-left">PerformanceTrendWidget-Purc...</td>
+                                <td class="text-left">apr</td>
+                                <td class="text-left"></td>
+                                <td class="text-left">3/05/16</td>
+
+
+                            </tr>
+
+                            <tr class="bar ">
+                                <td class="text-left"><input type="checkbox"></td>
+                                <td class=" text-left">allKpiDashboard-Al.</td>
+
+                                <td class="text-left">PerformanceTrendWidget-Purc...</td>
+                                <td class="text-left">apr</td>
+                                <td class="text-left"></td>
+                                <td class="text-left">3/05/16</td>
+
+
+                            </tr>
+
+                            <tr class="bar ">
+                                <td class="text-left"><input type="checkbox"></td>
+                                <td class=" text-left">allKpiDashboard-Al.</td>
+
+                                <td class="text-left">PerformanceTrendWidget-Purc...</td>
+                                <td class="text-left">apr</td>
+                                <td class="text-left"></td>
+                                <td class="text-left">3/05/16</td>
+
+
+                            </tr>
+
+
+                            <tr class="bar ">
+                                <td class="text-left"><input type="checkbox"></td>
+                                <td class=" text-left">allKpiDashboard-Al.</td>
+
+                                <td class="text-left">PerformanceTrendWidget-Purc...</td>
+                                <td class="text-left">apr</td>
+                                <td class="text-left"></td>
+                                <td class="text-left">3/05/16</td>
+
+
+                            </tr>
+
+                            <tr class="bar ">
+                                <td class="text-left"><input type="checkbox"></td>
+                                <td class=" text-left">allKpiDashboard-Al.</td>
+
+                                <td class="text-left">PerformanceTrendWidget-Purc...</td>
+                                <td class="text-left">apr</td>
+                                <td class="text-left"></td>
+                                <td class="text-left">3/05/16</td>
+
+
+                            </tr>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="modal__footer">
+                <a class="btn btn--cancel"> Cancel</a>
+
+                <a class="btn"> Update Translation</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <header class="l-header header">
+
+        <div class="logo l-logo">
+            <a href="index.html"><img src="assets/images/logo.png"></a>
+        </div>
+        <!-- /.logo -->
+        <nav class="nav">
+            <ul>
+                <li class="nav__link active">
+                    <a href="">
+                        <i class="fal fa-tachometer-alt"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav__link">
+                    <a href="">
+                        <i class="fal fa-exclamation-circle"></i> Alerts
+                    </a>
+                </li>
+                <li class="nav__link">
+                    <a href="#">
+                        <i class="fal fa-list-alt"></i> Reports
+                    </a>
+                </li>
+                <li class="nav__link">
+                    <a href="">
+                        <i class="fal fa-sliders-v"></i> Report Generator
+                    </a>
+                </li>
+                <li class="nav__link">
+                    <a href="">
+                        <i class="fal fa-file"></i> Text Analytics
+                    </a>
+                </li>
+                <li class="nav__link">
+                    <a href="">
+                        <i class="fal fa-book-alt"></i> Cross Tab
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-options">
+
+            <div class="user-info">
+                <a href="javascript:void(0)" class="user-dropdown-link">
+                    <i class="fas fa-user-circle"></i>
+                </a>
+                <div class="user-dropdown">
+                    <div class="user">
+                        <div class="user__inital"> J</div>
+                        <p>Welcome Back, <strong>Jason Tryfon</strong></p></div>
+                    <div class="user__list">
+                        <ul>
+                            <li>
+                                <a href="#"><i class="fal fa-plus"></i>Admin Module</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fal fa-pencil"></i>Portal Translation</a>
+                            </li>
+
+                            <li>
+                                <a href="#"><i class="fal fa-file"></i>Notification Template</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fal fa-sign-language"></i>Language</a>
+                            </li>
+
+                            <li>
+                                <a href="#"><i class="fal fa-print"></i>Print</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fal fa-question-circle"></i>Help</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fal fa-power-off"></i>Logout</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="user-features">
+                <div class="feature-node notification-node has-notification notification-box">
+                    <div class="noti-dot">
+                        <span class="dot"></span>
+                        <span class="pulse"></span>
+                    </div>
+                    <a class="handler" href="#"><i class="fal fa-bell"></i></a>
+
+                </div>
+                <div class="feature-node edit-node">
+                    <a class="handler" href="#"><i class="fal fa-pencil"></i></a>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </header>
+    <!-- /.header-->
+    <div class="l-content">
+        <section class="sidebar">
+            <!--<a href="" class="back-link"><i class="icon icon-long-arrow-left"></i><span>Back</span></a>-->
+            <div class="sidebar-header">
+                <div class="menu-wrapper">
+                    <div class="hamburger-menu"></div>
+                </div>
+            </div>
+            <div class="sidebar-menu ">
+                <ul class="">
+                    <li><a href="" class="sidebar__link"> <i class="icon icon-file-text-o"></i> My Reports</a></li>
+                    <li><a href="" class="sidebar__link"> <i class="icon icon-star-half-o"></i> Rating Analysis</a></li>
+                    <li><a href="" class="sidebar__link"> <i class="icon icon-building-o"></i> Organization Summary</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- /.sidebar-->
+        <main class="page-surveylist main">
+            <div class="page_inner">
+
+
+                <div class="w-xl">
+                    <div class="page_header">
+                        <div class="breadcrumbs page-breadcrumbs">
+                            <ul class="breadcrumbs_list">
+                                <!-- <li><a
+                                         href=""><span class="">Back</span></a>
+                                 </li>-->
+                                <li>
+                                    <a><span class="fas fa-home"></span></a></li>
+                                <li class="active"><a
+                                        href=""><span class="">Portal Translation</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <h1 class="page__title">
+                            Portal Translation
+                        </h1>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="w-xl ">
+                    <div class="widget fullpage--widget">
+
+
+                        <div class="widget__filters ">
+                            <div class="filter-item filter-item--btntranslation">
+                                <a href="" class="btn">Update Translation</a>
+                            </div>
+
+                            <div class="filter-item">
+                                <div class="progress-bar">
+                                    <label class="progress__label"><span>30%</span> Translation Updated</label>
+                                    <div class="progress"><span class="progress__bar" style="width:30%;"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="filter-item">
+
+
+                                <div class="filter-search search--seperate">
+                                    <input placeholder="Enter Current Translation here" type="text">
+                                    <a class="btn btn--search"><i class="far fa-search"></i></a>
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="table table--striped">
+                            <table>
+                                <thead>
+                                <tr class="bar no--border">
+                                    <th class="text-left">
+                                        <div class="custom-checkbox without--label">
+                                            <input class="checkbox__field" type="checkbox" id="active">
+                                            <label class="checkbox__label" for="active"><span></span></label>
+                                        </div>
+                                    </th>
+                                    <th class="text-left">Reviewed</th>
+                                    <th class="sorting text-left"><a href="">Portal Location</a></th>
+                                    <th class="sorting text-left"><a href="">current translation</a></th>
+                                    <th class="sorting text-left "><a href="">new translation</a></th>
+                                    <th class="sorting text-left"><a href="">last updated</a></th>
+
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="">
+                                    <td class="text-left">
+                                        <div class="custom-checkbox without--label">
+                                            <input class="checkbox__field" type="checkbox" id="active1">
+                                            <label class="checkbox__label" for="active1"><span></span></label>
+                                        </div>
+                                    </td>
+                                    <td class=" text-left">allKpiDashboard-Al.</td>
+
+                                    <td class="text-left">PerformanceTrendWidget-Purc...</td>
+                                    <td class="text-left">apr</td>
+                                    <td class="text-left"></td>
+                                    <td class="text-left">3/05/16</td>
+
+
+                                </tr>
+
+                                <tr class="">
+                                    <td class="text-left">
+                                        <div class="custom-checkbox without--label">
+                                            <input class="checkbox__field" type="checkbox" id="active2">
+                                            <label class="checkbox__label" for="active2"><span></span></label>
+                                        </div>
+                                    </td>
+                                    <td class=" text-left">allKpiDashboard-Al.</td>
+
+                                    <td class="text-left">PerformanceTrendWidget-Purc...</td>
+                                    <td class="text-left">apr <a class="translation-link" href=""><i
+                                            class="icon icon-edit2"></i></a></td>
+                                    <td class="text-left"><input class="translation-field" type="text"></td>
+                                    <td class="text-left">3/05/16</td>
+
+
+                                </tr>
+
+                                <tr class="">
+                                    <td class="text-left">
+                                        <div class="custom-checkbox without--label">
+                                            <input class="checkbox__field" type="checkbox" id="active3">
+                                            <label class="checkbox__label" for="active3"><span></span></label>
+                                        </div>
+                                    </td>
+                                    <td class=" text-left">allKpiDashboard-Al.</td>
+
+                                    <td class="text-left">PerformanceTrendWidget-Purc...</td>
+                                    <td class="text-left">apr</td>
+                                    <td class="text-left"></td>
+                                    <td class="text-left">3/05/16</td>
+
+
+                                </tr>
+
+                                <tr class="">
+                                    <td class="text-left">
+                                        <div class="custom-checkbox without--label">
+                                            <input class="checkbox__field" type="checkbox" id="active4">
+                                            <label class="checkbox__label" for="active4"><span></span></label>
+                                        </div>
+                                    </td>
+                                    <td class=" text-left">allKpiDashboard-Al.</td>
+
+                                    <td class="text-left">PerformanceTrendWidget-Purc...</td>
+                                    <td class="text-left">apr</td>
+                                    <td class="text-left"></td>
+                                    <td class="text-left">3/05/16</td>
+
+
+                                </tr>
+
+                                <tr class="">
+                                    <td class="text-left">
+                                        <div class="custom-checkbox without--label">
+                                            <input class="checkbox__field" type="checkbox" id="active5">
+                                            <label class="checkbox__label" for="active5"><span></span></label>
+                                        </div>
+                                    </td>
+                                    <td class=" text-left">allKpiDashboard-Al.</td>
+
+                                    <td class="text-left">PerformanceTrendWidget-Purc...</td>
+                                    <td class="text-left">apr</td>
+                                    <td class="text-left"></td>
+                                    <td class="text-left">3/05/16</td>
+
+
+                                </tr>
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="pagination">
+                            <ul class="pagination__list">
+                                <li>Showing results 1-10 of 16</li>
+                                <li>Per page <span class="pagination__count count--select">
+
+
+                                    <select class="selectpicker" data-style="btn-select">
+                                            <option value=""></option>
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                            <option value="">4</option>
+                                            <option value="">5</option>
+                                            <option value="">6</option>
+                                            <option value="">7</option>
+                                            <option value="">8</option>
+                                            <option value="">9</option>
+                                            <option value="">10</option>
+                                            <option value="">11</option>
+                                            <option value="">12</option>
+                                        </select></span> results
+                                </li>
+                                <li class="last--child">Page <span class="pagination__count">1</span> of 30
+                                    <button class="pagination__btn btn btn--prev btn--disabled">
+                                        <i class="fas fa-angle-left"></i>
+                                    </button>
+                                    <button class="pagination__btn btn"><i class="fas fa-angle-right"></i></button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="translation__footer">
+                            <button class="btn">Update Translation</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+</body>
+</html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       

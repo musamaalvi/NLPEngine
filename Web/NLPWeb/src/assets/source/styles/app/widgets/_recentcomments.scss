@@ -1,0 +1,155 @@
+//customer comments
+
+.recent-comment{
+  .widget__content{
+ height: calc(100% - 120px);
+// height: 300px;
+  }
+}
+
+.customer-comments {
+  border-bottom: 1px solid #ebebeb;
+  padding: 20px 20px 20px 80px;
+  position: relative;
+  @include clearfix();
+  &:last-child {
+    border: 0;
+  }
+
+  .customer__tags {
+    float: right;
+    @include susy-breakpoint(1024px, $susy, '.no-mq') {
+      padding:10px 0 0;
+      float: left;
+      width: 100%;
+    }
+
+    li {
+      font-size: 12px;
+      display: inline-block;
+      margin-left: 5px;
+      color: #38454f;
+
+      .tags__tag {
+        border: 1px solid $clr-blue;
+        color: $clr-blue;
+        border-radius: 3px;
+        padding: 3px 5px;
+        font-size: 10px;
+        font-weight: 500;
+        text-transform: uppercase;
+        background: lighten($clr-blue, 34%);
+
+        &.tag--green {
+          border: 1px solid #17a2b8;
+          color: #17a2b8;
+          background: lighten(#17a2b8, 55%);
+        }
+
+        &.tag--gray {
+          border: 1px solid #808080;
+          color: #38454f;
+          background: none;
+        }
+
+      }
+    }
+  }
+
+  .customer__initial {
+    position: absolute;
+    width: 42px;
+    left: 20px;
+    top: 18px;
+    text-align: center;
+    height: 42px;
+    font-size: 20px;
+    border: 2px solid $clr-pri;
+    color: $clr-pri;
+    background: lighten($clr-pri, 60%);
+    border-radius: 100%;
+
+    &.initial--clr-one {
+      border: 2px solid #7246c2;
+      color: #7246c2;
+      background: lighten(#7246c2, 40%);
+    }
+
+    &.initial--clr-two {
+      border: 2px solid $clr-amber;
+      color: $clr-amber;
+      background: lighten($clr-amber, 40%);
+    }
+
+    &.initial--clr-three {
+      border: 2px solid $clr-green;
+      color: $clr-green;
+      background: lighten($clr-green, 62%);
+    }
+
+    span {
+      font-size: 16px;
+      @include center();
+    }
+  }
+
+  .customer__description {
+    float: left;
+    width: 100%;
+
+    .customer__comments {
+      float: left;
+      width: 100%;
+      margin-top:10px;
+    }
+
+    .customer__name {
+      float: left;
+
+      h2 {
+        font-weight: 400;
+        font-size: 14px;
+        color: #2e2e2e;
+        margin-bottom: 2px;
+      }
+
+      small {
+        color: #959595;
+      }
+    }
+    p {
+      color: #546a79;
+    }
+
+  }
+
+}
+
+
+.customer__comments__action {
+  float: left;
+  width: 100%;
+  margin-top:15px;
+  ul{
+    li {
+      display: inline-block;
+      margin-right: 10px;
+
+
+      a {
+        color: #b2b2b2;
+        padding:3px 10px;
+      border-radius:15px;
+      border:1px solid #ebebeb;
+      }
+
+      &:hover a {
+        color:#666;
+        background: #f3f6f9;
+      }
+    }
+  }
+
+
+}
+

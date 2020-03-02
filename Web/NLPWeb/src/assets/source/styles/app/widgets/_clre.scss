@@ -1,0 +1,91 @@
+//cl breakdown
+
+$tabs-bg: #f2f2f2;
+
+.widget--clre {
+
+  // overflow: hidden;
+
+  .tabs {
+    background: $tabs-bg;
+    height: auto;
+    padding: emify(10, 10);
+    margin:0 0 emify(10, 10);
+    @include border-radius(30px);
+    @include clearfix();
+    li {
+      margin-right: 10px;
+      a {
+        font-size: emify(14, 10);
+        padding: 10px 20px;
+        @include border-radius(20px);
+        text-transform: uppercase;
+        font-family: $font-pri;
+
+        &:hover, &.active {
+          background-color: $clr-pri;
+          color: $white;
+
+        }
+      }
+
+      &:last-child{
+        margin: 0;
+      }
+    }
+  }
+
+  .widget__content {
+    @include clearfix();
+  }
+
+  .widget__graph {
+    @include span(7);
+    padding: 0;
+
+  }
+
+
+
+  .widget__table {
+    @include span(5);
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  &.widget--full{
+    .widget__graph,.widget__table{
+      @include span(12);
+    }
+
+
+  }
+
+  .table{
+
+    th{
+      text-transform: uppercase;
+    }
+    td,th{
+      font-family: $font-pri;
+     // font-weight: normal;
+      padding: emify(5,10);
+
+      &:last-child{
+        width:130px;
+      }
+    }
+  }
+
+  .count {
+    font-size: emify(15, 10);
+   // font-weight: normal;
+    color: #34495e;
+
+    small{
+      color: #a1a5a9;
+    }
+
+  }
+
+}

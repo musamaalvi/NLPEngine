@@ -1,0 +1,218 @@
+//Editable
+
+$cancel: #f0f0f0;
+
+.editable {
+  border-bottom: 1px dashed;
+  font-weight: 400;
+}
+
+.editable--btn {
+  .PortalTranslationEdit {
+    @include susy-breakpoint(1024px, $susy, '.no-mq') {
+      display: none;
+    }
+  }
+}
+
+.popover {
+  position: absolute;
+  padding:15px;
+  background-color: rgb(254, 254, 254);
+  box-shadow: 0px 0px 30px 0px rgba(119, 119, 119, 0.35);
+  @include arrow('top', 'left', 10px, $white, #eee, 1px);
+  @include border-radius(5px);
+  z-index: 20;
+  margin-top: 42px;
+  margin-left: 10px;
+}
+
+.editable-form {
+  .editable__field {
+    display: inline-block;
+    width: auto;
+    height: 37px;
+    padding:7px;
+    //vertical-align: middle;
+    border-color: #d6dade;
+  }
+
+  .btn {
+    margin-left: 5px;
+    width: 37px;
+    height: 37px;
+    padding: 0;
+
+    &.editable__cancel {
+      background: $cancel;
+      border: 1px solid #d6dade;
+      color: #4c5e70;
+
+      &:hover {
+        background-color: darken($cancel, 5%);
+      }
+
+    }
+  }
+
+  .editable__submit {
+
+  }
+}
+
+.translation--col {
+  width: 300px;
+}
+
+.translation-field {
+  padding:8px 10px;
+  @include border-radius(3px);
+  border: 1px solid #d0d7dd;
+  font-family: $font-pri;
+  font-size: 12px;
+  color: #666;
+  background: $white;
+  max-width: 100%;
+ max-height: 150px;
+  overflow-y: auto;
+  text-align: left;
+  cursor: pointer;
+
+  &:focus {
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(119, 119, 119, 0.25);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(119, 119, 119, 0.25);
+    box-shadow: 0px 0px 10px 0px rgba(119, 119, 119, 0.25);
+    outline: none;
+  }
+
+}
+
+.translation-link {
+  float: right;
+
+  font-size: 16px;
+}
+
+.modal {
+  &.modal--translation {
+    .modal__outer {
+      .modal__inner {
+        // width: 451px;
+        overflow: visible;
+        .modal__header {
+          margin: 0px;
+        }
+        .modal__content {
+          max-height: none;
+          overflow-y: visible;
+
+          @include susy-breakpoint(1024px, $susy, '.no-mq') {
+            //height: auto;
+            //  overflow-y: auto;
+            overflow-y: scroll; /* has to be scroll, not auto */
+            -webkit-overflow-scrolling: touch;
+          }
+          .table-translaton {
+            tr.thead:first-child {
+              th {
+                border-top: none;
+              }
+            }
+          }
+          .pagination {
+            border-top: 1px solid #e4e9ed;
+          }
+          .mCSB_scrollTools {
+            top: 5px;
+            right: 1px;
+            bottom: 5px;
+          }
+
+        }
+
+      }
+
+    }
+  }
+}
+
+.table-translaton {
+  height: 429px;
+  overflow-y: auto;
+
+  th, td {
+    padding:10px 15px;
+  }
+
+  @include susy-breakpoint(1024px, $susy, '.no-mq') {
+    height: auto;
+    overflow: auto;
+  }
+}
+
+
+/*.moving-stoke{
+  fill:none;
+  stroke-width:4;
+  stroke:green;
+  stroke-dasharray: 7;
+  animation: dash 5s infinite linear;
+  -webkit-animation: dash 5s infinite linear;
+  stroke-linecap:round;
+}*/
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 200;
+  }
+}
+
+
+/*.editable:hover::after{
+  cursor: text;
+  content: "";
+  !*     background:#000; *!
+  !*     border:3px dashed #000; *!
+  !*     display:block; *!
+  height: calc(100% - 6px);
+  width: calc(100% - 6px);
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(90deg, green 50%, transparent 50%), linear-gradient(90deg, green 50%, transparent 50%), linear-gradient(0deg, green 50%, transparent 50%), linear-gradient(0deg, green 50%, transparent 50%);
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-size: 15px 2px, 15px 2px, 2px 15px, 2px 15px;
+  background-position: left top, right bottom, left bottom, right   top;
+  animation: border-dance .3s infinite linear;
+}
+
+.editable:hover{
+
+}*/
+
+@keyframes border-dance {
+  0% {
+    background-position: left top, right bottom, left bottom, right   top;
+  }
+  100% {
+    background-position: left 15px top, right 15px bottom , left bottom 15px , right   top 15px;
+  }
+}
+
+
+
+.translation__footer {
+  border-top: 1px solid #ebebeb;
+  padding: 15px 20px;
+  margin: 0 0 0;
+  position: relative;
+  background: #f9fafc;
+  text-align: left;
+  border-radius: 0 0 3px 3px;
+
+  .btn {
+    margin: 0 5px 0 0;
+  }
+}
+
+

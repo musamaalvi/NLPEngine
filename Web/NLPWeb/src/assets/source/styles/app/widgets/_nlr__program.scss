@@ -1,0 +1,51 @@
+.nlr-program {
+  text-align: center;
+
+  .widget__graph{
+    float: left;
+    width: 100%;
+  }
+
+  h2{
+    font-size: 36px;
+    font-weight:normal;
+  }
+
+  h3{
+    font-size:26px;
+    font-weight:normal;
+    small{
+      font-size: 20px;
+    }
+  }
+
+  p{
+    color: #212229;
+    font-size: 14px;
+  }
+
+  .col__left {
+    @include span(6);
+    min-height: 100px;
+    @include susy-breakpoint(1024px, $susy, '.no-mq') {
+      @include span(12);
+    }
+
+  }
+
+  .col__right {
+    @include span(6);
+    min-height: 100px;
+
+    position: relative;
+    @include susy-breakpoint(1024px, $susy, '.no-mq') {
+      @include span(12);
+      height: auto;
+    }
+
+  }
+
+}
+
+
+

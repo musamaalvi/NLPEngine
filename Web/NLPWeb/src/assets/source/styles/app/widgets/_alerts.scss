@@ -1,0 +1,29 @@
+//alerts
+$alert-color:#546a79;
+.widget--alerts {
+    .table {
+        td {
+            color: $alert-color;
+            vertical-align: middle;
+            font-weight: 300;
+            .icon {
+                font-size: emify(12, 10);
+                vertical-align: middle;
+                margin: 0;
+            }
+            &:first-child {
+                width: emify(15, 10);
+                padding: emify(10, 10) emify(5, 10);
+            }
+        }
+    }
+    .alert-label {
+        font-size: emify(10, 10);
+        text-transform: uppercase;
+        font-weight: bold;
+        vertical-align: middle;
+    }
+    .alert-count {
+        font-size: emify(25, 10);
+    }
+}

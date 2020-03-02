@@ -1,0 +1,73 @@
+.training-videos {
+  .video-list {
+    @include span(5);
+  }
+  .video-preview {
+    @include span(7);
+
+    video{
+      border: 1px solid #ebebeb;
+      width: 100%    !important;
+      height: auto   !important;
+    }
+  }
+}
+
+.video-list {
+  ul {
+    li {
+      a {
+        padding: 15px 15px 15px 40px;
+        font-size: 12px;
+        color: #34495e;
+        display: block;
+        border-top: 1px solid #ebebeb;
+        cursor: pointer;
+        position: relative;
+        &:before {
+          content: "\f03d";
+          font-family: "Font Awesome 5 Pro";
+          position: absolute;
+          font-size: 16px;
+          top: 13px;
+          color: $clr-pri;
+          font-weight: 300;
+          left: 10px;
+        }
+
+        &:after {
+          content: "\f144";
+          font-family: "Font Awesome 5 Pro";
+          position: absolute;
+          font-size: 12px;
+          top: 15px;
+          color: $clr-pri;
+          font-weight: 900;
+          right: 15px;
+          display: none;
+        }
+        &:hover {
+          background: #f4f5f9;
+          &:after {
+            display: block;
+          }
+        }
+      }
+
+      &.active {
+        a {
+          background: #f4f5f9;
+          &:after {
+            display: block;
+          }
+        }
+      }
+
+      &:first-child {
+        a {
+          border: 0;
+        }
+      }
+    }
+  }
+}

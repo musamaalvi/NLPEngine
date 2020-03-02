@@ -1,0 +1,486 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>Bulletins</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <!-- favicons-->
+    <link rel="icon" type="image/ico" href="assets/images/favicon.png">
+
+</head>
+
+<body>
+
+<div class="modal modal--small">
+    <div class="modal__background"></div>
+    <div class="modal__outer">
+        <div class="modal__inner">
+            <div class="modal__header">
+                <h2 class="modal__title">Add URL</h2>
+            </div>
+            <div class="modal__content">
+                <div class="form-container form--padding10">
+
+
+                    <div class="form-column twelve">
+                        <div class="form-label">
+                            Link URL
+                        </div>
+                        <div class="form-field">
+                            <input type="text" class="fluid" placeholder="" pInputText/>
+                        </div>
+                    </div>
+
+                    <div class="form-column twelve">
+                        <div class="form-label">
+                            Icon
+                        </div>
+                        <div class="form-field">
+                            <select class="selectpicker" data-placeholder="Steve Newman"
+                                    data-style="btn-select" data-width="100%">
+
+                                <option data-icon="fal fa-book" value="">Document</option>
+                                <option data-icon="fal fa-file" value="">File</option>
+                                <option data-icon="fal fa-list-alt" value="">Comment</option>
+                                <option data-icon="fal fa-calendar-alt" value="">Calendar</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="form-column twelve">
+                        <div class="form-label">
+                            Comment
+                        </div>
+                        <div class="form-field">
+                                    <textarea pInputTextarea
+                                              class="ui-inputtext ui-corner-all ui-state-default ui-widget"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-column six">
+                        <div class="form-label">
+                            Attachment
+                        </div>
+                        <div class="form-field">
+                            <button class="btn">Choose File</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="modal__footer">
+                <a class="btn btn--cancel" href="" style="position: relative; overflow: hidden;">Cancel</a>
+                <a href="" class="btn" style="position: relative; overflow: hidden;">Done</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="container">
+    <header class="l-header header">
+
+        <div class="logo l-logo">
+            <a href="index.html"><img src="assets/images/logo.png"></a>
+        </div>
+        <!-- /.logo -->
+        <nav class="nav">
+            <ul>
+                <li class="nav__link ">
+                    <a href="">
+                        <i class="fal fa-tachometer-alt"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav__link">
+                    <a href="">
+                        <i class="fal fa-exclamation-circle"></i> Alerts
+                    </a>
+                </li>
+                <li class="nav__link">
+                    <a href="#">
+                        <i class="fal fa-list-alt"></i> Reports
+                    </a>
+                </li>
+                <li class="nav__link">
+                    <a href="">
+                        <i class="fal fa-sliders-v"></i> Report Generator
+                    </a>
+                </li>
+                <li class="nav__link">
+                    <a href="">
+                        <i class="fal fa-file"></i> Text Analytics
+                    </a>
+                </li>
+                <li class="nav__link">
+                    <a href="">
+                        <i class="fal fa-book-alt"></i> Cross Tab
+                    </a>
+                </li>
+
+                <li class="nav__link active">
+                    <a href="">
+                        <i class="fal fa-window-restore"></i>Bulletins
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-options">
+
+            <div class="user-info">
+                <a href="javascript:void(0)" class="user-dropdown-link">
+                    <i class="fas fa-user-circle"></i>
+                </a>
+                <div class="user-dropdown">
+                    <div class="user">
+                        <div class="user__inital"> J</div>
+                        <p>Welcome Back, <strong>Jason Tryfon</strong></p></div>
+                    <div class="user__list">
+                        <ul>
+                            <li>
+                                <a href="#"><i class="fal fa-plus"></i>Admin Module</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fal fa-pencil"></i>Portal Translation</a>
+                            </li>
+
+                            <li>
+                                <a href="#"><i class="fal fa-file"></i>Notification Template</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fal fa-sign-language"></i>Language</a>
+                            </li>
+
+                            <li>
+                                <a href="#"><i class="fal fa-print"></i>Print</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fal fa-question-circle"></i>Help</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fal fa-power-off"></i>Logout</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="user-features">
+                <div class="feature-node notification-node has-notification notification-box">
+                    <div class="noti-dot">
+                        <span class="dot"></span>
+                        <span class="pulse"></span>
+                    </div>
+                    <a class="handler" href="#"><i class="fal fa-bell"></i></a>
+
+                </div>
+                <div class="feature-node edit-node">
+                    <a class="handler" href="#"><i class="fal fa-pencil"></i></a>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </header>
+    <!-- /.header-->
+    <div class="l-content">
+        <section class="sidebar">
+            <!--<a href="" class="back-link"><i class="icon icon-long-arrow-left"></i><span>Back</span></a>-->
+            <div class="sidebar-header">
+                <div class="menu-wrapper">
+                    <div class="hamburger-menu"></div>
+                </div>
+            </div>
+            <div class="sidebar-menu ">
+                <ul class="">
+                    <li><a href="" class="sidebar__link"> <i class="icon icon-file-text-o"></i> My Reports</a></li>
+                    <li><a href="" class="sidebar__link"> <i class="icon icon-star-half-o"></i> Rating Analysis</a></li>
+                    <li><a href="" class="sidebar__link"> <i class="icon icon-building-o"></i> Organization Summary</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- /.sidebar-->
+        <main class="page-surveylist main">
+            <div class="page_inner">
+
+
+                <div class="w-xl">
+                    <div class="page_header">
+                        <div class="breadcrumbs page-breadcrumbs">
+                            <ul class="breadcrumbs_list">
+                                <!-- <li><a
+                                         href=""><span class="">Back</span></a>
+                                 </li>-->
+                                <li>
+                                    <a><span class="fas fa-home"></span></a></li>
+                                <li class="active"><a
+                                        href=""><span class="">Bulletins</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <h1 class="page__title">
+                            Bulletins
+                        </h1>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="w-xl">
+                    <div class="widget fullpage--widget height--auto">
+
+                        <div class="bulletin__filters filter--white">
+                            <div class="filter-item filter-item--title">
+                                <h2>URL</h2>
+                            </div>
+
+                            <div class="filter-item filter-item--btn">
+                                <a href="" class="btn">Add URL</a>
+                            </div>
+
+
+                        </div>
+
+                        <div class="bulletin-list">
+
+                            <ul>
+
+                                <li class="active">
+                                    <a href="#." class="tooltip"
+                                       title="We ask for your age only for statistical purposes.">
+                                        <i class="fal fa-book"></i>
+                                        <span>Link 01</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="" class="tooltip"
+                                       title="hi how are you.">
+                                        <i class="fal fa-desktop"></i>
+                                        Link 02
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fal fa-car"></i>
+                                        Link 03
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fal fa-plane"></i>
+                                        Link 04
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fal fa-cog"></i>
+                                        Link 05
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fal fa-file"></i>
+                                        Link 06
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fal fa-globe"></i>
+                                        Link 07
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fal fa-briefcase"></i>
+                                        Link 08
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="">
+                                        <i class="fal fa-mobile"></i>
+                                        Link 09
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="">
+                                        <i class="fal fa-list-alt"></i>
+                                        Link 10
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="w-xl">
+                    <ul class="tabs ">
+                        <li><a class="active" href="#">Sales</a></li>
+                        <li><a href="#">Service</a></li>
+                    </ul>
+                </div>
+                <div class="w-xl ">
+                    <div class="widget fullpage--widget">
+
+
+                        <div class="bulletin__filters filter--white">
+                            <div class="filter-item filter-item--title">
+                                <h2>Bulletin</h2>
+                            </div>
+
+                            <div class="filter-item filter-item--btn">
+                                <a href="" class="btn">Upload Bulletin</a>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="">
+                            <div class="table table--striped">
+
+
+                                <table>
+                                    <thead>
+                                    <tr class="thead no--border">
+                                        <th class="text-left">Bulletin Name</th>
+                                        <th class="text-left">Description</th>
+                                        <th>File Type</th>
+
+                                        <th>Upload Date (newest to oldest)</th>
+                                        <th>Uploaded By</th>
+                                        <th>Actions</th>
+
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="">
+                                        <td class="text-left"><a href="">Bulletin Number 245</a></td>
+                                        <td class="text-left">
+                                            <span class="tooltip" data-tooltip-content="#tooltip_content">This span has a tooltip with HTML when you hover over it!</span>
+
+                                            <div class="tooltip_templates">
+    <span id="tooltip_content">
+        orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+    </span>
+                                            </div>
+                                        </td>
+                                        <td class="actions">
+                                            <a><i class="fal fa-file-pdf"></i></a>
+                                        </td>
+                                        <td>07/07/19</td>
+                                        <td>Micheal Kane</td>
+                                        <td class="actions"><a href=""><i class="fal fa-pencil"></i></a> <a
+                                                href=""><i class="far fa-trash"></i></a></td>
+
+
+                                    </tr>
+
+                                    <tr class="">
+                                        <td class="text-left"><a href="">Bulletin Number 245</a></td>
+                                        <td class="text-left">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        </td>
+                                        <td class="actions">
+                                            <a><i class="fal fa-file-pdf"></i></a>
+                                        </td>
+                                        <td>07/07/19</td>
+                                        <td>Micheal Kane</td>
+                                        <td class="actions"><a href=""><i class="fal fa-pencil"></i></a> <a
+                                                href=""><i class="far fa-trash"></i></a></td>
+
+
+                                    </tr>
+                                    <tr class="">
+                                        <td class="text-left"><a href="">Bulletin Number 245</a></td>
+                                        <td class="text-left">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        </td>
+                                        <td class="actions">
+                                            <a><i class="fal fa-file-pdf"></i></a>
+                                        </td>
+                                        <td>07/07/19</td>
+                                        <td>Micheal Kane</td>
+                                        <td class="actions"><a href=""><i class="fal fa-pencil"></i></a> <a
+                                                href=""><i class="far fa-trash"></i></a></td>
+
+
+                                    </tr>
+                                    <tr class="">
+                                        <td class="text-left"><a href="">Bulletin Number 245</a></td>
+                                        <td class="text-left">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        </td>
+                                        <td class="actions">
+                                            <a><i class="fal fa-file-pdf"></i></a>
+                                        </td>
+                                        <td>07/07/19</td>
+                                        <td>Micheal Kane</td>
+                                        <td class="actions"><a href=""><i class="fal fa-pencil"></i></a> <a
+                                                href=""><i class="far fa-trash"></i></a></td>
+
+
+                                    </tr>
+                                    <tr class="">
+                                        <td class="text-left"><a href="">Bulletin Number 245</a></td>
+                                        <td class="text-left">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        </td>
+                                        <td class="actions">
+                                            <a><i class="fal fa-file-pdf"></i></a>
+                                        </td>
+                                        <td>07/07/19</td>
+                                        <td>Micheal Kane</td>
+                                        <td class="actions"><a href=""><i class="fal fa-pencil"></i></a> <a
+                                                href=""><i class="far fa-trash"></i></a></td>
+
+
+                                    </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+</body>
+<script src='assets/scripts/jquery-1.12.3.min.js'></script>
+<script src="assets/scripts/bootstrap-dropdown.js"></script>
+<script src="assets/scripts/bootstrap-select.min.js"></script>
+<script src="assets/scripts/tooltipster.bundle.min.js"></script>
+<script src="assets/scripts/tooltipster-scrollableTip.min.js"></script>
+<!-- Add Custom Tooltip -->
+<script>
+    $('.tooltip').tooltipster({
+              arrow: 'true',
+        maxWidth:'300',
+        distance:5,
+        contentAsHTML:'true',
+        trigger: 'hover',
+        interactive:'true',
+        position: 'bottom'
+    });
+
+</script>
+
+</html>
+                                                                                                                                           

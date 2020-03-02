@@ -1,0 +1,52 @@
+//widget emerging trends
+.widget--emergingtrends {
+    .widget__graph{
+        padding: 0;
+    }
+
+
+    .widget__legends{
+        border-top: 1px solid #f0f0f0;
+        float: left;
+        width: 100%;
+
+
+
+
+        table{
+            width: 100%;
+            table-layout: fixed;
+            td{
+                border-right: 1px solid #e1e1e1;
+                padding:10px 5px;
+
+                &:last-child{
+                    border: 0;
+                }
+            }
+        }
+
+
+
+        ul{
+            li{
+                font-size: 12px;
+                display: block;
+                color: #888888;
+            }
+        }
+
+    }
+}
+
+/*
+
+.Rectangle_603 {
+    background-image: -moz-linear-gradient( 90deg, rgb(255,43,67) 0%, rgb(255,145,95) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(255,43,67) 0%, rgb(255,145,95) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(255,43,67) 0%, rgb(255,145,95) 100%);
+
+}
+*/
+
+

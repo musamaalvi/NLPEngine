@@ -1,0 +1,152 @@
+.source{
+  img{
+   margin-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+//total reviews
+
+.total-reviews{
+  float:left;
+  width: 100%;
+  padding:20px;
+  font-size: 16px;
+  border-bottom: 1px solid #d5d5d5;
+  text-align: left;
+  margin: 0;
+  font-weight:500;
+
+  span{
+    color:#a9b4bd;
+  }
+}
+
+
+.comment-container{
+  border-top: 2px solid #ebebeb;
+  border-bottom: 2px solid #ebebeb;
+  margin:15px 0;
+  clear: both;
+  float:left;
+  width: 100%;
+}
+
+.comments__footer{
+  float:left;
+  width: 100%;
+  margin-top: 15px;
+}
+.comments-review{
+  padding:15px 15px 15px 70px;
+  width:100%;
+  position: relative;
+  float:left;
+
+  h2{
+    font-weight:400;
+    font-size:16px;
+    color:#34495e;
+    margin-bottom:10px;
+    small{
+      display: block;
+      font-size: 12px;
+      color: #a9b4bd;
+      margin-top: 3px;
+    }
+  }
+
+  p{
+    line-height:18px;
+    color: #34495e;
+    font-weight: normal;
+  }
+
+  .user-initial{
+    float: left;
+    background: lighten($clr-pri,60%);
+    border:2px solid $clr-pri;
+    width: 42px;
+    height: 42px;
+    text-align: center;
+    line-height:42px;
+    border-radius: 100%;
+    font-size: 18px;
+    margin-left: -60px;
+    color: $clr-pri;
+  }
+}
+
+
+
+
+/// feedback
+
+.response{
+  padding:0 20px 20px 70px;
+  width:100%;
+  float: left;
+  position: relative;
+  border-bottom: 2px solid #ebebeb;
+  margin-bottom: 15px;
+
+  .feedback{
+    border-left: 5px solid $clr-pri;
+    background: #f4f5f9;
+    padding: 20px;
+    width: 80%;
+    float: left;
+  }
+
+  h3{
+    font-weight:400;
+    font-size:12px;
+    margin-bottom:10px;
+    color: #a9b4bd;
+
+  }
+
+  p{
+    line-height:18px;
+    color: #34495e;
+    font-weight: normal;
+  }
+
+  .user-initial{
+    float: left;
+    background: lighten($clr-pri,60%);
+    border:2px solid $clr-pri;
+    width:42px;
+    height:42px;
+    text-align: center;
+    line-height:42px;
+    font-size: 18px;
+    border-radius: 100%;
+    margin-left: -60px;
+    color: $clr-pri;
+  }
+}
+
+
+
+.star-ratings-percentage {
+  position: relative;
+  vertical-align: middle;
+  display: inline-block;
+  color: #b1b1b1;
+  //overflow: hidden;
+  .full-stars {
+    position: absolute;
+    left: 0;
+    top: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #fbcd33;
+  }
+  .empty-stars:before, .full-stars:before {
+    content:"\f005 \202f \f005 \202f \f005 \202f \f005 \202f \f005";
+    font-family:"Font Awesome 5 Pro" ;
+    font-weight:700;
+    font-size: 16px;
+  }
+}

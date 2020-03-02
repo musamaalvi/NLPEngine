@@ -1,0 +1,90 @@
+//cl breakdown
+
+
+.widget--clefficiency {
+
+   // overflow: hidden;
+
+    .widget__content{
+        @include clearfix();
+      padding: 0;
+    }
+
+    .widget__graph{
+        @include span(9 no-gutters);
+       // padding-top: emify(30,10);
+        border-right: 1px solid $widget-border;
+      padding: 20px;
+
+      @include susy-breakpoint(1024px, $susy, '.no-mq') {
+
+        @include span(12 no-gutters);
+      }
+    }
+
+    .widget__counts{
+        @include span(3 no-gutters);
+
+      @include susy-breakpoint(1024px, $susy, '.no-mq') {
+
+        @include span(12 no-gutters);
+      }
+      padding: 20px;
+    }
+    
+    .counts__list{
+       padding-top: emify(25,10);
+
+      @include susy-breakpoint(1024px, $susy, '.no-mq') {
+
+        padding-top:0;
+      }
+        li{
+            float: left;
+            width: 50%;
+            //display: block;
+            padding:emify(17,10) 0;
+
+          &:last-child{
+            width: 100%;
+          }
+
+        }
+
+        .count{
+            font-size: emify(30,10);
+            //font-weight:300;
+            font-weight: normal;
+
+
+
+        }
+        
+        label{
+            display: block;
+            font-size: emify(13,10);
+            color:$clr-blue;
+            text-transform: capitalize;
+        }
+
+        small{
+            font-size: emify(13,10);
+            position: relative;
+            padding-left: emify(15,10);
+           //color: #a1a5a9;
+
+            .icon{
+                position: absolute;
+                left: 0;
+                &:before{
+                    font-size:emify(16,10);
+                }
+
+            }
+        }
+    }
+
+
+}
+
+

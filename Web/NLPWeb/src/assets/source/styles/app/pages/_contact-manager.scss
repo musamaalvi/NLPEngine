@@ -1,0 +1,120 @@
+//contact manager
+.table--contactmanager {
+    table {
+        th {
+            white-space: nowrap;
+        }
+    }
+}
+
+//contact search list
+.contact-search {
+    min-height: auto;
+    font-size: 1rem;
+    padding: em(10, 10);
+    @include clearfix();
+    .contact_list {
+        width: 85%;
+        li {
+            display: inline-block;
+            margin-right: em(10, 10);
+            label {
+                display: block;
+                margin: em(7, 10) em(0, 10);
+                color: $clr-pri;
+                font-size: em(12, 10);
+            }
+            select {
+                width: em(130, 10);
+                padding: 3px;
+                text-transform: capitalize;
+                font-size: em(12, 10);
+                border-color: $clr-graylighter;
+            }
+        }
+    }
+    .contact_btns {
+        width: 15%;
+        .btn {
+            margin-bottom: em(5, 10);
+            padding: emify(4, 10) em(8, 10);
+            padding-right: emify(20, 10);
+            position: relative;
+            width: 100%;
+            text-align: left;
+            &:before {
+                position: absolute;
+                right: emify(6, 10);
+                top: emify(5, 10);
+            }
+        }
+    }
+}
+
+//actions_icon{
+.actions_icon {
+    min-width: em(65, 10);
+    i {
+        font-size: em(12, 10);
+        margin: em(0, 10) em(2, 10);
+    }
+}
+
+//edit action plan popup
+.edit-action,
+.edit-contact {
+    .modal__title {
+        display: inline-block;
+    }
+    .date__created {
+        float: right;
+        font-size: emify(12, 10);
+        margin-top: emify(3, 10);
+    }
+    .print {
+        float: right;
+        margin-left: emify(8, 10);
+        margin-top: emify(1, 10);
+        i {
+            font-size: emify(16, 10);
+        }
+        a {
+            color: $clr-gray;
+            &:hover {
+                color: $clr-pri;
+            }
+        }
+    }
+}
+
+
+$icon-color:#aaaaaa;
+
+//help-documents
+.help-documents {
+    .modal__inner {
+        //width: 700px;
+        table {
+
+            tr{
+                &:last-child{
+                    border:0;
+                }
+            }
+            td {
+                padding: emify(10, 10) emify(25, 10);
+                text-align: right;
+                font-size: emify(14, 10);
+                i {
+                    font-size: emify(18, 10);
+                    color: $icon-color;
+                    margin:0;
+                    padding: 0; 
+                }
+                &:first-child {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}

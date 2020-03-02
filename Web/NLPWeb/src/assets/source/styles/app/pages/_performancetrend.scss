@@ -1,0 +1,263 @@
+//performance trend
+
+.page-performancetrend {
+  .widget__content {
+    padding: 20px;
+
+    @include susy-breakpoint(1024px, $susy, '.no-mq') {
+      padding: 0;
+    }
+
+    .graph__title {
+      text-align: center;
+      color: #212229;
+      line-height: 18px;
+      max-width: 50%;
+      margin: 0 auto;
+      font-weight: normal;
+      // text-transform: uppercase;
+      font-size: 15px;
+
+      @include susy-breakpoint(1024px, $susy, '.no-mq') {
+        width: 100%;
+        padding: 10px;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.carousel-list {
+  text-align: center;
+  font-size: 0;
+  .list__item {
+    position: relative;
+    -webkit-backface-visibility: hidden;
+    //   border-left: 1px solid #d6dade;
+    padding: 5px 10px;
+    white-space: nowrap;
+    font-size: 13px;
+    text-align: center;
+    cursor: pointer;
+    color: #212229;
+    display: inline-block;
+
+    span {
+      color: $clr-pri;
+    }
+
+    &.active {
+      background: $clr-pri;
+      color: $white;
+      border-radius: 3px;
+      span {
+        color: $white;
+      }
+    }
+
+  }
+
+  &.carousel--child {
+
+    .list__item {
+      border-top: 0;
+      border-bottom: 0;
+    }
+  }
+
+}
+
+.carousel--child {
+  margin-top: 0px;
+  .owl-carousel {
+    border: 0px;
+    //background: #f8f9fa;
+  }
+}
+
+.page__filters {
+  display: flex;
+  position: relative;
+  background: #f5f6f7;
+  border-bottom: 1px solid #ebebeb;
+  border-top: 1px solid #ebebeb;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px 3px 0 0;
+  @include susy-breakpoint(1024px, $susy, '.no-mq') {
+    flex-direction: column;
+    //padding: 10px;
+  }
+  .filter-item {
+    padding: 15px 20px;
+    @include susy-breakpoint(1024px, $susy, '.no-mq') {
+      padding: 10px;
+      float: left;
+      width: 100%;
+      
+      text-align: center;
+    }
+  }
+}
+
+.filter-hierarchy {
+
+  .filter-dropdown{
+    top:68px;
+    @include susy-breakpoint(1024px, $susy, '.no-mq') {
+      top:0;
+    }
+  }
+
+  label {
+    font-size: 12px;
+    float: left;
+    line-height: 37px;
+
+    @include susy-breakpoint(1024px, $susy, '.no-mq') {
+      line-height: normal;
+      width: 100%;
+    }
+  }
+  .filter-field {
+    background: $white;
+    padding: 0;
+    margin: 0 10px;
+    width: 514px;
+    @include susy-breakpoint(1024px, $susy, '.no-mq') {
+      margin: 10px 0 10px;
+      position: relative;
+
+    }
+    .filter__trigger {
+      padding: 8px 10px 3px;
+      border: 1px solid #ebebeb;
+      border-radius: 3px;
+    }
+
+    .breadcrumbs-tags {
+      float: left;
+      ol {
+        li {
+          margin-bottom: 5px;
+        }
+      }
+
+    }
+    .field__icons {
+      top: 12px;
+      right: 5px;
+      font-size: 12px;
+    }
+  }
+
+  .btn {
+    padding: 10px 15px 9px;
+    @include susy-breakpoint(1024px, $susy, '.no-mq') {
+      padding: 5px 10px;
+      float: left;
+      width: 100%;
+      display: block;
+    }
+  }
+
+}
+
+.owl-item{
+  .item {
+    position: relative;
+    -webkit-backface-visibility: hidden;
+    //   border-left: 1px solid #d6dade;
+    padding:7px 10px;
+    white-space: nowrap;
+    font-size: 13px;
+    text-align: center;
+    cursor: pointer;
+    color: #212229;
+    display: inline-block;
+
+    span {
+      color: $clr-pri;
+    }
+
+    &.active {
+      background: $clr-pri;
+      color: $white;
+      border-radius: 3px;
+      span {
+        color: $white;
+      }
+    }
+
+  }
+}
+
+
+.carousel-wrap{
+  padding:8px 50px;
+  margin-top: 20px;
+  border-bottom: 1px solid #ebebeb;  
+  border-top: 1px solid #ebebeb;  
+}
+
+.child-carousel{
+  padding:8px 50px;
+}
+
+
+
+
+/* end fix */
+.owl-nav > div {
+  // margin-top: -26px;
+  position: absolute;
+  top:0;
+  color: #34495e;
+}
+
+.owl-nav i {
+  font-size:16px;
+}
+
+.owl-nav{
+  .owl-prev,.owl-next {
+    width:30px;
+    height:30px;
+    line-height:34px;
+    text-align: center;
+    border-radius: 100%;
+    
+  
+  &:hover{
+   // background: #000;
+    background: #e1e1e1;
+    }
+  }
+}
+
+.owl-nav .owl-prev {
+  left: -30px;
+
+
+@include susy-breakpoint(768px, $susy, '.no-mq') {
+   left: -40px;
+  }
+
+  &.disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+
+}
+
+.owl-nav .owl-next {
+  right: -30px;
+
+  @include susy-breakpoint(768px, $susy, '.no-mq') {
+    right: -40px;
+  }
+  &.disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+}

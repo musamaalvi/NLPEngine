@@ -1,0 +1,54 @@
+.l-content {
+  float: left;
+  width: 100%;
+  position: relative;
+  padding:0;
+  @include transition(margin, 0.3s, ease-in-out);
+
+  // @include susy-breakpoint(1024px, $susy, '.no-mq') {
+  //   padding-left: 0;
+  //   padding-top: 55px;
+  // }
+
+}
+
+.row {
+  @include clearfix();
+  margin-left: 0 - gutter();
+  margin-right: 0 - gutter();
+}
+
+
+.fontawesome-list {
+  font-size: 24px;
+  color: #495057;
+  ul {
+    li {
+      display: inline-block;
+      margin: 5px;
+      width: 64px;
+      max-width: 64px;
+      text-align: center;
+      vertical-align: top;
+      i {
+        font-size: 36px;
+      }
+      span {
+        display: block;
+        font-size:12px;
+      }
+    }
+  }
+}
+
+
+
+footer{
+  float: left;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  p{
+    color: #4d565f;
+  }
+}

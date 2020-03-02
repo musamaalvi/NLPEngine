@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>Dashboard</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <!-- favicon-->
+    <link rel="icon" type="image/ico" href="assets/images/favicon.ico">
+
+</head>
+
+<body>
+
+
+<!--<div id="draggable" class="updating-message">
+    <h3><i class="icon icon-clock-o"></i> Updating<div class="loading"></div></h3>
+    <p>Portal data is updating you will se updated results once procees completes.</p>
+</div>-->
+<div class="container">
+    <header class="header">
+        <div class="menu-wrapper">
+            <div class="hamburger-menu"></div>
+        </div>
+        <div class="logo l-logo">
+            <a href="index.html"><img src="assets/images/logo.png"></a>
+        </div>
+        <!-- /.logo -->
+        <nav class="nav">
+            <ul>
+                <li class="nav__link ">
+                    <a href="">
+                        <i class="fal fa-tachometer-alt"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav__link">
+                    <a href="">
+                        <i class="fal fa-exclamation-circle"></i> Alerts
+                    </a>
+                </li>
+                <li class="nav__link active">
+                    <a href="#">
+                        <i class="fal fa-list-alt"></i> Reports
+                    </a>
+                </li>
+                <li class="nav__link">
+                    <a href="">
+                        <i class="fal fa-sliders-v"></i> Report <br> Generator
+                    </a>
+                </li>
+                <li class="nav__link">
+                    <a href="">
+                        <i class="fal fa-file"></i> Text Analytics
+                    </a>
+                </li>
+                <li class="nav__link">
+                    <a href="">
+                        <i class="fal fa-book-alt"></i> Cross Tab
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-options">
+
+            <div class="user-info">
+                <a href="javascript:void(0)" class="user-dropdown-link">
+                    <i class="fas fa-user-circle"></i>
+                </a>
+                <div class="user-dropdown">
+                    <div class="user">
+                        <div class="user__inital"> J</div>
+                        <p>Welcome Back, <strong>Jason Tryfon</strong></p></div>
+                    <div class="user__list">
+                        <ul>
+                            <li>
+                                <a href="#"><i class="fal fa-plus"></i>Admin Module</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fal fa-pencil"></i>Portal Translation</a>
+                            </li>
+
+                            <li>
+                                <a href="#"><i class="fal fa-file"></i>Notification Template</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fal fa-sign-language"></i>Language</a>
+                            </li>
+
+                            <li>
+                                <a href="#"><i class="fal fa-print"></i>Print</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fal fa-question-circle"></i>Help</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fal fa-power-off"></i>Logout</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div id="actionMenu" class="user-dropdown iskyActionMenu noprint hide active">
+                    <div class="user">
+                        <div class="user__inital"> M</div>
+                        <p>
+
+        <span title="<span title=&quot;Welcome Back&quot;>Welcome Back</span>, "><span
+                title="Welcome Back">Wel...</span> <strong>Mulazim Hussain</strong>
+
+</span></p>
+                    </div>
+
+                    <div class="user__list">
+                        <ul>
+                            <li>
+                                <a class="iskyActionItem" data-ajax="true"
+                                   data-ajax-begin="SelModuleName = 'UserAdminModule'"
+                                   data-ajax-loading="#report-loader" data-ajax-mode="replace"
+                                   data-ajax-success="$('#report').trigger('reportify'); $('#actionMenu').removeClass('active'); $('.sidebarLinkItem').removeClass('active'); SelReportingName = 'UserAdminModule'"
+                                   data-ajax-update="#report" href="/ibexDEV/Clearview/Reporting/UserAdminModule"><i
+                                        class="fal fa-plus"></i><span title="Admin Module">Admin Module</span></a>
+                            </li>
+                            <li>
+                                <a class="iskyActionItem" data-ajax="true"
+                                   data-ajax-begin="SelModuleName = 'PortalTranslation'"
+                                   data-ajax-loading="#report-loader" data-ajax-mode="replace"
+                                   data-ajax-success="$('#report').trigger('reportify'); $('#actionMenu').removeClass('active'); $('.sidebarLinkItem').removeClass('active'); SelReportingName = 'PortalTranslation'"
+                                   data-ajax-update="#report" href="/ibexDEV/Clearview/Reporting/PortalTranslation"><i
+                                        class="fal fa-pencil"></i> <span
+                                        title="Portal Translation">Portal Translation</span></a>
+                            </li>
+                            <li>
+                                <a class="iskyActionItem" data-ajax="true"
+                                   data-ajax-begin="SelModuleName = 'NotificationTemplate'"
+                                   data-ajax-loading="#report-loader" data-ajax-mode="replace"
+                                   data-ajax-success="$('#report').trigger('reportify'); $('#actionMenu').removeClass('active'); $('.sidebarLinkItem').removeClass('active'); SelReportingName = 'NotificationTemplate'"
+                                   data-ajax-update="#report"
+                                   href="/ibexDEV/Clearview/Reporting/NotificationTemplate"><i
+                                        class="fal fa-file"></i> <span title="Notification Template">Notification Template</span></a>
+                            </li>
+                            <li class="hide">
+                                <a class="iskyActionItem" href="#" onclick="OpenCustomizedDashboad()">
+                                    <i class="fal fa-arrows"></i>
+                                    Customize_Dashboard
+                                </a>
+                            </li>
+                            <li class="exportli noMobile hide">
+                                <a class="iskyActionItem" id="lnkExport" onclick="ExportClick();" href="#">
+                                    <i class="fal fa-file-excel"></i>
+                                    Export
+                                </a>
+                            </li>
+
+                            <li class="exportallli noMobile hide">
+                                <a class="iskyActionItem" data-tooltip="<span title=" 10000="" records="" in="" csv"="">10000
+                                records in CSV"
+                                id="lnkExportAll"
+                                onclick="ExportAllClick();"
+                                href="#"&gt;
+                                <i class="fal fa-file-excel"></i>
+                                <span title="Export">Export</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a id="ChangeLanguage" onclick="changeLanguage();toggleMenu()" class="iskyActionItem"
+                                   href="#">
+                                    <i class="fal fa-sign-language"></i>
+                                    <span title="Language">Language</span>
+                                </a>
+                            </li>
+                            <li class="noMobile">
+                                <a class="iskyActionItem noMobile" id="lnkPrint" href="#" onclick="PrintClick();">
+                                    <i class="fal fa-print"></i>
+                                    <span title="Print">Print</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="iskyActionItem noMobile" onclick="webHelpGoogleAnalytics();
+                            toggleMenu();
+                            RH_ShowHelp(0, '/ibexDEV/WebHelp/en-CA/index.htm>WithNavPane', HH_HELP_CONTEXT, $('#report-helpid').val());
+                            return false;" href="#">
+                                    <i class="fal fa-question-circle"></i>
+                                    <span title="Help">Help</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="iskyActionItem" id="linkTraningVideos" href="#" onclick="trainingVideos();">
+                                    <i class="fal fa-play-circle"></i>
+                                    <span title="Training Videos">Training Videos</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="iskyActionItem"
+                                   href="https://iskytech.atlassian.net/servicedesk/customer/portal/6" target="_blank">
+                                    <i class="fab fa-jira"></i>
+                                    <span title="Service Desk">Service Desk</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="customizedDashboard" onclick="OpenCustomizedDashboad()" class="iskyActionItem"
+                                   href="#" style="display: block;">
+                                    <i class="fal fa-arrows"></i>
+                                    <span title="Customized Dashboard">Customized Dashboard</span>
+                                </a>
+                            </li>
+                            <li>
+                                <form action="/ibexDEV/Account/LogOff" class="navbar-right" id="logoutForm"
+                                      method="post"><input name="__RequestVerificationToken" type="hidden"
+                                                           value="TkqDAcjtwb60tYBt1dZni4lcYn1iShTdb9niEMvY-q-JkA76-dx9Px6RbkPcV09ap-Irtvr_vJkOVCujorFrR5i3gkmc6iZfXWzzzp3Kcuq58uoAkN_SCMPMrdeuzmeyfs-NTIME5ZJ4RFCwmIT3PA2">
+                                    <a class="iskyActionItem"
+                                       href="javascript:document.getElementById('logoutForm').submit()"
+                                       onclick="EPanalLogout()">
+                                        <i class="fal fa-power-off"></i>
+                                        Logout
+                                    </a>
+                                </form>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="user-features">
+                <div class="feature-node menu-node">
+                    <a class="handler eff" href="#."><i class="far fa-stream"></i></a>
+                </div>
+                <div class="feature-node notification-node has-notification notification-box">
+                    <div class="noti-dot">
+                        <span class="dot"></span>
+                        <span class="pulse"></span>
+                    </div>
+                    <a class="handler eff" href="#."><i class="fal fa-bell"></i></a>
+
+                </div>
+                <div class="feature-node edit-node">
+                    <a class="handler eff" href="#."><i class="fal fa-pencil"></i></a>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </header>
+    <!-- /.header-->
+    <div class="l-content">
+        <section class="sidebar">
+            <!--<a href="" class="back-link"><i class="icon icon-long-arrow-left"></i><span>Back</span></a>-->
+            <div class="sidebar-header">
+                <div class="menu-wrapper">
+                    <div class="hamburger-menu"></div>
+                </div>
+            </div>
+            <div class="sidebar-menu ">
+                <ul class="">
+                    <li><a href="" class="sidebar__link"> <i class="icon icon-file-text-o"></i> My Reports</a></li>
+                    <li><a href="" class="sidebar__link"> <i class="icon icon-star-half-o"></i> Rating Analysis</a></li>
+                    <li><a href="" class="sidebar__link"> <i class="icon icon-building-o"></i> National Sales / Service
+                        Ranking Report</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- /.sidebar-->
+        <main class="page-performancetrend main">
+            <div class="page_inner">
+
+
+                <div class="w-xl">
+                    <div class="page_header">
+                        <div class="breadcrumbs page-breadcrumbs">
+                            <ul class="breadcrumbs_list">
+                                <!-- <li><a
+                                         href=""><span class="">Back</span></a>
+                                 </li>-->
+                                <li>
+                                    <a><span class="fas fa-home"></span></a></li>
+                                <li class="active"><a
+                                        href=""><span class="">Performance Trend</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <h1 class="page__title">
+                            Performance Trend
+                        </h1>
+                        <div class="breadcrumbs">
+                            <ol class="breadcrumbs_list">
+                                <li>
+                                    <a href="javascript:void(0);">National</a>
+                                </li>
+                                <li class="active"><a href="#">Zone</a></li>
+                            </ol>
+                        </div>
+
+                    </div>
+                    <div class="filter ">
+
+                        <ul>
+
+                            <li class="filter__item flex3">
+                                <div class="filter__label">Hirearchy</div>
+                                <div data-identifier="Filter-1" class="filter-field filter--hierarchy"
+                                     id="hierarchyFilterContent"
+                                     data-metric="HierarchyId=12|Entity=Hierarchy|OrgId=12|RNO=3|OrgLevel=2|OrgName=Zone">
+                                    <div class="filter__trigger">
+                                        <i class="fal fa-search"></i>
+                                        <input data-refresh="/ibexQA/Widget/Refresh" id="Filter-1_autoComplete"
+                                               class="devAutoComp field__label" title="Enter Dealer Name/Code"
+                                               maxlength="30" placeholder="Enter Dealer Name/Code" type="text"
+                                               disabled="true">
+                                        <div class="field__icons">
+                                            <span class="iconPopup icons__active"><i class="fal fa-pencil2"></i></span>
+                                            <span class="iconRefresh icons__active icon--ok"><i
+                                                    class="fal fa-check "></i> </span>
+                                            <i class="fal fa-angle-down"></i>
+                                        </div>
+                                    </div>
+                                    <div class="filter-dropdown noprint dropdown--hierarchy hierarchy--big">
+                                        <div style="display: none" class="loader-overlay">
+                                            <div class="loader">
+                                                <div class="loader__center">
+                                                    <svg class="loader__icon" width="34" height="38"
+                                                         viewBox="0 0 34 38">
+                                                        <path class="loader__path" stroke-dashoffset="0"
+                                                              d="M29.437 8.114L19.35 2.132c-1.473-.86-3.207-.86-4.68 0L4.153 8.114C2.68 8.974 1.5 10.56 1.5 12.28v11.964c0 1.718 1.22 3.306 2.69 4.165l10.404 5.98c1.47.86 3.362.86 4.834 0l9.97-5.98c1.472-.86 2.102-2.45 2.102-4.168V12.28c0-1.72-.59-3.306-2.063-4.166z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hierarchy-breadcrumbs">
+                                            <ul class="breadcrumbs_list ">
+                                                <li class="drillCrumb" data-entity="National"
+                                                    data-terminateddate="null " data-employeetypecd="null"
+                                                    data-hierarchyid="0" data-orglevel="1" data-parentrno="0"
+                                                    data-rownumber="1" data-orgid="1" data-orgname="National"
+                                                    disabled="disabled" style="pointer-events: none;"><a
+                                                        href="javascript:void(0);" disabled="disabled"
+                                                        style="cursor: default; pointer-events: none;">National</a>
+                                                </li>
+                                                <li class="drillCrumb" data-entity="Hierarchy"
+                                                    data-terminateddate="null " data-employeetypecd="null"
+                                                    data-hierarchyid="12" data-orglevel="2" data-parentrno="1"
+                                                    data-rownumber="3" data-orgid="12" data-orgname="Zone">
+                                                    <a>Zone</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="hierarchy-scroll scrollerForHirerchy mCustomScrollbar _mCS_5 mCS_no_scrollbar"
+                                             style="position: relative; overflow: visible;">
+                                            <div id="mCSB_5"
+                                                 class="mCustomScrollBox mCS-light mCSB_vertical_horizontal mCSB_outside"
+                                                 style="max-height: none;" tabindex="0">
+                                                <div id="mCSB_5_container"
+                                                     class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y mCS_x_hidden mCS_no_scrollbar_x"
+                                                     style="position: relative; top: 0px; left: 0px; width: 721px; min-width: 100%; overflow-x: inherit;"
+                                                     dir="ltr">
+                                                    <ul id="Filter-1_hlist" class="hierarchy">
+                                                        <li class="hierarchy__list">
+                                                            <ul class="mCustomScrollbar _mCS_2 mCS_no_scrollbar">
+                                                                <div id="mCSB_2"
+                                                                     class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+                                                                     style="max-height: none;" tabindex="0">
+                                                                    <div id="mCSB_2_container"
+                                                                         class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
+                                                                         style="position:relative; top:0; left:0;"
+                                                                         dir="ltr">
+                                                                        <li class="drillNode active"
+                                                                            data-hierarchyid="0"
+                                                                            data-terminateddate="null "
+                                                                            data-employeetypecd="null"
+                                                                            data-orglevel="1" data-orgid="1"
+                                                                            data-orgname="National"
+                                                                            data-parentrno="0"
+                                                                            data-entity="National"
+                                                                            data-rownumber="1" style=""><a
+                                                                                href="#">National</a>
+                                                                        </li>
+                                                                    </div>
+                                                                    <div id="mCSB_2_scrollbar_vertical"
+                                                                         class="mCSB_scrollTools mCSB_2_scrollbar mCS-light mCSB_scrollTools_vertical"
+                                                                         style="display: none;">
+                                                                        <div class="mCSB_draggerContainer">
+                                                                            <div id="mCSB_2_dragger_vertical"
+                                                                                 class="mCSB_dragger"
+                                                                                 style="position: absolute; min-height: 30px; height: 0px; top: 0px;">
+                                                                                <div class="mCSB_dragger_bar"
+                                                                                     style="line-height: 30px;"></div>
+                                                                            </div>
+                                                                            <div class="mCSB_draggerRail"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="hierarchy__list">
+                                                            <ul class="mCustomScrollbar _mCS_3 mCS_no_scrollbar">
+                                                                <div id="mCSB_3"
+                                                                     class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+                                                                     style="max-height: none;" tabindex="0">
+                                                                    <div id="mCSB_3_container"
+                                                                         class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
+                                                                         style="position:relative; top:0; left:0;"
+                                                                         dir="ltr">
+                                                                        <li class="drillNode" data-hierarchyid="11"
+                                                                            data-terminateddate="null "
+                                                                            data-employeetypecd="null"
+                                                                            data-orglevel="2" data-orgid="11"
+                                                                            data-orgname="National"
+                                                                            data-parentrno="1"
+                                                                            data-entity="Hierarchy"
+                                                                            data-rownumber="2" style=""><a
+                                                                                href="#">National</a>
+                                                                        </li>
+                                                                        <li class="drillNode active"
+                                                                            data-hierarchyid="12"
+                                                                            data-terminateddate="null "
+                                                                            data-employeetypecd="null"
+                                                                            data-orglevel="2" data-orgid="12"
+                                                                            data-orgname="Zone" data-parentrno="1"
+                                                                            data-entity="Hierarchy"
+                                                                            data-rownumber="3" style=""><a
+                                                                                href="#">Zone</a>
+                                                                        </li>
+                                                                    </div>
+                                                                    <div id="mCSB_3_scrollbar_vertical"
+                                                                         class="mCSB_scrollTools mCSB_3_scrollbar mCS-light mCSB_scrollTools_vertical"
+                                                                         style="display: none;">
+                                                                        <div class="mCSB_draggerContainer">
+                                                                            <div id="mCSB_3_dragger_vertical"
+                                                                                 class="mCSB_dragger"
+                                                                                 style="position: absolute; min-height: 30px; height: 0px; top: 0px;">
+                                                                                <div class="mCSB_dragger_bar"
+                                                                                     style="line-height: 30px;"></div>
+                                                                            </div>
+                                                                            <div class="mCSB_draggerRail"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="hierarchy__list">
+                                                            <ul class="mCustomScrollbar _mCS_4 mCS_no_scrollbar">
+                                                                <div id="mCSB_4"
+                                                                     class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+                                                                     style="max-height: none;" tabindex="0">
+                                                                    <div id="mCSB_4_container"
+                                                                         class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
+                                                                         style="position:relative; top:0; left:0;"
+                                                                         dir="ltr">
+                                                                        <li class="drillNode" data-hierarchyid="12"
+                                                                            data-terminateddate="null "
+                                                                            data-employeetypecd="null"
+                                                                            data-orglevel="3" data-orgid="105"
+                                                                            data-orgname="Atlantic"
+                                                                            data-parentrno="3" data-entity="Zone"
+                                                                            data-rownumber="8" style=""><a
+                                                                                href="#">Atlantic</a>
+                                                                        </li>
+                                                                        <li class="drillNode" data-hierarchyid="12"
+                                                                            data-terminateddate="null "
+                                                                            data-employeetypecd="null"
+                                                                            data-orglevel="3" data-orgid="106"
+                                                                            data-orgname="Central"
+                                                                            data-parentrno="3" data-entity="Zone"
+                                                                            data-rownumber="9" style=""><a
+                                                                                href="#">Central</a>
+                                                                        </li>
+                                                                        <li class="drillNode" data-hierarchyid="12"
+                                                                            data-terminateddate="null "
+                                                                            data-employeetypecd="null"
+                                                                            data-orglevel="3" data-orgid="107"
+                                                                            data-orgname="Pacific"
+                                                                            data-parentrno="3" data-entity="Zone"
+                                                                            data-rownumber="10" style=""><a
+                                                                                href="#">Pacific</a></li>
+                                                                        <li class="drillNode" data-hierarchyid="12"
+                                                                            data-terminateddate="null "
+                                                                            data-employeetypecd="null"
+                                                                            data-orglevel="3" data-orgid="108"
+                                                                            data-orgname="Prairie"
+                                                                            data-parentrno="3" data-entity="Zone"
+                                                                            data-rownumber="11" style=""><a
+                                                                                href="#">Prairie</a></li>
+                                                                        <li class="drillNode" data-hierarchyid="12"
+                                                                            data-terminateddate="null "
+                                                                            data-employeetypecd="null"
+                                                                            data-orglevel="3" data-orgid="109"
+                                                                            data-orgname="Quebec" data-parentrno="3"
+                                                                            data-entity="Zone" data-rownumber="12"
+                                                                            style=""><a href="#">Quebec</a></li>
+                                                                    </div>
+                                                                    <div id="mCSB_4_scrollbar_vertical"
+                                                                         class="mCSB_scrollTools mCSB_4_scrollbar mCS-light mCSB_scrollTools_vertical"
+                                                                         style="display: none;">
+                                                                        <div class="mCSB_draggerContainer">
+                                                                            <div id="mCSB_4_dragger_vertical"
+                                                                                 class="mCSB_dragger"
+                                                                                 style="position: absolute; min-height: 30px; height: 0px; top: 0px;">
+                                                                                <div class="mCSB_dragger_bar"
+                                                                                     style="line-height: 30px;"></div>
+                                                                            </div>
+                                                                            <div class="mCSB_draggerRail"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div id="mCSB_5_scrollbar_vertical"
+                                                 class="mCSB_scrollTools mCSB_5_scrollbar mCS-light mCSB_scrollTools_vertical"
+                                                 style="display: none;">
+                                                <div class="mCSB_draggerContainer">
+                                                    <div id="mCSB_5_dragger_vertical" class="mCSB_dragger"
+                                                         style="position: absolute; min-height: 30px; height: 0px; top: 0px;">
+                                                        <div class="mCSB_dragger_bar"
+                                                             style="line-height: 30px;"></div>
+                                                    </div>
+                                                    <div class="mCSB_draggerRail"></div>
+                                                </div>
+                                            </div>
+                                            <div id="mCSB_5_scrollbar_horizontal"
+                                                 class="mCSB_scrollTools mCSB_5_scrollbar mCS-light mCSB_scrollTools_horizontal"
+                                                 style="display: none;">
+                                                <div class="mCSB_draggerContainer">
+                                                    <div id="mCSB_5_dragger_horizontal" class="mCSB_dragger"
+                                                         style="position: absolute; min-width: 30px; width: 0px; left: 0px;">
+                                                        <div class="mCSB_dragger_bar"></div>
+                                                    </div>
+                                                    <div class="mCSB_draggerRail"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown__footer">
+                                            <a id="Filter-1_done" href="#" class="btn devBtnDone">Done</a>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </li>
+                            <li class="filter__item flex2" id="AdjustedFilter">
+                                <div class="filter__label">Methodology</div>
+                                <div class="filter-field filter--all" data-metric="Datatype=1" id="datatype--container">
+                                    <div class="filter__trigger">
+                                        <label class="field__label" id="lblDataType">
+                                            DataType-Adjusted
+                                        </label>
+                                        <div class="field__icons">
+                                            <span class="iconPopup  icons__active"><i class="fal fa-pencil"></i></span>
+                                            <span class="iconRefresh icons__active icon--ok"><i
+                                                    class="fal fa-check "></i> </span>
+                                            <i class="fal fa-angle-down"></i>
+                                        </div>
+                                    </div>
+                                    <div class="filter-dropdown noprint dropdown--survey" id="datatype--dropdown">
+                                        <div class="filter__list">
+                                            <ul>
+                                                <li>
+                                                    <a href="# " id="DataType-Adjusted" data-typeid="1"
+                                                       class="filter--datatype" data-datatypename="DataType-Adjusted">
+                                                        DataType-Adjusted
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" id="DataType-Unadjusted" data-typeid="0"
+                                                       class="filter--datatype" data-datatypename="DataType-Unadjusted">
+                                                        DataType-Unadjusted
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="filter__item flex1" id="AdjustedFilter">
+                                <div class="filter__label">Data Type</div>
+                                <div class="filter-field filter--all" data-metric="Datatype=1" id="datatype--container">
+                                    <div class="filter__trigger">
+                                        <label class="field__label" id="lblDataType">
+                                            All
+                                        </label>
+                                        <div class="field__icons">
+                                            <span class="iconPopup  icons__active"><i class="fal fa-pencil"></i></span>
+                                            <span class="iconRefresh icons__active icon--ok"><i
+                                                    class="fal fa-check "></i> </span>
+                                            <i class="fal fa-angle-down"></i>
+                                        </div>
+                                    </div>
+                                    <div class="filter-dropdown noprint dropdown--survey" id="datatype--dropdown">
+                                        <div class="filter__list">
+                                            <ul>
+                                                <li>
+                                                    <a href="# " id="DataType-Adjusted" data-typeid="1"
+                                                       class="filter--datatype" data-datatypename="DataType-Adjusted">
+                                                        All
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" id="DataType-Unadjusted" data-typeid="0"
+                                                       class="filter--datatype" data-datatypename="DataType-Unadjusted">
+                                                        SMS
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="filter__item flex2">
+                                <div class="filter__label">Model Type</div>
+                                <div data-metric="Model=0" class="filter-field filter--model">
+                                    <div class="filter__trigger">
+                                        <label id="Filter-1_repfilmodel" class="field__label">All Models</label>
+                                        <div class="field__icons">
+                                            <span class="iconPopup  icons__active"><i
+                                                    class="icon icon-pencil2"></i></span>
+                                            <span class="iconRefresh icons__active icon--ok"><i
+                                                    class="fal fa-check "></i> </span>
+                                            <i class="fal fa-angle-down" onclick="LoadModelDynamically()"></i>
+                                        </div>
+                                    </div>
+                                    <div class="filter-dropdown dropdown--allmodels">
+
+                                        <div class="model-column">
+                                            <div class="model-search">
+                                                <i class="fal fa-search search__icon"></i>
+                                                <input type="text" class="search__field" placeholder="Search"
+                                                       name="">
+                                            </div>
+
+                                            <h4 class="model__title">All Models Years</h4>
+                                            <ul class="model__list mCustomScrollbar">
+
+                                                <li><a href="#">All Models
+                                                </a>
+                                                </li>
+                                                <li><a href="#">2008
+                                                </a>
+                                                </li>
+                                                <li><a href="#">2009
+                                                </a>
+                                                </li>
+                                                <li class=""><a href="#">2010
+                                                </a>
+                                                </li>
+                                                <li><a href="#">2011
+                                                </a>
+                                                </li>
+                                                <li><a href="#">2012
+                                                </a>
+                                                </li>
+                                                <li><a href="#">2013
+                                                </a>
+                                                </li>
+
+                                                <li><a href="#">Others
+                                                </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+
+                                        <div class="model-column">
+
+                                            <div class="model-search">
+
+                                            </div>
+
+                                            <h4 class="model__title">All Model Types</h4>
+                                            <ul class="model__list mCustomScrollbar">
+
+                                                <li><a href="#">All Models
+                                                </a>
+                                                </li>
+                                                <li><a href="#">Hybrid
+                                                </a>
+                                                </li>
+                                                <li><a href="#">Non-Hybrid
+                                                </a>
+                                                </li>
+
+                                            </ul>
+
+                                        </div>
+
+                                        <div class="model-column">
+                                            <div class="model-search">
+                                                <i class="fal fa-search search__icon"></i>
+                                                <input type="text" class="search__field" placeholder="Search"
+                                                       name="">
+                                            </div>
+                                            <h4 class="model__title">All Models</h4>
+                                            <ul class="model__list mCustomScrollbar all__models">
+
+                                                <li><a href="#">4RUNNER
+                                                </a>
+                                                </li>
+                                                <li><a href="#">86
+                                                </a>
+                                                </li>
+                                                <li><a href="#">AVALON
+                                                </a>
+                                                </li>
+                                                <li class=""><a href="#">CAMRY
+                                                </a>
+                                                </li>
+                                                <li><a href="#">C-HR
+                                                </a>
+                                                </li>
+                                                <li><a href="#">COROLLA
+                                                </a>
+                                                </li>
+                                                <li><a href="#">XD
+                                                </a>
+                                                </li>
+                                                <li><a href="#">IQ
+                                                </a>
+                                                </li>
+                                                <li><a href="#">TC
+                                                </a>
+                                                </li>
+                                            </ul>
+
+                                        </div>
+
+                                        <div class="dropdown__footer">
+
+                                            <a class="btn">
+                                                Done
+                                            </a>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="display:none" id="FilterParentModel" data-metric="ParentModel=0"
+                                     class="filter-field">
+                                </div>
+                            </li>
+
+                            <li class="filter__item flex3">
+                                <div class="filter__label">Date</div>
+                                <div data-metric="StartDate=2018/11/1|EndDate=2018/11/14|DBperiod=MTD|Period=MTD"
+                                     class="filter-field filter--calendar">
+                                    <div class="filter__trigger">
+                                        <i class="fal fa-calendar-alt"></i>
+                                        <label class="field__label"><span
+                                                id="Filter-1_StartDateLabel">Nov 01, 2018</span> <span
+                                                class="to"> To</span>
+                                            <span id="Filter-1_EndDateLabel">Nov 14, 2018</span></label>
+                                        <div class="field__icons">
+                                            <i class="fal fa-angle-down"></i>
+                                        </div>
+                                        <div class="field__icons">
+                                            <span class="iconPopup  icons__active"><i
+                                                    class="icon icon-pencil2"></i></span>
+                                            <span class="iconRefresh icons__active icon--ok">
+                                                    <i class="fal fa-check "></i> </span>
+                                            <i class="fal fa-angle-down"></i>
+                                        </div>
+                                    </div>
+                                    <div class="filter-dropdown noprint dropdown--calendar">
+                                        <div class="date-filters">
+                                            <ul id="Filter-1_datePeriod">
+                                                <li class="active"><a href="javascript:void(0)" data-dbperiod="MTD"
+                                                                      data-period="MTD">CM</a></li>
+                                                <li class=""><a href="javascript:void(0)" data-dbperiod="YTD"
+                                                                data-period="YTD">YTD</a></li>
+                                                <li class=""><a href="javascript:void(0)" data-dbperiod="MTD"
+                                                                data-period="PreviousMonth"><span
+                                                        title="Previous Month">Previous Mont...</span></a></li>
+                                                <li class=""><a href="javascript:void(0)" data-dbperiod="R3M"
+                                                                data-period="R3M">R3M</a></li>
+                                                <li class=""><a href="javascript:void(0)" data-dbperiod="R6M"
+                                                                data-period="R6M">R6M</a></li>
+                                                <li class=""><a href="javascript:void(0)" data-dbperiod="R12M"
+                                                                data-period="R12M">R12M</a></li>
+                                                <li class="" style="display: none;"><a href="javascript:void(0)"
+                                                                                       data-dbperiod="CUSTOM"
+                                                                                       data-period="CUSTOM">Custom</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="date-calendar">
+                                            <div class="date__calendar">
+                                                <div type="text" class="devDatePicker" id="Filter-1_datepicker">
+                                                    <div class="bootstrap-datetimepicker-widget usetwentyfour">
+                                                        <ul class="list-unstyled">
+                                                            <li>
+                                                                <div class="datepicker">
+                                                                    <div class="datepicker-days"
+                                                                         style="display: none;">
+                                                                        <table class="table-condensed">
+                                                                            <thead>
+                                                                            <tr>
+                                                                                <th class="prev"
+                                                                                    data-action="previous"><span
+                                                                                        class="glyphicon glyphicon-chevron-left"
+                                                                                        title="Previous Month"></span>
+                                                                                </th>
+                                                                                <th class="picker-switch"
+                                                                                    data-action="pickerSwitch"
+                                                                                    colspan="5"
+                                                                                    title="Select Month">November
+                                                                                    2018
+                                                                                </th>
+                                                                                <th class="next disabled"
+                                                                                    data-action="next"><span
+                                                                                        class="glyphicon glyphicon-chevron-right"
+                                                                                        title="Next Month"></span>
+                                                                                </th>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th class="dow">Su</th>
+                                                                                <th class="dow">Mo</th>
+                                                                                <th class="dow">Tu</th>
+                                                                                <th class="dow">We</th>
+                                                                                <th class="dow">Th</th>
+                                                                                <th class="dow">Fr</th>
+                                                                                <th class="dow">Sa</th>
+                                                                            </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                            <tr>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-10-28"
+                                                                                    class="day old weekend">28
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-10-29"
+                                                                                    class="day old">29
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-10-30"
+                                                                                    class="day old">30
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-10-31"
+                                                                                    class="day old">31
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-01"
+                                                                                    class="day">1
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-02"
+                                                                                    class="day">2
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-03"
+                                                                                    class="day weekend">3
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-04"
+                                                                                    class="day weekend">4
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-05"
+                                                                                    class="day">5
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-06"
+                                                                                    class="day">6
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-07"
+                                                                                    class="day">7
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-08"
+                                                                                    class="day">8
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-09"
+                                                                                    class="day">9
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-10"
+                                                                                    class="day weekend">10
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-11"
+                                                                                    class="day weekend">11
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-12"
+                                                                                    class="day">12
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-13"
+                                                                                    class="day">13
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-14"
+                                                                                    class="day active today">14
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-15"
+                                                                                    class="day">15
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-16"
+                                                                                    class="day">16
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-17"
+                                                                                    class="day weekend">17
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-18"
+                                                                                    class="day weekend">18
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-19"
+                                                                                    class="day">19
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-20"
+                                                                                    class="day">20
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-21"
+                                                                                    class="day">21
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-22"
+                                                                                    class="day">22
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-23"
+                                                                                    class="day">23
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-24"
+                                                                                    class="day weekend">24
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-25"
+                                                                                    class="day weekend">25
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-26"
+                                                                                    class="day">26
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-27"
+                                                                                    class="day">27
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-28"
+                                                                                    class="day">28
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-29"
+                                                                                    class="day">29
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-30"
+                                                                                    class="day">30
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-12-01"
+                                                                                    class="day new disabled weekend">
+                                                                                    1
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-12-02"
+                                                                                    class="day new disabled weekend">
+                                                                                    2
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-12-03"
+                                                                                    class="day new disabled">3
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-12-04"
+                                                                                    class="day new disabled">4
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-12-05"
+                                                                                    class="day new disabled">5
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-12-06"
+                                                                                    class="day new disabled">6
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-12-07"
+                                                                                    class="day new disabled">7
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-12-08"
+                                                                                    class="day new disabled weekend">
+                                                                                    8
+                                                                                </td>
+                                                                            </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                    <div class="datepicker-months" style="">
+                                                                        <table class="table-condensed">
+                                                                            <thead>
+                                                                            <tr>
+                                                                                <th class="prev"
+                                                                                    data-action="previous"><span
+                                                                                        class="glyphicon glyphicon-chevron-left"
+                                                                                        title="Previous Year"></span>
+                                                                                </th>
+                                                                                <th class="picker-switch"
+                                                                                    data-action="pickerSwitch"
+                                                                                    colspan="5" title="Select Year">
+                                                                                    2018
+                                                                                </th>
+                                                                                <th class="next disabled"
+                                                                                    data-action="next"><span
+                                                                                        class="glyphicon glyphicon-chevron-right"
+                                                                                        title="Next Year"></span>
+                                                                                </th>
+                                                                            </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                            <tr>
+                                                                                <td colspan="7"><span
+                                                                                        data-action="selectMonth"
+                                                                                        class="month">Jan</span><span
+                                                                                        data-action="selectMonth"
+                                                                                        class="month">Feb</span><span
+                                                                                        data-action="selectMonth"
+                                                                                        class="month">Mar</span><span
+                                                                                        data-action="selectMonth"
+                                                                                        class="month">Apr</span><span
+                                                                                        data-action="selectMonth"
+                                                                                        class="month">May</span><span
+                                                                                        data-action="selectMonth"
+                                                                                        class="month">Jun</span><span
+                                                                                        data-action="selectMonth"
+                                                                                        class="month">Jul</span><span
+                                                                                        data-action="selectMonth"
+                                                                                        class="month">Aug</span><span
+                                                                                        data-action="selectMonth"
+                                                                                        class="month">Sep</span><span
+                                                                                        data-action="selectMonth"
+                                                                                        class="month">Oct</span><span
+                                                                                        data-action="selectMonth"
+                                                                                        class="month active">Nov</span><span
+                                                                                        data-action="selectMonth"
+                                                                                        class="month disabled">Dec</span>
+                                                                                </td>
+                                                                            </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                    <div class="datepicker-years"
+                                                                         style="display: none;">
+                                                                        <table class="table-condensed">
+                                                                            <thead>
+                                                                            <tr>
+                                                                                <th class="prev disabled"
+                                                                                    data-action="previous"><span
+                                                                                        class="glyphicon glyphicon-chevron-left"
+                                                                                        title="Previous Decade"></span>
+                                                                                </th>
+                                                                                <th class="picker-switch"
+                                                                                    data-action="pickerSwitch"
+                                                                                    colspan="5"
+                                                                                    title="Select Decade">2013-2024
+                                                                                </th>
+                                                                                <th class="next disabled"
+                                                                                    data-action="next"><span
+                                                                                        class="glyphicon glyphicon-chevron-right"
+                                                                                        title="Next Decade"></span>
+                                                                                </th>
+                                                                            </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                            <tr>
+                                                                                <td colspan="7"><span
+                                                                                        data-action="selectYear"
+                                                                                        class="year disabled">2013</span><span
+                                                                                        data-action="selectYear"
+                                                                                        class="year disabled">2014</span><span
+                                                                                        data-action="selectYear"
+                                                                                        class="year disabled">2015</span><span
+                                                                                        data-action="selectYear"
+                                                                                        class="year">2016</span><span
+                                                                                        data-action="selectYear"
+                                                                                        class="year">2017</span><span
+                                                                                        data-action="selectYear"
+                                                                                        class="year active">2018</span><span
+                                                                                        data-action="selectYear"
+                                                                                        class="year disabled">2019</span><span
+                                                                                        data-action="selectYear"
+                                                                                        class="year disabled">2020</span><span
+                                                                                        data-action="selectYear"
+                                                                                        class="year disabled">2021</span><span
+                                                                                        data-action="selectYear"
+                                                                                        class="year disabled">2022</span><span
+                                                                                        data-action="selectYear"
+                                                                                        class="year disabled">2023</span><span
+                                                                                        data-action="selectYear"
+                                                                                        class="year disabled">2024</span>
+                                                                                </td>
+                                                                            </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                    <div class="datepicker-decades"
+                                                                         style="display: none;">
+                                                                        <table class="table-condensed">
+                                                                            <thead>
+                                                                            <tr>
+                                                                                <th class="prev disabled"
+                                                                                    data-action="previous"><span
+                                                                                        class="glyphicon glyphicon-chevron-left"
+                                                                                        title="Previous Century"></span>
+                                                                                </th>
+                                                                                <th class="picker-switch"
+                                                                                    data-action="pickerSwitch"
+                                                                                    colspan="5">2000-2107
+                                                                                </th>
+                                                                                <th class="next disabled"
+                                                                                    data-action="next"><span
+                                                                                        class="glyphicon glyphicon-chevron-right"
+                                                                                        title="Next Century"></span>
+                                                                                </th>
+                                                                            </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                            <tr>
+                                                                                <td colspan="7"><span
+                                                                                        data-action="selectDecade"
+                                                                                        class="decade disabled"
+                                                                                        data-selection="2005">2000 - 2011</span><span
+                                                                                        data-action="selectDecade"
+                                                                                        class="decade active"
+                                                                                        data-selection="2017">2012 - 2023</span><span
+                                                                                        data-action="selectDecade"
+                                                                                        class="decade disabled"
+                                                                                        data-selection="2029">2024 - 2035</span><span
+                                                                                        data-action="selectDecade"
+                                                                                        class="decade disabled"
+                                                                                        data-selection="2041">2036 - 2047</span><span
+                                                                                        data-action="selectDecade"
+                                                                                        class="decade disabled"
+                                                                                        data-selection="2053">2048 - 2059</span><span
+                                                                                        data-action="selectDecade"
+                                                                                        class="decade disabled"
+                                                                                        data-selection="2065">2060 - 2071</span><span
+                                                                                        data-action="selectDecade"
+                                                                                        class="decade disabled"
+                                                                                        data-selection="2077">2072 - 2083</span><span
+                                                                                        data-action="selectDecade"
+                                                                                        class="decade disabled"
+                                                                                        data-selection="2089">2084 - 2095</span><span
+                                                                                        data-action="selectDecade"
+                                                                                        class="decade disabled"
+                                                                                        data-selection="2101">2096 - 2107</span><span></span><span></span><span></span>
+                                                                                </td>
+                                                                            </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="picker-switch accordion-toggle">
+                                                                <table class="table-condensed">
+                                                                    <tbody>
+                                                                    <tr></tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="date__calendar">
+                                                <div style="display: none" id="Filter-1_endDatePicker">
+                                                    <div class="bootstrap-datetimepicker-widget usetwentyfour">
+                                                        <ul class="list-unstyled">
+                                                            <li>
+                                                                <div class="datepicker">
+                                                                    <div class="datepicker-days" style="">
+                                                                        <table class="table-condensed">
+                                                                            <thead>
+                                                                            <tr>
+                                                                                <th class="prev"
+                                                                                    data-action="previous"><span
+                                                                                        class="glyphicon glyphicon-chevron-left"
+                                                                                        title="Previous Month"></span>
+                                                                                </th>
+                                                                                <th class="picker-switch"
+                                                                                    data-action="pickerSwitch"
+                                                                                    colspan="5"
+                                                                                    title="Select Month">November
+                                                                                    2018
+                                                                                </th>
+                                                                                <th class="next disabled"
+                                                                                    data-action="next"><span
+                                                                                        class="glyphicon glyphicon-chevron-right"
+                                                                                        title="Next Month"></span>
+                                                                                </th>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th class="dow">Su</th>
+                                                                                <th class="dow">Mo</th>
+                                                                                <th class="dow">Tu</th>
+                                                                                <th class="dow">We</th>
+                                                                                <th class="dow">Th</th>
+                                                                                <th class="dow">Fr</th>
+                                                                                <th class="dow">Sa</th>
+                                                                            </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                            <tr>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-10-28"
+                                                                                    class="day old weekend">28
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-10-29"
+                                                                                    class="day old">29
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-10-30"
+                                                                                    class="day old">30
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-10-31"
+                                                                                    class="day old">31
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-01"
+                                                                                    class="day">1
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-02"
+                                                                                    class="day">2
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-03"
+                                                                                    class="day weekend">3
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-04"
+                                                                                    class="day weekend">4
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-05"
+                                                                                    class="day">5
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-06"
+                                                                                    class="day">6
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-07"
+                                                                                    class="day">7
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-08"
+                                                                                    class="day">8
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-09"
+                                                                                    class="day">9
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-10"
+                                                                                    class="day weekend">10
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-11"
+                                                                                    class="day weekend">11
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-12"
+                                                                                    class="day">12
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-13"
+                                                                                    class="day">13
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-14"
+                                                                                    class="day active today">14
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-15"
+                                                                                    class="day disabled">15
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-16"
+                                                                                    class="day disabled">16
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-17"
+                                                                                    class="day disabled weekend">17
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-18"
+                                                                                    class="day disabled weekend">18
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-19"
+                                                                                    class="day disabled">19
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-20"
+                                                                                    class="day disabled">20
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-21"
+                                                                                    class="day disabled">21
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-22"
+                                                                                    class="day disabled">22
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-23"
+                                                                                    class="day disabled">23
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-24"
+                                                                                    class="day disabled weekend">24
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-25"
+                                                                                    class="day disabled weekend">25
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-26"
+                                                                                    class="day disabled">26
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-27"
+                                                                                    class="day disabled">27
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-28"
+                                                                                    class="day disabled">28
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-29"
+                                                                                    class="day disabled">29
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-11-30"
+                                                                                    class="day disabled">30
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-12-01"
+                                                                                    class="day new disabled weekend">
+                                                                                    1
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-12-02"
+                                                                                    class="day new disabled weekend">
+                                                                                    2
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-12-03"
+                                                                                    class="day new disabled">3
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-12-04"
+                                                                                    class="day new disabled">4
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-12-05"
+                                                                                    class="day new disabled">5
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-12-06"
+                                                                                    class="day new disabled">6
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-12-07"
+                                                                                    class="day new disabled">7
+                                                                                </td>
+                                                                                <td data-action="selectDay"
+                                                                                    data-day="2018-12-08"
+                                                                                    class="day new disabled weekend">
+                                                                                    8
+                                                                                </td>
+                                                                            </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                    <div class="datepicker-months"
+                                                                         style="display: none;">
+                                                                        <table class="table-condensed">
+                                                                            <thead>
+                                                                            <tr>
+                                                                                <th class="prev"
+                                                                                    data-action="previous"><span
+                                                                                        class="glyphicon glyphicon-chevron-left"
+                                                                                        title="Previous Year"></span>
+                                                                                </th>
+                                                                                <th class="picker-switch"
+                                                                                    data-action="pickerSwitch"
+                                                                                    colspan="5" title="Select Year">
+                                                                                    2018
+                                                                                </th>
+                                                                                <th class="next disabled"
+                                                                                    data-action="next"><span
+                                                                                        class="glyphicon glyphicon-chevron-right"
+                                                                                        title="Next Year"></span>
+                                                                                </th>
+                                                                            </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                            <tr>
+                                                                                <td colspan="7"><span
+                                                                                        data-action="selectMonth"
+                                                                                        class="month">Jan</span><span
+                                                                                        data-action="selectMonth"
+                                                                                        class="month">Feb</span><span
+                                                                                        data-action="selectMonth"
+                                                                                        class="month">Mar</span><span
+                                                                                        data-action="selectMonth"
+                                                                                        class="month">Apr</span><span
+                                                                                        data-action="selectMonth"
+                                                                                        class="month">May</span><span
+                                                                                        data-action="selectMonth"
+                                                                                        class="month">Jun</span><span
+                                                                                        data-action="selectMonth"
+                                                                                        class="month">Jul</span><span
+                                                                                        data-action="selectMonth"
+                                                                                        class="month">Aug</span><span
+                                                                                        data-action="selectMonth"
+                                                                                        class="month">Sep</span><span
+                                                                                        data-action="selectMonth"
+                                                                                        class="month">Oct</span><span
+                                                                                        data-action="selectMonth"
+                                                                                        class="month active">Nov</span><span
+                                                                                        data-action="selectMonth"
+                                                                                        class="month disabled">Dec</span>
+                                                                                </td>
+                                                                            </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                    <div class="datepicker-years"
+                                                                         style="display: none;">
+                                                                        <table class="table-condensed">
+                                                                            <thead>
+                                                                            <tr>
+                                                                                <th class="prev disabled"
+                                                                                    data-action="previous"><span
+                                                                                        class="glyphicon glyphicon-chevron-left"
+                                                                                        title="Previous Decade"></span>
+                                                                                </th>
+                                                                                <th class="picker-switch"
+                                                                                    data-action="pickerSwitch"
+                                                                                    colspan="5"
+                                                                                    title="Select Decade">2013-2024
+                                                                                </th>
+                                                                                <th class="next disabled"
+                                                                                    data-action="next"><span
+                                                                                        class="glyphicon glyphicon-chevron-right"
+                                                                                        title="Next Decade"></span>
+                                                                                </th>
+                                                                            </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                            <tr>
+                                                                                <td colspan="7"><span
+                                                                                        data-action="selectYear"
+                                                                                        class="year disabled">2013</span><span
+                                                                                        data-action="selectYear"
+                                                                                        class="year disabled">2014</span><span
+                                                                                        data-action="selectYear"
+                                                                                        class="year disabled">2015</span><span
+                                                                                        data-action="selectYear"
+                                                                                        class="year">2016</span><span
+                                                                                        data-action="selectYear"
+                                                                                        class="year">2017</span><span
+                                                                                        data-action="selectYear"
+                                                                                        class="year active">2018</span><span
+                                                                                        data-action="selectYear"
+                                                                                        class="year disabled">2019</span><span
+                                                                                        data-action="selectYear"
+                                                                                        class="year disabled">2020</span><span
+                                                                                        data-action="selectYear"
+                                                                                        class="year disabled">2021</span><span
+                                                                                        data-action="selectYear"
+                                                                                        class="year disabled">2022</span><span
+                                                                                        data-action="selectYear"
+                                                                                        class="year disabled">2023</span><span
+                                                                                        data-action="selectYear"
+                                                                                        class="year disabled">2024</span>
+                                                                                </td>
+                                                                            </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                    <div class="datepicker-decades"
+                                                                         style="display: none;">
+                                                                        <table class="table-condensed">
+                                                                            <thead>
+                                                                            <tr>
+                                                                                <th class="prev disabled"
+                                                                                    data-action="previous"><span
+                                                                                        class="glyphicon glyphicon-chevron-left"
+                                                                                        title="Previous Century"></span>
+                                                                                </th>
+                                                                                <th class="picker-switch"
+                                                                                    data-action="pickerSwitch"
+                                                                                    colspan="5">2000-2107
+                                                                                </th>
+                                                                                <th class="next disabled"
+                                                                                    data-action="next"><span
+                                                                                        class="glyphicon glyphicon-chevron-right"
+                                                                                        title="Next Century"></span>
+                                                                                </th>
+                                                                            </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                            <tr>
+                                                                                <td colspan="7"><span
+                                                                                        data-action="selectDecade"
+                                                                                        class="decade disabled"
+                                                                                        data-selection="2005">2000 - 2011</span><span
+                                                                                        data-action="selectDecade"
+                                                                                        class="decade active"
+                                                                                        data-selection="2017">2012 - 2023</span><span
+                                                                                        data-action="selectDecade"
+                                                                                        class="decade disabled"
+                                                                                        data-selection="2029">2024 - 2035</span><span
+                                                                                        data-action="selectDecade"
+                                                                                        class="decade disabled"
+                                                                                        data-selection="2041">2036 - 2047</span><span
+                                                                                        data-action="selectDecade"
+                                                                                        class="decade disabled"
+                                                                                        data-selection="2053">2048 - 2059</span><span
+                                                                                        data-action="selectDecade"
+                                                                                        class="decade disabled"
+                                                                                        data-selection="2065">2060 - 2071</span><span
+                                                                                        data-action="selectDecade"
+                                                                                        class="decade disabled"
+                                                                                        data-selection="2077">2072 - 2083</span><span
+                                                                                        data-action="selectDecade"
+                                                                                        class="decade disabled"
+                                                                                        data-selection="2089">2084 - 2095</span><span
+                                                                                        data-action="selectDecade"
+                                                                                        class="decade disabled"
+                                                                                        data-selection="2101">2096 - 2107</span><span></span><span></span><span></span>
+                                                                                </td>
+                                                                            </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="picker-switch accordion-toggle">
+                                                                <table class="table-condensed">
+                                                                    <tbody>
+                                                                    <tr></tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="filter__item">
+                                <div class="filter__label">Action</div>
+                                <a href="#." class="btn btn--filter">Apply Filters</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="w-xl">
+                    <div class="widget fullpage--widget">
+
+
+
+
+
+                        <div class="page__filters">
+                            <div class="filter-item filter-item--hierarchy">
+
+                                <div class="filter-hierarchy">
+                                    <label>Compare with</label>
+                                    <div class="filter-field filter--hierarchy">
+                                        <div class="filter__trigger">
+                                            <div class="breadcrumbs-tags">
+                                                <ol>
+                                                    <li>
+                                                        <a href="javascript:void(0);">National</a>
+                                                    </li>
+                                                    <li class="active"><a href="#">Zone</a></li>
+                                                </ol>
+                                            </div>
+                                            <div class="field__icons"><span class="icons__active"><i
+                                                    class="fal fa-pencil"></i></span><span
+                                                    class="icons__active icon--ok"><i class="fal fa-check"></i></span><i
+                                                    class="fal fa-angle-down"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <a href="" class="btn">Go</a>
+
+                                </div>
+                            </div>
+
+                            <div class="filter-item filter-item-toggle">
+                                <div class="toggle">
+                                    <ul>
+                                        <li>
+                                            <label class="" for="check">Status</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="check" checked>
+                                            <label class="toggle__switch" for="check"></label>
+                                        </li>
+                                        <li>
+                                            <label for="check">Questions</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+</body>
+
+
+
+
+</html>     

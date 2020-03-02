@@ -1,0 +1,183 @@
+/*
+$widget-title: #909090;
+$kpi-heading:#303030;
+$progress-bar:#efefef;
+$clr-green:#b6db49;
+$clr-red:#ff9494;
+$clr-amber:#ffd060;
+$speed: .3s;
+$ease: ease-in-out;
+.kpi-metrics {
+    font-size: 1rem;
+    width: emify(85, 10);
+    height: emify(85, 10);
+    float: left;
+    padding: emify(10, 10);
+    margin-right: emify(15, 10);
+    text-align: center;
+    @include border-radius(100%);
+    background: $clr-gray;
+    .metrics__title {
+        font-size: emify(12, 10);
+        font-weight: 300;
+        color: $white;
+        margin-top: emify(10, 10);
+        margin-bottom: emify(3, 10);
+        text-transform: capitalize;
+    }
+    .metrics__score {
+        color: $white;
+        font-size: emify(21, 10);
+        font-weight: 400;
+        i {
+            &:before {
+                position: relative;
+                top: emify(2, 10);
+            }
+        }
+    }
+    &.metrics--positive {
+        background: $clr-green;
+    }
+    &.metrics--neutral {
+        background: $clr-amber;
+    }
+    &.metrics--negative {
+        background: $clr-red;
+    }
+}
+
+//signedStatus
+.signed-status {
+    float: right;
+    position: relative;
+    text-align: right;
+    font-size: 1rem;
+    border-left: 1px solid $border-heading;
+    padding-left: emify(18, 10);
+    width: emify(210, 10);
+    margin-top: emify(18, 10);
+    .signed__title {
+        font-size: emify(18, 10);
+        text-transform: capitalize;
+        font-weight: 400;
+        color: $black;
+        line-height: 100%;
+    }
+    .icon-pen {
+        position: relative;
+        float: left;
+        top: emify(20, 10);
+        left: emify(13, 10);
+        &:before {
+            font-size: emify(35, 10);
+            color: $clr-gray;
+        }
+    }
+    .signed__link {
+        color: $clr-gray;
+        font-size: emify(11, 10);
+    }
+    .signed__close {
+        border: 1px solid $clr-red;
+        @include border-radius(100%);
+        width: emify(20, 10);
+        height: emify(20, 10);
+        text-align: center;
+        display: inline-block; 
+        line-height: 20px;
+        margin-left: emify(5, 10);
+        position: relative;
+        top: -16px;
+        cursor: pointer;
+       // margin-top: emify(0, 10);
+        i {
+            color: $clr-red;
+            //@include .center;
+            &:before {
+                vertical-align: middle;
+                font-size: emify(8, 10);
+            }
+        }
+        &:hover {
+            background: $clr-red;
+            i {
+                color: $white;
+            }
+        }
+    }
+    .field--attachment {
+        float: left;
+        width: 100%;
+        .btn {
+            font-size: 1.2rem;
+            display: inline-block;
+            padding: emify(5, 10);
+        }
+        label {
+            text-align: left;
+            margin-right: 0;
+            margin-bottom: emify(5, 10);
+        }
+        .inputfield {
+            position: absolute;
+            left: -9999px;
+        }
+
+        span{
+            display: block;
+            //text-align: left;
+            padding-top: emify(10,10); 
+            padding-right: emify(23,10);
+        }
+    }
+}
+
+.check-box {
+    position: absolute;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    input {
+        display: none;
+    }
+    label {
+        cursor: pointer;
+        position: relative;
+        width: 17px;
+        height: 17px;
+        float: left;
+        background: $white;
+        border: 1px solid $border-heading;
+        transition: all $speed $ease;
+        font-size: emify(9, 10);
+        color: #FFF;
+        font-smoothing: antialiased;
+        &.radio {}
+        &.check {
+          //  @extend .icon-cancel;
+        }
+        &:before {
+            color: $clr-red;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transform: scale(1);
+            transition: all $speed $ease;
+            line-height: 17px;
+            text-align: center;
+        }
+    }
+    input:checked + label {
+        @extend .icon-check;
+        &:before {
+            opacity: 1;
+            transform: scale(1);
+            color: $clr-green;
+            font-size: emify(9, 10);
+        }
+    }
+}
+*/

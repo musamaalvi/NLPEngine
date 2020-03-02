@@ -1,0 +1,43 @@
+//page
+[class*='page-'],
+[class*=' page-'] {
+  .page_header {
+    float: left;
+    width: 100%;
+    position: relative;
+
+    &.fixed{
+      margin-bottom:56px;
+    }
+
+    .popover {
+      top:60px;
+      margin: 0;
+    }
+  }
+  .page__title {
+    float: left;
+    font-size:25px;
+    line-height: 34px;
+    font-weight: 500;
+    color: #212229;
+    @include susy-breakpoint(480px, $susy, ".no-mq") {
+      line-height: 24px;
+      padding-top: 5px;
+      font-size: 20px;
+    }
+  }
+  .main-breadcrumbs {
+
+  }
+  .page_inner {
+    padding:5px 7px;
+    float: left;
+    width: 100%;
+    @include susy-breakpoint(1024px, $susy, ".no-mq") {
+      padding:5px 0 0;
+    }
+
+  }
+
+}

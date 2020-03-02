@@ -1,0 +1,94 @@
+.page-monthlytrendreport,
+.page-acceleratedservicereport,
+.page-serviceconsultantreport,
+.page-districtsummaryreport,
+.page-NationalAccServiceSummary,
+.page-technicianperformancereport{
+  .row-notification {
+    margin: 0;
+    float: right;
+  }
+
+  .widget{
+   // overflow: hidden;
+  //  @include border-bottom-radius(5px);
+  //  @include border-bottom-radius(5px);
+  }
+
+  .table {
+    @include border-top-radius(10px);
+
+
+    tr {
+      &.active,
+      &.row--blue {
+        background: none;
+        td {
+          background: $clr-lightblue;
+          font-size: emify(14, 10);
+          a {
+            font-size: emify(10, 10);
+
+          }
+
+          .report-index{
+           // width: 450px;
+           // display: inline-block;
+          }
+
+          .icon {
+            font-size: 12px;
+          }
+
+        }
+
+      }
+
+      &.active {
+        td {
+          background: $row-gray;
+        }
+      }
+
+    }
+
+    &.table--bordered {
+
+      td, th {
+
+
+        &.no--border {
+          border: 0;
+          background: none;
+        }
+      }
+    }
+  }
+}
+
+.table--monthlytrendreport{
+  max-height:100%;
+  width: auto !important;
+  //overflow-y: auto;
+  overflow:hidden;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  //min-height: 100px;
+  @include susy-breakpoint(1369px) {
+    max-height: 400px;
+  }
+
+
+
+  a{
+    cursor:default;
+  }
+}
+
+.report-legends{
+  padding:10px 20px 20px;
+  p{
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+}

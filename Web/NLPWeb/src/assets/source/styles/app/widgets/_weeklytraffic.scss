@@ -1,0 +1,12 @@
+//weeklytraffic
+.widget--weeklytraffic {
+    .table {
+        table {
+            table-layout: fixed;
+            @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+                /* IE10+ specific styles go here */
+                table-layout: auto;
+            }
+        }
+    }
+}

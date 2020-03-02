@@ -1,0 +1,157 @@
+//customized dashboard
+.modal {
+    &.modal--customized-dashboard {
+        .modal__outer {
+            .modal__inner {
+                max-width: 690px;
+                overflow: visible;
+            }
+        }
+
+    }
+    .customized-dashboard {
+        padding: 20px 25px 25px 25px;
+        font-size: 12px;
+        color: #90939a;
+        .col__header {
+            float: left;
+            width:100%;
+            background: #e8f2f6;
+            font-weight: 600;
+            padding: 10px 15px;
+           // border: 1px solid #d5d5d5;
+            border-bottom:1px solid #d5d5d5;
+
+            .col__description {
+                //float: left;
+            }
+            .col__action {
+                float: right;
+            }
+
+        }
+    }
+}
+
+.ms-container {
+    &:after {
+        content: ".";
+        display: block;
+        height: 0;
+        line-height: 0;
+        font-size: 0;
+        clear: both;
+        min-height: 0;
+        visibility: hidden;
+    }
+    .ms-list {
+        background: $white;
+        height: 145px;
+        clear:both;
+        overflow-y: auto;
+        li {
+            background: #fafafa;
+            margin: 0 0 2px 0;
+            padding: 5px 35px 5px 35px;
+            position: relative;
+            &:before {
+                content: '\f07d';
+                position: absolute;
+                left: 15px;
+                top: 8px;
+                font-family: "Icomoon";
+                color: $clr-pri;
+                font-size: 12px;
+            }
+            &:after {
+                //content: '\f068';
+
+                content: '\f067';
+                position: absolute;
+                right: 15px;
+                top: 8px;
+                font-family: "Icomoon";
+                color: $clr-pri;
+                font-size: 12px;
+            }
+
+            &:hover, &:active{
+                background:#f5f4f4;
+                cursor: pointer;
+            }
+        }
+        &.ms-focus {
+            outline: none;
+        }
+    }
+    .ms-selectable {
+        @include span(6 no-gutters);
+        float: right;
+        border: 1px solid #d5d5d5;
+        @include susy-breakpoint(768px, $susy, '.no-mq') {
+            @include span(12 no-gutters);
+        }
+    }
+    .ms-selection {
+        @include span(6 no-gutters);
+        float: right;
+        border: 1px solid #d5d5d5;
+        border-right: none;
+        @include susy-breakpoint(768px, $susy, '.no-mq') {
+            @include span(12 no-gutters);
+            border-right: 1px solid #d5d5d5;
+            margin-top: 15px;
+        }
+
+        .ms-list {
+            li {
+                padding-left: 13px;
+                &:before {
+                    display: none;
+                }
+                &:after {
+                    content: '\f068';
+                    //content: '\f067';
+                    right: 15px;
+                    top: 8px;
+                }
+            }
+        }
+    }
+    .ms-optgroup-container {
+        width: 100%;
+    }
+    .ms-optgroup-label {
+        //margin: 0;
+        //padding: 5px 0px 0px 5px;
+        //cursor: pointer;
+        //color: #999;
+    }
+    .ms-selectable li.ms-elem-selectable, .ms-selection li.ms-elem-selection {
+        //border-bottom: 1px #eee solid;
+        //padding: 2px 10px;
+        //color: #555;
+        //font-size: 14px;
+    }
+    .ms-selectable li.ms-hover, .ms-selection li.ms-hover {
+        //cursor: pointer;
+        //color: #fff;
+        //text-decoration: none;
+        //background-color: #08c;
+    }
+    .ms-selectable li.disabled, .ms-selection li.disabled {
+        background-color: #eee;
+        color: #aaa;
+        cursor: text;
+    }
+
+    .mCSB_scrollTools {
+        top: 2px;
+        bottom: 2px;
+        right: -3px;
+    }
+    .mCSB_inside>.mCSB_container {
+        margin-right: 12px;
+    }
+
+}

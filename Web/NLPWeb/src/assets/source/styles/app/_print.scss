@@ -1,0 +1,170 @@
+//main header
+body {
+  background: $white;
+}
+
+.header {
+  border-bottom: 1px solid #d6dbdf !important;
+  position: static;
+}
+
+.l-content {
+  margin: 0;
+}
+
+input.field__label:disabled {
+  color:black !important;
+}
+
+
+//hide
+.noprint,
+.arrow-wrap,
+.nav,
+.owl-nav,
+.back-link,
+.mCSB_scrollTools,
+.masthead__controls,
+.loader,
+.btn,
+.header-options,
+.carousel-wrap:before,
+.carousel-wrap:after {
+  display: none !important;
+}
+
+.btn.btn-select {
+  display: block !important;;
+}
+
+[class*='page-'],
+[class*=' page-'] {
+  width: 100%;
+  vertical-align: top;
+}
+
+.widget__graph {
+  width: 100%;
+  float: left;
+  overflow: hidden;
+  padding: 0;
+  text-align: center;
+}
+
+.widget {
+  overflow: hidden;
+  border: 1px solid #d6dbdf;
+  box-shadow: none;
+  background: $white;
+  &.widget--keyperformance {
+    background: #F9F9F9;
+  }
+  &.widget--comingsoon {
+    min-height: 100px;
+  }
+}
+
+.filter {
+  overflow: hidden;
+  border: 1px solid #d6dbdf;
+  box-shadow: none;
+  background: $white;
+}
+
+.main-breadcrumbs li.active a {
+  color: #fff !important;
+}
+
+.highcharts-container {
+  margin: 0 auto !important;
+  float: none !important;
+}
+
+.widget {
+  page-break-after: auto;
+  page-break-before: auto;
+  page-break-inside: avoid;
+}
+
+.page-break {
+  page-break-after: auto;
+  page-break-before: auto;
+  page-break-inside: avoid;
+}
+
+.table {
+  &.table--scroll {
+    overflow-y: auto !important;
+    height: auto;
+  }
+}
+
+.GridCellDiv {
+  display: inline-block;
+}
+
+.showprint {
+  display: block !important;
+}
+
+#print-canvas img {
+  width: 100%;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+.right--header {
+  width: 50%;
+  text-align: right;
+  float: right;
+}
+
+.owl-stage {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+}
+
+.filter--calendar {
+  .field__label {
+
+    span {
+      display: inline-block;
+    }
+
+    .to {
+      padding: 0 5px;
+
+    }
+  }
+}
+
+.btn--removal {
+  display: block !important;
+}
+
+table {
+  &.table--bordered {
+    tr {
+      border: 0;
+    }
+    td, th {
+      border: 1px solid $row-border;
+    }
+  }
+}
+
+.page-myappeals {
+  .table {
+    table {
+      th, td {
+        white-space: normal !important;
+        &.removal-reason {
+          max-width: 400px;
+        }
+      }
+    }
+  }
+}

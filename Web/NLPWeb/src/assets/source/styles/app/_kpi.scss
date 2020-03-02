@@ -1,0 +1,148 @@
+$widget-title: #909090;
+$kpi-heading: #39d3c6;
+$progress-bar: #efefef;
+$meter-bg: #212121;
+$meter-border: #e6e6e6;
+$kpi-link: #d2d2d2;
+$location-border: #e2eaf2;
+
+.widget--kpi {
+  min-height: 100px;
+
+  .page-corporatedashboard & {
+      @include nested(15) {
+        .kpi {
+          @include span(3 no-gutters);
+          @include susy-breakpoint(1024px, $susy, ".no-mq") {
+            @include span(15 no-gutters);
+            margin-top: gutter()*2;
+
+            &.first-child{
+              margin-top: 0;
+            }
+
+          }
+        }
+    }
+  }
+
+  .page-mysteryshopper & {
+    @include nested(15) {
+      .kpi {
+        @include span(3 no-gutters);
+        @include susy-breakpoint(1024px, $susy, ".no-mq") {
+          @include span(15 no-gutters);
+          margin-top: gutter()*2;
+
+          &.first-child{
+            margin-top: 0;
+          }
+
+        }
+      }
+  }
+  }
+
+  .kpi {
+    @include span(3 no-gutters);
+    @include susy-breakpoint(1024px, $susy, ".no-mq") {
+      @include span(12 no-gutters);
+      margin-top: gutter()*2;
+
+      &.first-child{
+        margin-top: 0;
+      }
+
+    }
+  }
+
+
+
+
+}
+
+.kpi {
+
+  .kpi__inner {
+    text-align: center;
+  }
+
+  .kpi__location {
+
+    text-align: left;
+    padding: 40px 2px 0;
+    vertical-align: top;
+    display: inline-block;
+
+    .page-corporatedashboard &{
+    display: none;
+    }
+
+    @include susy-breakpoint(1024px, $susy, '.no-mq') {
+      padding:0 0 5px 0;
+    }
+    li {
+      display: block;
+      margin-bottom: 5px;
+      padding-bottom: 5px;
+      border-bottom: 2px solid $location-border;
+      .icon {
+        margin-right: 3px;
+        position: relative;
+        top: 1px;
+      }
+      .location__label {
+        display: block;
+        color: #34495e;
+        font-size: 11px;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+      }
+      .location__score {
+        display: block;
+        font-size: 12px;
+       // color: $clr-green;
+        font-weight: 700;
+      }
+      &.location--positive {
+        .location__score {
+          color: $clr-green;
+        }
+      }
+      &.location--negative {
+        .location__score {
+          color: $clr-red;
+        }
+      }
+      &.location--neutral {
+        .location__score {
+          color: $clr-amber;
+        }
+      }
+    }
+  }
+
+  .kpi__meter {
+    width: 200px;
+    display: inline-block;
+    height: 200px;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    div {
+      &:first-child {
+        width: 200px;
+        height: 200px;
+      }
+
+    }
+  }
+}
+
+.kpi__footer {
+  margin-top: 10px;
+  height: auto;
+  font-size: 14px;
+  color: #212229;
+}

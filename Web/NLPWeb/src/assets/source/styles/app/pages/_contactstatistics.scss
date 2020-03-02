@@ -1,0 +1,23 @@
+.page-contactstatistics {
+  .table {
+    td {
+      .indent--one {
+        text-indent: 0;
+      }
+      .indent--two {
+        text-indent: 30px;
+        position: relative;
+      }
+      .indent--three {
+        position: relative;
+        text-indent: 70px;
+      }
+      .indent--four {
+        position: relative;
+        text-indent: 100px;
+        padding-left: 0px;
+      }
+
+    }
+  }
+}

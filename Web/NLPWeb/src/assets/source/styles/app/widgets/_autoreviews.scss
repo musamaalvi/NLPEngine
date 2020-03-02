@@ -1,0 +1,30 @@
+//cl breakdown
+.widget--autoreviews {
+   // overflow: hidden;
+
+    .widget__content{
+        @include clearfix();
+        padding:emify(20,10);
+    }
+
+    h3{
+        border-bottom: 1px solid #f1f2f4;
+        margin-bottom: emify(5,10);
+        padding-bottom: emify(5,10);
+        font-size: emify(16,10);
+        font-weight: 400;
+    }
+
+    p{
+        margin-bottom: emify(15,10);
+        font-size: emify(12,10);
+        line-height: 20px;
+
+        a{
+            font-weight: 400;
+        }
+    }
+
+
+
+}
