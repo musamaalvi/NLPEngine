@@ -25,4 +25,4 @@ export const serviceInfo = {
   PasswordForExtrernalPythonService: "T0y0T@p@s$CI"
 }
 
-export const apiURL = "https://localhost:44365/api/values";
+export const apiURL = "https://localhost:5001/api/values";
