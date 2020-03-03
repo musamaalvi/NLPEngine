@@ -7,6 +7,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 
 import { FormsModule } from '@angular/forms';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { ResultComponent } from './result/result.component';
 
 
 
@@ -14,6 +17,9 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     DashboardComponent,
+    HeaderComponent,
+    FooterComponent,
+    ResultComponent,
   ],
   imports: [
     BrowserModule,

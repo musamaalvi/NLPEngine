@@ -1,4 +1,4 @@
-
+<!-- 
 <div  *ngFor="let numb of CommentNumber; let i =index">
   <textarea [(ngModel)]="numb.value" class="commentArea"></textarea>
 </div>
@@ -7,4 +7,52 @@
   <button (click)="DeleteComment()">Delete Comment</button>
   <button (click)="classify()">Process</button>
 
+ -->
 
+
+ <div class="container">
+  <app-header></app-header>
+  <!-- /.header-->
+  <div class="l-content">
+
+    <!-- /.sidebar-->
+    <main class="page-dashboard main">
+
+
+
+          <div class="widget">
+            <div class="form-container">
+
+
+
+              <div class="form-row">
+                  <div class="form-column twelve">
+                      <div class="form-label">
+                          Comments
+                      </div>
+                      <div class="form-field">
+                          <textarea [(ngModel)]="CommentText" class="ui-inputtext ui-corner-all ui-state-default ui-widget"></textarea>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-column twelve form-control">
+                  <a class="btn" (click)="classify()">Submit</a>
+                  <a class="btn btn--cancel">Cancel</a>
+                </div>
+            </div>
+
+
+
+          </div>
+          
+          </div>
+
+
+
+    </main>
+  </div>
+  <app-result *ngIf="resultReceived" [NLPResult]="resultData"></app-result>
+  <app-footer></app-footer>
+</div>
