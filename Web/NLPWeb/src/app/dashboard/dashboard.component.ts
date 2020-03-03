@@ -15,13 +15,14 @@ import {tokenResult, tokenRequestDTO, ProcessRequestDTO, Doc, ClassificationDTO}
 
 export class DashboardComponent implements OnInit {
   data: any;
+  resultData: any = "usamaalvi";
   tokenRequest:tokenRequestDTO = new tokenRequestDTO()
   tokenResult: tokenResult = new tokenResult()
   postObj: ProcessRequestDTO = new ProcessRequestDTO()
   doc: Doc = new Doc()
   ClassiReq: ClassificationDTO = new ClassificationDTO()
   CommentNumber: any[] = [];
-
+  resultReceived:boolean = false
 
   CommentText: String;
   constructor(private route: ActivatedRoute, private httpClient: HttpClient,  private router: Router) {}
@@ -90,6 +91,9 @@ export class DashboardComponent implements OnInit {
     this.ClassiReq.docs=this.postObj
     this.ClassiReq.access = this.tokenRequest
     this.httpClient.post(apiURL + "/Classify",this.ClassiReq,httpOptions) .subscribe(data => {
+      this.resultData=data
+      this.resultReceived = true
+      
       debugger;
 
     })
