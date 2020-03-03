@@ -1,0 +1,18 @@
+<div>
+<h2>Result</h2>
+
+
+<ul *ngFor="let result of NLPResult.predictions[0].categorization">
+  <li>
+    <h2>
+      Segment
+  </h2>
+  <p>{{result.text_chunk}}</p>
+  <h2>
+    Sentiment
+</h2>
+<p>{{result.ensemble_sentiment_label}}</p>
+</li>
+</ul>
+
+</div>
