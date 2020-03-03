@@ -1,18 +1,55 @@
-<div>
-<h2>Result</h2>
+<div class="voc-result">
+  <h2>Result</h2>
+
+  <ng-container *ngFor="let result of NLPResult.predictions[0].categorization">
+    <div class="result-panel">
+
+      <h2>Segment</h2>
+      <div class="panel__content">
+        <p>{{result.text_chunk}}</p>
+      </div>
+
+    </div>
+
+    <div class="result-panel panel--sentiment">
+
+      <h2>Sentiment</h2>
+      <div class="panel__content">
+        <p><span [class]="result.ensemble_sentiment_label | lowercase">{{result.ensemble_sentiment_label}}</span></p>
+      </div>
+
+    </div>
+  </ng-container>
 
 
-<ul *ngFor="let result of NLPResult.predictions[0].categorization">
-  <li>
-    <h2>
-      Segment
-  </h2>
-  <p>{{result.text_chunk}}</p>
-  <h2>
-    Sentiment
-</h2>
-<p>{{result.ensemble_sentiment_label}}</p>
-</li>
-</ul>
+  <div class="result-panel panel--partspeach">
+
+    <h2>Part of speach</h2>
+    <div class="panel__content">
+      <div class="speach__part">
+
+        <span class="negative">Negative</span>
+        <p>I</p>
+
+      </div>
+
+      <div class="speach__part">
+
+        <span class="positive">Negative</span>
+        <p>Love</p>
+
+      </div>
+
+      <div class="speach__part">
+
+        <span class="neutral">Negative</span>
+        <p>You</p>
+
+      </div>
+    </div>
+
+  </div>
+
+
 
 </div>
