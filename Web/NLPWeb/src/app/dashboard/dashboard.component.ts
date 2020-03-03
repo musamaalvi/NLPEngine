@@ -24,7 +24,7 @@ export class DashboardComponent implements OnInit {
   CommentNumber: any[] = [];
   resultReceived:boolean = false
 
-  CommentText: String;
+  CommentText: string;
   constructor(private route: ActivatedRoute, private httpClient: HttpClient,  private router: Router) {}
   ngOnInit() {  }
 
@@ -83,7 +83,7 @@ export class DashboardComponent implements OnInit {
     this.postObj.token = this.tokenResult.token;
     this.postObj.top_n_categories = 3
     this.doc.id = '123';
-    this.doc.text = 'it was a good experience and fast service'
+    this.doc.text = this.CommentText
     this.postObj.docs = []
     this.postObj.docs.push(this.doc);
 
