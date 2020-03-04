@@ -1,58 +1,68 @@
 <div class="widget widget--comments" *ngIf="!ResultProcessed">
-  <div class="voc-result">
-
-    <h2>{{CommentText}}</h2>
+  <div class="comment">
+    <p>{{CommentText}}</p>
   </div>
 </div>
 
 
 
 <div *ngIf="ResultProcessed" class="widget widget--comments">
-  <div class="voc-result">
-    <h2>{{CommentText}}</h2>
+  <div class="comment">
+
+    <p>{{CommentText}}</p>
+  </div>
 
 
 
-    <ng-container *ngFor="let result of NLPResult.categorization">
-      <div class="result-panel">
+  <ng-container *ngFor="let result of NLPResult.categorization">
 
-        <h2>Segment</h2>
-        <h4>Category</h4>
-        <p>{{result.category_label}}</p>
-        <div class="panel__content">
-          <p>{{result.text_chunk}}</p>
+    <div class="segment">
+      <h2>Segment</h2>
+      <p>{{result.text_chunk}}</p>
+
+      <div class="comments__sections">
+        <div class="section__col">
+          <h2>Category</h2>
+          <p>{{result.category_label}}</p>
+        </div>
+        <div class="section__col">
+          <div class="sentiment">
+            <h2>Sentiment</h2>
+
+            <p><span [class]="result.ensemble_sentiment_label | lowercase">{{result.ensemble_sentiment_label}}</span></p>
+          </div>
+
+
         </div>
 
       </div>
 
-      <div class="result-panel panel--sentiment">
-
-        <h2>Sentiment</h2>
-        <div class="panel__content">
-          <p><span [class]="result.ensemble_sentiment_label | lowercase">{{result.ensemble_sentiment_label}}</span></p>
-        </div>
-
-      </div>
-    </ng-container>
-
-
-    <div class="result-panel panel--partspeach">
-
-      <h2>Part of speach</h2>
-      <div class="panel__content">
-        <div class="speach__part" *ngFor="let result of NLPResult.linguistic_features">
-
-          <span class="neutral">{{result.p}}</span>
-          <p>{{result.l}}</p>
-
-        </div>
-
-
-      </div>
 
     </div>
 
 
 
+
+  </ng-container>
+
+
+  <div class="result-panel panel--partspeach">
+
+    <h2>Part of speach</h2>
+    <div class="panel__content">
+      <div class="speach__part" *ngFor="let result of NLPResult.linguistic_features">
+
+        <span class="neutral">{{result.p}}</span>
+        <p>{{result.l}}</p>
+
+      </div>
+
+
+    </div>
+
   </div>
+
+
+
+
 </div>
