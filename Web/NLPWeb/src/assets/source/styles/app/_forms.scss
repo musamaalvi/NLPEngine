@@ -110,9 +110,9 @@
 }
 
 .twelve.form-column {
-  @include span(12);
+  @include span(12 no-gutters);
   @include susy-breakpoint(1024px, $susy, '.no-mq') {
-    @include span(12);
+    @include span(12 no-gutters);
   }
 }
 

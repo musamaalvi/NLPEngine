@@ -11,8 +11,8 @@
 
 
     <!-- /.sidebar-->
-    <main class="page-dashboard main">
-      <div class="widget">
+    <main class="main">
+
         <div class="form-container">
           <div class="form-row">
             <div class="form-column twelve">
@@ -28,7 +28,7 @@
 
           <div class="form-row">
             <div class="form-column twelve form-control">
-              <a class="btn" (click)="classify()">Submit</a>
+              <a class="btn btn--submit btn--loading" (click)="classify()">Submit</a>
               <a class="btn btn--cancel">Cancel</a>
             </div>
           </div>
@@ -36,6 +36,6 @@
 
   <app-result *ngIf="resultReceived" [NLPResult]="resultData"></app-result>
 
-      </div>
+
     </main>
 
