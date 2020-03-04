@@ -35,22 +35,25 @@ export class DashboardComponent implements OnInit {
 
 
   classify(){
-    this.resultLoaderBoolean = true
-    console.log(this.CommentNumber);
-
-
-    this.tokenRequest.PythonServiceBaseURL = serviceInfo.PythonServiceBaseURL;
-    this.tokenRequest.userNameForExternalPythonService = serviceInfo.UserNameForExtrernalPythonService;
-    this.tokenRequest.passwordForExternalPythonService = serviceInfo.PasswordForExtrernalPythonService;
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type':  'application/json'
-      })
-    };
-
-
-
-    this.callForAuth(this.tokenRequest,  httpOptions);
+    if(this.CommentNumber.length!=0){
+      this.resultLoaderBoolean = true
+      console.log(this.CommentNumber);
+  
+  
+      this.tokenRequest.PythonServiceBaseURL = serviceInfo.PythonServiceBaseURL;
+      this.tokenRequest.userNameForExternalPythonService = serviceInfo.UserNameForExtrernalPythonService;
+      this.tokenRequest.passwordForExternalPythonService = serviceInfo.PasswordForExtrernalPythonService;
+      const httpOptions = {
+        headers: new HttpHeaders({
+          'Content-Type':  'application/json'
+        })
+      };
+  
+  
+  
+      this.callForAuth(this.tokenRequest,  httpOptions);
+    }
+    
 
 
   }
