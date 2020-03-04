@@ -28,7 +28,7 @@ export class DashboardComponent implements OnInit {
   ResultProcessed:boolean = false
 
 
-  CommentText: string;
+  CommentText: string = "";
   constructor(private route: ActivatedRoute, private httpClient: HttpClient,  private router: Router) {}
   ngOnInit() {  }
 
@@ -55,9 +55,13 @@ export class DashboardComponent implements OnInit {
 
   }
   AddComment(){
-    this.CommentNumber.push({value: this.CommentText, index: 1})
-    this.CommentText=""
-    this.ResultProcessed=false
+    if(this.CommentText.trim()!=""){
+      this.CommentNumber.push({value: this.CommentText, index: 1})
+      this.CommentText=""
+      this.ResultProcessed=false
+
+    }
+   
   }
   DeleteComment(){
     this.CommentNumber.pop()
