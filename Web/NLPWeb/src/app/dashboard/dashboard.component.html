@@ -28,7 +28,7 @@
 
           <div class="form-row">
             <div class="form-column twelve form-control">
-              <a class="btn btn--submit btn--loading" (click)="classify()">Submit</a>
+              <a class="btn btn--submit" [ngClass]="{'btn--loading': resultLoaderBoolean}" (click)="classify()">Submit</a>
               <a class="btn btn--cancel">Cancel</a>
             </div>
           </div>

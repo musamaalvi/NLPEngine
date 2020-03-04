@@ -23,6 +23,7 @@ export class DashboardComponent implements OnInit {
   ClassiReq: ClassificationDTO = new ClassificationDTO()
   CommentNumber: any[] = [];
   resultReceived:boolean = false
+  resultLoaderBoolean = false;
 
   CommentText: string;
   constructor(private route: ActivatedRoute, private httpClient: HttpClient,  private router: Router) {}
@@ -31,7 +32,7 @@ export class DashboardComponent implements OnInit {
 
 
   classify(){
-
+    this.resultLoaderBoolean = true
     console.log(this.CommentNumber);
 
 
@@ -95,7 +96,7 @@ export class DashboardComponent implements OnInit {
     this.httpClient.post(apiURL + "/Classify",this.ClassiReq,httpOptions) .subscribe(data => {
       this.resultData=data
       this.resultReceived = true
-
+      this.resultLoaderBoolean = false
       debugger;
 
     })
