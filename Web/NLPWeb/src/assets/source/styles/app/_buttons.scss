@@ -24,19 +24,24 @@ $clr-pink: #ef207d;
     background-color: darken($clr-pri, 8%);
   }
 
+  &.right{
+    margin: 0;
+  }
+
   &.btn--submit {
     &:after {
+      display: none;
       -webkit-transition: none;
       transition: none;
       font-family: "Font Awesome 5 Pro";
+      content: "\f3f4";
       font-size: 12px;
-      display: inline-block;
       margin-left: 10px;
     }
   }
   &.btn--loading {
     &:after {
-      content: "\f3f4";
+      display: inline-block;
       -webkit-animation: rotateAnimation 1s infinite linear;
       animation: rotateAnimation 1s infinite linear;
     }

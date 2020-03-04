@@ -196,9 +196,9 @@
     padding: 10px;
     font-family: $font-pri;
     @include border-radius(3px);
-    border: 1px solid #d0d7dd;
+    border: 1px solid #e1e1e1;
     font-size: 12px;
-    height:102px;
+    height:50px;
     &:focus {
       -webkit-box-shadow: 0px 0px 10px 0px rgba(119, 119, 119, 0.25);
       -moz-box-shadow: 0px 0px 10px 0px rgba(119, 119, 119, 0.25);

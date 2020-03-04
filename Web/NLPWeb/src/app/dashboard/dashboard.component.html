@@ -13,6 +13,7 @@
     <!-- /.sidebar-->
     <main class="main">
 
+      <div class="widget">
         <div class="form-container">
           <div class="form-row">
             <div class="form-column twelve">
@@ -33,11 +34,15 @@
             <div class="form-column twelve form-control">
               <a class="btn btn--submit" [ngClass]="{'btn--loading': resultLoaderBoolean}" (click)="classify()">Submit</a>
               <!-- <a class="btn btn--cancel">Cancel</a> -->
-              <a class="btn btn--cancel" (click)="AddComment()">Add Comment</a>
+
               <a class="btn btn--cancel" (click)="DeleteComment()">Delete Comment</a>
+              <a class="btn right" (click)="AddComment()"><i class="fal fa-plus"></i> Add Comment</a>
             </div>
           </div>
         </div>
+      </div>
+
+
 
   <app-result *ngIf="resultReceived" [NLPResult]="resultData"></app-result>
 

@@ -1,48 +1,51 @@
 <ng-container *ngFor="let item of NLPResult.predictions; let i = index">
-  <div class="voc-result">
-    <h2>Result</h2>
+  <div class="widget widget--comments">
+    <div class="voc-result">
+      <h2>Result</h2>
 
-    <ng-container *ngFor="let result of NLPResult.predictions[i].categorization">
-      <div class="result-panel">
+      <ng-container *ngFor="let result of NLPResult.predictions[i].categorization">
+        <div class="result-panel">
 
-        <h2>Segment</h2>
-        <h4>Category</h4>
-        <p>{{result.category_label}}</p>
+          <h2>Segment</h2>
+          <h4>Category</h4>
+          <p>{{result.category_label}}</p>
+          <div class="panel__content">
+            <p>{{result.text_chunk}}</p>
+          </div>
+
+        </div>
+
+        <div class="result-panel panel--sentiment">
+
+          <h2>Sentiment</h2>
+          <div class="panel__content">
+            <p><span [class]="result.ensemble_sentiment_label | lowercase">{{result.ensemble_sentiment_label}}</span></p>
+          </div>
+
+        </div>
+      </ng-container>
+
+
+      <div class="result-panel panel--partspeach">
+
+        <h2>Part of speach</h2>
         <div class="panel__content">
-          <p>{{result.text_chunk}}</p>
+          <div class="speach__part" *ngFor="let result of NLPResult.predictions[i].linguistic_features">
+
+            <span class="neutral">{{result.p}}</span>
+            <p>{{result.l}}</p>
+
+          </div>
+
+
         </div>
 
       </div>
 
-      <div class="result-panel panel--sentiment">
 
-        <h2>Sentiment</h2>
-        <div class="panel__content">
-          <p><span [class]="result.ensemble_sentiment_label | lowercase">{{result.ensemble_sentiment_label}}</span></p>
-        </div>
-
-      </div>
-    </ng-container>
-
-
-    <div class="result-panel panel--partspeach">
-
-      <h2>Part of speach</h2>
-      <div class="panel__content">
-        <div class="speach__part" *ngFor="let result of NLPResult.predictions[i].linguistic_features">
-
-          <span class="neutral">{{result.p}}</span>
-          <p>{{result.l}}</p>
-
-        </div>
-
-
-      </div>
 
     </div>
-
-
-
   </div>
+
 
 </ng-container>

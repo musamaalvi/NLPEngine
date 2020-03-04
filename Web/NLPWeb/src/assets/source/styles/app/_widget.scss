@@ -5,7 +5,7 @@ $widget-border: #d6dbdf;
 .widget {
   background: #fff;
   position: relative;
-  min-height: 250px;
+ // min-height: 250px;
   width: 100%;
   padding: 20px;
   @include clearfix();
@@ -14,6 +14,10 @@ $widget-border: #d6dbdf;
   box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.06);
   @include susy-breakpoint(1024px, $susy, ".no-mq") {
     padding:15px;
+  }
+
+  &.widget--comments{
+    margin-top: 10px;
   }
 
 
