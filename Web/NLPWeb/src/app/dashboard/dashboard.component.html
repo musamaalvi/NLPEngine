@@ -20,8 +20,11 @@
                 Please enter your text
               </div>
               <div class="form-field">
-                <textarea [(ngModel)]="CommentText"
+                <ng-container *ngFor="let numb of CommentNumber; let i =index">
+                <textarea [(ngModel)]="numb.value"
                   class="ui-inputtext ui-corner-all ui-state-default ui-widget"></textarea>
+
+                </ng-container>
               </div>
             </div>
           </div>
@@ -29,7 +32,9 @@
           <div class="form-row">
             <div class="form-column twelve form-control">
               <a class="btn btn--submit" [ngClass]="{'btn--loading': resultLoaderBoolean}" (click)="classify()">Submit</a>
-              <a class="btn btn--cancel">Cancel</a>
+              <!-- <a class="btn btn--cancel">Cancel</a> -->
+              <a class="btn btn--cancel" (click)="AddComment()">Add Comment</a>
+              <a class="btn btn--cancel" (click)="DeleteComment()">Delete Comment</a>
             </div>
           </div>
         </div>

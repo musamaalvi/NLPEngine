@@ -85,10 +85,19 @@ export class DashboardComponent implements OnInit {
     this.postObj.pipeline.push('topic_identification')
     this.postObj.token = this.tokenResult.token;
     this.postObj.top_n_categories = 3
-    this.doc.id = '123';
-    this.doc.text = this.CommentText
     this.postObj.docs = []
-    this.postObj.docs.push(this.doc);
+
+    for(var i=0;i<this.CommentNumber.length;i++){
+      var doc: Doc = new Doc()
+      doc.id=i.toString()
+      doc.text = this.CommentNumber[i].value
+      this.postObj.docs.push(doc);
+    }
+
+    // this.doc.id = '123';
+    // this.doc.text = this.CommentText
+   
+  
 
     console.log(this.CommentText)
     this.ClassiReq.docs=this.postObj
