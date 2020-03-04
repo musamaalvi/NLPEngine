@@ -10,7 +10,8 @@ import { Component, OnInit, Input } from '@angular/core';
 
 export class ResultComponent implements OnInit {
   @Input() NLPResult ;
-
+  @Input() ResultProcessed: boolean = false
+  @Input() CommentText
   constructor() { 
     debugger
    

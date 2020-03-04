@@ -15,7 +15,8 @@ import {tokenResult, tokenRequestDTO, ProcessRequestDTO, Doc, ClassificationDTO}
 
 export class DashboardComponent implements OnInit {
   data: any;
-  resultData: any = "usamaalvi";
+  resultData: any = {
+  };
   tokenRequest:tokenRequestDTO = new tokenRequestDTO()
   tokenResult: tokenResult = new tokenResult()
   postObj: ProcessRequestDTO = new ProcessRequestDTO()
@@ -23,7 +24,9 @@ export class DashboardComponent implements OnInit {
   ClassiReq: ClassificationDTO = new ClassificationDTO()
   CommentNumber: any[] = [];
   resultReceived:boolean = false
-  resultLoaderBoolean = false;
+  resultLoaderBoolean = false
+  ResultProcessed:boolean = false
+
 
   CommentText: string;
   constructor(private route: ActivatedRoute, private httpClient: HttpClient,  private router: Router) {}
@@ -52,7 +55,8 @@ export class DashboardComponent implements OnInit {
 
   }
   AddComment(){
-    this.CommentNumber.push({value: '', index: 1})
+    this.CommentNumber.push({value: this.CommentText, index: 1})
+    this.CommentText=""
   }
   DeleteComment(){
     this.CommentNumber.pop()
@@ -106,6 +110,7 @@ export class DashboardComponent implements OnInit {
       this.resultData=data
       this.resultReceived = true
       this.resultLoaderBoolean = false
+      this.ResultProcessed=true
       debugger;
 
     })
