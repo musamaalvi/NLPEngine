@@ -12,7 +12,7 @@ $clr-pink: #ef207d;
   color: $white;
   @include transition();
   border-radius: 3px;
-  padding: 7px 15px;
+  padding:6px 15px;
   border: 1px solid $clr-pri;
   font-size: 12px;
   text-align: center;
@@ -30,18 +30,21 @@ $clr-pink: #ef207d;
 
   &.btn--submit {
     &:after {
-      display: none;
-      -webkit-transition: none;
-      transition: none;
-      font-family: "Font Awesome 5 Pro";
       content: "\f3f4";
-      font-size: 12px;
-      margin-left: 10px;
+      display:inline-block;
+      opacity: 0;
+     visibility: hidden;
+      font-family: "Font Awesome 5 Pro";
+      font-size:0;
+
     }
   }
   &.btn--loading {
     &:after {
-      display: inline-block;
+      opacity:1;
+      margin-left: 10px;
+      font-size: 12px;
+      visibility: visible;
       -webkit-animation: rotateAnimation 1s infinite linear;
       animation: rotateAnimation 1s infinite linear;
     }

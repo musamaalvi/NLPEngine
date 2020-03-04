@@ -57,6 +57,7 @@ export class DashboardComponent implements OnInit {
   AddComment(){
     this.CommentNumber.push({value: this.CommentText, index: 1})
     this.CommentText=""
+    this.ResultProcessed=false
   }
   DeleteComment(){
     this.CommentNumber.pop()
@@ -100,8 +101,8 @@ export class DashboardComponent implements OnInit {
 
     // this.doc.id = '123';
     // this.doc.text = this.CommentText
-   
-  
+
+
 
     console.log(this.CommentText)
     this.ClassiReq.docs=this.postObj

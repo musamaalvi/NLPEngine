@@ -2,14 +2,10 @@
 
 .form-container {
   @include clearfix();
+  padding:20px;
 
-  &.form--padding {
-    padding: 20px;
-  }
 
-  &.form--padding10 {
-    padding: 10px;
-  }
+
 
   &.form--grey {
     background: #f9fafc;
@@ -110,9 +106,9 @@
 }
 
 .twelve.form-column {
-  @include span(12 no-gutters);
+  @include span(12);
   @include susy-breakpoint(1024px, $susy, '.no-mq') {
-    @include span(12 no-gutters);
+    @include span(12);
   }
 }
 
@@ -198,7 +194,7 @@
     @include border-radius(3px);
     border: 1px solid #e1e1e1;
     font-size: 12px;
-    height:50px;
+    height:80px;
     &:focus {
       -webkit-box-shadow: 0px 0px 10px 0px rgba(119, 119, 119, 0.25);
       -moz-box-shadow: 0px 0px 10px 0px rgba(119, 119, 119, 0.25);
@@ -371,12 +367,12 @@
 
 .form__footer {
   border-top: 1px solid #ebebeb;
-  padding: 15px 30px;
+  padding: 10px 30px;
   margin: 0 0 0;
   position: relative;
   background: #f9fafc;
-  text-align: right;
-  border-radius: 0 0 3px 3px;
+  text-align: left;
+  border-radius: 0 0 5px 5px;
 
   .btn {
     margin: 0 5px 0 0;

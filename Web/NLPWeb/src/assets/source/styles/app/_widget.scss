@@ -20,6 +20,10 @@ $widget-border: #d6dbdf;
     margin-top: 10px;
   }
 
+  &.full--widget{
+    padding: 0;
+  }
+
 
   .widget__graph {
     &.with--padding {
