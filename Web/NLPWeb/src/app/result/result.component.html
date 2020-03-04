@@ -26,26 +26,14 @@
 
     <h2>Part of speach</h2>
     <div class="panel__content">
-      <div class="speach__part">
+      <div class="speach__part" *ngFor="let result of NLPResult.predictions[0].linguistic_features">
 
-        <span class="negative">Negative</span>
-        <p>I</p>
-
-      </div>
-
-      <div class="speach__part">
-
-        <span class="positive">Negative</span>
-        <p>Love</p>
+        <span class="neutral">{{result.p}}</span>
+        <p>{{result.l}}</p>
 
       </div>
 
-      <div class="speach__part">
-
-        <span class="neutral">Negative</span>
-        <p>You</p>
-
-      </div>
+    
     </div>
 
   </div>

@@ -80,6 +80,7 @@ export class DashboardComponent implements OnInit {
     this.postObj.pipeline.push('sentiment')
     this.postObj.pipeline.push('ensemble_sentiment')
     this.postObj.pipeline.push('deep_sentiment')
+    this.postObj.pipeline.push('linguistic_features')
     this.postObj.token = this.tokenResult.token;
     this.postObj.top_n_categories = 3
     this.doc.id = '123';
