@@ -1,15 +1,36 @@
-//VOC
+// VOC
 
 .comment {
   float: left;
   width: 100%;
-  padding: 0;
+  padding: 0 30px 0 0;
+  position: relative;
+
+  .remove__comment {
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    text-align: right;
+    line-height: 30px;
+    width: 30px;
+    cursor: pointer;
+    font-size: 13px;
+    height: 30px;
+    padding-right:6px;
+    background: #f1f1f1;
+    color: $clr-pri;
+    border-radius: 0 5px 0 20px;
+    &:hover {
+      color: $clr-red;
+      background: #ebebeb;
+    }
+  }
 
   p {
     margin: 0;
     font-size: 13px;
     line-height: 18px;
-    color: #989898;
+    // color: #989898;
   }
 }
 
@@ -17,26 +38,26 @@
   float: left;
   width: 100%;
   border-top: 1px solid #ebebeb;
-  padding:15px 0 10px;
+  padding: 15px 0 10px;
   margin-top: 15px;
 
   h2 {
-    font-size:14px;
-    color: #4d565f;
+    font-size: 14px;
+    color: #212229;
     font-weight: 400;
     margin-bottom: 10px;
   }
 
   p {
-    color: #989898;
+    //  color: #989898;
     margin: 0;
-    line-height:16px;
+    line-height: 16px;
   }
 }
 
 .result-panel {
   float: left;
-  margin-top:20px;
+  margin-top: 20px;
   width: 100%;
   border: 1px solid #ebebeb;
   padding: 0;
@@ -44,7 +65,7 @@
 
   h2 {
     font-size: 12px;
-    color: #4d565f;
+    color: #212229;
     border-bottom: 1px solid #ebebeb;
     font-weight: 500;
     padding: 7px 10px;
@@ -56,7 +77,7 @@
   }
 
   p {
-    color: #989898;
+    //  color: #989898;
     line-height: 18px;
   }
 }
@@ -152,13 +173,49 @@
   }
 }
 
-
-
-.comments__sections{
+.comments__sections {
   margin: 20px 0;
- // border-top: 1px solid #ebebeb;
+  // border-top: 1px solid #ebebeb;
 
-  .section__col{
+  .section__col {
     @include span(6 no-gutters);
+  }
+}
+
+
+.category-breadcrumbs {
+  display: inline-block;
+  @include susy-breakpoint(480px, $susy, ".no-mq") {
+    padding-top: 5px;
+  }
+  li {
+    display: inline;
+    vertical-align: middle;
+    white-space: normal;
+    font-size:11px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #969dab;
+    &:before {
+      color: #969dab;
+      position: relative;
+    //  top: 1px;
+      font-size:12px;
+      margin: 0 10px;
+    //  @include opacity(0.5);
+      content: "\f105";
+      font-family: "Font Awesome 5 Pro";
+    }
+    &:first-child {
+      &:before {
+        display: none;
+      }
+    }
+
+    &.active {
+      a {
+        color: #969dab;
+      }
+    }
   }
 }

@@ -28,6 +28,16 @@ $clr-pink: #ef207d;
     margin: 0;
   }
 
+  &.btn--outline{
+    background: #fff;
+    color: #212229;
+    border:1px solid #ebebeb;
+    &:hover {
+      color: #212229;
+      background-color: darken(#fff, 5%);
+    }
+  }
+
   &.btn--submit {
     &:after {
       content: "\f3f4";

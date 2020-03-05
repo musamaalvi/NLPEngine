@@ -1,6 +1,9 @@
 <div class="widget widget--comments" *ngIf="!ResultProcessed">
   <div class="comment">
     <p>{{CommentText}}</p>
+    <div class="remove__comment">
+      <i class="fal fa-trash-alt"></i>
+    </div>
   </div>
 </div>
 
@@ -10,6 +13,10 @@
   <div class="comment">
 
     <p>{{CommentText}}</p>
+
+    <div class="remove__comment">
+      <i class="fal fa-trash-alt"></i>
+    </div>
   </div>
 
 
@@ -24,6 +31,11 @@
         <div class="section__col">
           <h2>Category</h2>
           <p>{{result.category_label}}</p>
+          <ul class="category-breadcrumbs">
+            <li>Lorem Ipsum</li>
+            <li>Ipsum</li>
+            <li>Lorem</li>
+          </ul>
         </div>
         <div class="section__col">
           <div class="sentiment">
