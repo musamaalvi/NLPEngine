@@ -1,7 +1,7 @@
 <div class="widget widget--comments" *ngIf="!ResultProcessed">
   <div class="comment">
     <p>{{CommentText}}</p>
-    <div class="remove__comment">
+    <div class="remove__comment" (click)="RemoveComment()">
       <i class="fal fa-trash-alt"></i>
     </div>
   </div>
@@ -14,7 +14,7 @@
 
     <p>{{CommentText}}</p>
 
-    <div class="remove__comment">
+    <div class="remove__comment" (click)="RemoveComment()">
       <i class="fal fa-trash-alt"></i>
     </div>
   </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-result',
@@ -12,13 +12,19 @@ export class ResultComponent implements OnInit {
   @Input() NLPResult ;
   @Input() ResultProcessed: boolean = false
   @Input() CommentText
+  @Input() index
+  @Output() DeleteIndex = new EventEmitter()
   constructor() { 
-    debugger
+  
    
   }
 
   ngOnInit() {
-    console.log(this.NLPResult)
-  }
+  
 
+  
+  }
+  RemoveComment(){
+    this.DeleteIndex.emit(this.index)
+  }
 }

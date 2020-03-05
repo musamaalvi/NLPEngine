@@ -32,6 +32,10 @@ export class DashboardComponent implements OnInit {
   constructor(private route: ActivatedRoute, private httpClient: HttpClient,  private router: Router) {}
   ngOnInit() {  }
 
+  DeleteIndex(index){
+ 
+    this.CommentNumber.splice(index,1)
+  }
 
 
   classify(){

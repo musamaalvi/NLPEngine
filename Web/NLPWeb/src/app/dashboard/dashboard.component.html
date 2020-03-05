@@ -41,7 +41,7 @@
 
 
   <ng-container *ngFor="let numb of CommentNumber; let i =index">
-    <app-result [ResultProcessed]="ResultProcessed" [NLPResult]="resultData?.predictions?.length > 0 ? resultData.predictions[i] : {}" [CommentText]="numb.value"></app-result>
+    <app-result (DeleteIndex)="DeleteIndex($event)" [index]="i" [ResultProcessed]="ResultProcessed" [NLPResult]="resultData?.predictions?.length > 0 ? resultData.predictions[i] : {}" [CommentText]="numb.value"></app-result>
   </ng-container>
 
 </main>
