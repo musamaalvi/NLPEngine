@@ -20,9 +20,9 @@ export const pipelineData = {
 
 
 export const serviceInfo = {
-  PythonServiceBaseURL: "http://172.21.3.196:8002",
-  UserNameForExtrernalPythonService: "TCI",
-  PasswordForExtrernalPythonService: "T0y0T@p@s$CI"
+  PythonServiceBaseURL: "http://172.21.3.196:8007",
+  UserNameForExtrernalPythonService: "internal",
+  PasswordForExtrernalPythonService: "MBU<3x76q[NJd/^)"
 }
 
 export const apiURL = "https://localhost:44365/api/values";

@@ -30,11 +30,15 @@
       <div class="comments__sections">
         <div class="section__col">
           <h2>Category</h2>
-          <p>{{result.category_label}}</p>
+         
           <ul class="category-breadcrumbs">
-            <li>Lorem Ipsum</li>
-            <li>Ipsum</li>
-            <li>Lorem</li>
+            <ng-container *ngFor="let cat of result.category_label.split('#')">
+
+              <li>{{cat}}</li>
+
+            </ng-container>
+           
+         
           </ul>
         </div>
         <div class="section__col">

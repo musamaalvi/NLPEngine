@@ -75,7 +75,7 @@ export class DashboardComponent implements OnInit {
   }
   callForAuth( TK, httpOptions){
     this.httpClient.post(apiURL + '/Authorize',TK,httpOptions) .subscribe(data => {
-      debugger;
+    
      this.data = data;
 
      this.tokenResult = this.data;
@@ -120,6 +120,7 @@ export class DashboardComponent implements OnInit {
     this.ClassiReq.access = this.tokenRequest
     this.httpClient.post(apiURL + "/Classify",this.ClassiReq,httpOptions) .subscribe(data => {
       this.resultData=data
+      console.log(data)
       this.resultReceived = true
       this.resultLoaderBoolean = false
       this.ResultProcessed=true
