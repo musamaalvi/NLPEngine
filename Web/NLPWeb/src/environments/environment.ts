@@ -7,7 +7,7 @@ export const environment = {
 };
 
 
-
+                                   //Production Server
 export const pipelineData = {
   Comment_Type: "social_media",
   TopNCategories: "3",
@@ -19,10 +19,34 @@ export const pipelineData = {
 }
 
 
+
+
+           
 export const serviceInfo = {
   PythonServiceBaseURL: "http://172.21.3.196:8007",
   UserNameForExtrernalPythonService: "internal",
   PasswordForExtrernalPythonService: "MBU<3x76q[NJd/^)"
 }
+
+
+
+          //For MBC
+// export const pipelineData = {
+//     Comment_Type: "social_media",
+//     TopNCategories: "3",
+//     ModelFilesPath: "./Models/",
+//     BatchSizetoProcess: "1000",
+//     ClientCode: "MBC",
+//     IS_DEBUG: "False",
+//     Client_Name_Masking: "Mercedes"
+//   }
+// export const serviceInfo = {
+//   PythonServiceBaseURL: "http://172.21.3.198:8003",
+//   UserNameForExtrernalPythonService: "internal",
+//   PasswordForExtrernalPythonService: "MBU<3x76q[NJd/^)"
+// }
+
+
+
 
 export const apiURL = "https://localhost:44365/api/values";
